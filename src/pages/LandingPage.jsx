@@ -11,7 +11,7 @@ import Container from '@material-ui/core/Container';
 import Link from '@material-ui/core/Link';
 
 
-import NavBar from '../components/NavBar';
+
 
 function Copyright() {
   return (
@@ -52,38 +52,30 @@ export default function Album() {
   return (
     <React.Fragment>
       <CssBaseline />
-      <AppBar position="relative">
-        <Toolbar>
-          
-          <Typography variant="h6" color="inherit" noWrap>
-            Banka App
-          </Typography>
-          <NavBar />
-        </Toolbar>
-      </AppBar>
+      {/* <NavBar/> */}
       <main>
         {/* Hero unit */}
         <div className={classes.heroContent}>
           <Container maxWidth="sm">
             <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
-            Welcome to Banka
+              Welcome to Banka
             </Typography>
             <Typography variant="h5" align="center" color="textSecondary" paragraph>
-            Banka is a light-weight core banking application that powers banking operations like account creation, customer deposit and withdrawals.
+              Banka is a light-weight core banking application that powers banking operations like account creation, customer deposit and withdrawals.
             </Typography>
             <div className={classes.heroButtons}>
               <Grid container spacing={2} justify="center">
                 <Grid item>
                   <Button variant="contained" color="primary">
-                  <Link color="inherit" href="/signin" underline='none'>
-                    Sign In
+                    <Link color="inherit" href="/signin" underline='none'>
+                      Sign In
                   </Link>
                   </Button>
                 </Grid>
                 <Grid item>
                   <Button variant="outlined" color="primary">
-                  <Link href="/signup" underline='none'>
-                    Sign Up
+                    <Link href="/signup" underline='none'>
+                      Sign Up
                   </Link>
                   </Button>
                 </Grid>
@@ -91,7 +83,7 @@ export default function Album() {
             </div>
           </Container>
         </div>
-        
+
       </main>
       {/* Footer */}
       <footer className={classes.footer}>
@@ -99,7 +91,7 @@ export default function Album() {
           Footer
         </Typography>
         <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
-        Developed by Ridwan Balogun
+          Developed by Ridwan Balogun
         </Typography>
         <Copyright />
       </footer>

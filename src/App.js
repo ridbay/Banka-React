@@ -1,7 +1,9 @@
 import React from 'react';
+import './App.css';
 import LandingPage from '../src/pages/LandingPage';
 import SignIn from '../src/pages/SignIn';
 import SignUp from '../src/pages/SignUp';
+import NavBar from '../src/components/NavBar'
 
 
 import {
@@ -14,23 +16,19 @@ import {
 
 function App() {
   return (
-    <Router>
-      <div>
-      
+    <div className='App'>
+      <NavBar />
+      <Router>
         <Switch>
-          <Route path="/signin">
-            <SignIn />
-          </Route>
-          <Route path="/signup">
-            <SignUp />
-          </Route>
-          <Route path="/">
-            <LandingPage />
-          </Route>
-        </Switch>
-      </div>
-    </Router>
-  );
-}
+          <Route path="/signin" component={SignIn} />
 
-export default App;
+          <Route path="/signup" component={SignUp} />
+            <Route path="/" component={LandingPage} />
+
+        </Switch>
+      </Router>
+    </div>
+        );
+      }
+      
+      export default App;
