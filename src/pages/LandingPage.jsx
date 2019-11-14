@@ -11,9 +11,7 @@ import Container from '@material-ui/core/Container';
 import Link from '@material-ui/core/Link';
 
 
-import SignIn from './SignIn'
-import SignUp from './SignUp'
-
+import NavBar from '../components/NavBar';
 
 function Copyright() {
   return (
@@ -74,6 +72,7 @@ export default function Album() {
           <Typography variant="h6" color="inherit" noWrap>
             Banka App
           </Typography>
+          <NavBar />
         </Toolbar>
       </AppBar>
       <main>
