@@ -16,7 +16,7 @@ function Copyright() {
     <Typography variant="body2" color="textSecondary" align="center">
       {'Copyright © '}
       <Link color="inherit" href="https://balogunridwan.com/">
-        Banka
+      RidBank
       </Link>{' '}
       {new Date().getFullYear()}
       {'.'}
@@ -56,10 +56,10 @@ const HomePage = () => {
         <div className={classes.heroContent}>
           <Container maxWidth="sm">
             <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
-              Welcome to Banka
+              Welcome to RidBank
             </Typography>
             <Typography variant="h5" align="center" color="textSecondary" paragraph>
-              Banka is a light-weight core banking application that powers banking operations like account creation, customer deposit and withdrawals.
+            RidBank is a light-weight core banking application that powers banking operations like account creation, customer deposit and withdrawals.
             </Typography>
             <div className={classes.heroButtons}>
               <Grid container spacing={2} justify="center">
