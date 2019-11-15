@@ -14,9 +14,7 @@ const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
   },
-  menuButton: {
-    marginRight: theme.spacing(2),
-  },
+
   title: {
     flexGrow: 1,
   },
@@ -27,9 +25,8 @@ const NavBar = () => {
     <div className={classes.root}>
       <AppBar>
         <Toolbar>
-
-          <Typography variant="h6" color="inherit" noWrap>
-            <Link color="inherit" href="/" underline='none'>Banking App</Link>
+          <Typography variant="h6" color="inherit" noWrap className={classes.title}>
+            <Link color="inherit" href="/" underline='none' >Banking App</Link>
           </Typography>
           <Button color='inherit'><Link color="inherit" href="/" underline='none'>Home</Link></Button>
           <Button color='inherit'><Link color="inherit" href="/signin" underline='none'>Sign In</Link></Button>
