@@ -20,9 +20,9 @@ function App() {
       <NavBar />
       <Router>
         <Switch>
-          <Route path="/signin" component={SignIn} />
-          <Route path="/signup" component={SignUp} />
-          <Route path="/" component={HomePage} />
+          <Route exact path="/signin" component={SignIn} />
+          <Route exact path="/signup" component={SignUp} />
+          <Route exact path="/" component={HomePage} />
 
         </Switch>
       </Router>

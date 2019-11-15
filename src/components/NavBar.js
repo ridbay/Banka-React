@@ -1,5 +1,7 @@
 import React from 'react';
-import {Link} from "react-router-dom";
+// import {Link} from "react-router-dom";
+
+import Link from '@material-ui/core/Link';
 
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -26,11 +28,12 @@ const NavBar = () => {
           <Toolbar>
   
             <Typography variant="h6" color="inherit" noWrap>
-              Banka App
+            <Link color="inherit" href="/" underline='none'>Banka App</Link>
+              
             </Typography>
-            <Button color='inherit' component={Link} to='/'>Home</Button>
-            <Button color='inherit' component={Link} to='/signin'>Sign In</Button>
-            <Button color='inherit' component={Link} to='/signup'>Sign Up</Button>
+            <Button color='inherit'><Link color="inherit" href="/" underline='none'>Home</Link></Button>
+            <Button color='inherit'><Link color="inherit" href="/signin" underline='none'>Sign In</Link></Button>
+            <Button color='inherit'><Link color="inherit" href="/signup" underline='none'>Sign Up</Link></Button>
           </Toolbar>
         </AppBar>
     )
