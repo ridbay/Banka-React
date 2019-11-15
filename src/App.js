@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import LandingPage from '../src/pages/LandingPage';
+import HomePage from '../src/pages/HomePage';
 import SignIn from '../src/pages/SignIn';
 import SignUp from '../src/pages/SignUp';
 import NavBar from '../src/components/NavBar'
@@ -21,9 +21,8 @@ function App() {
       <Router>
         <Switch>
           <Route path="/signin" component={SignIn} />
-
           <Route path="/signup" component={SignUp} />
-            <Route path="/" component={LandingPage} />
+          <Route path="/" component={HomePage} />
 
         </Switch>
       </Router>
