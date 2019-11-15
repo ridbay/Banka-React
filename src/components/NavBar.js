@@ -15,7 +15,7 @@ const NavBar = () => {
           <Toolbar>
   
             <Typography variant="h6" color="inherit" noWrap>
-            <Link color="inherit" href="/" underline='none'>Banka App</Link>
+            <Link color="inherit" href="/" underline='none'>Banking App</Link>
               
             </Typography>
             <Button color='inherit'><Link color="inherit" href="/" underline='none'>Home</Link></Button>
