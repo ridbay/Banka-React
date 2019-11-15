@@ -10,21 +10,8 @@ import Typography from '@material-ui/core/Typography';
 
 const NavBar = () => {
     return (
-        // <nav>
-        //     <ul>
-        //         <li>
-        //             <Link to="/">Home</Link>
-        //         </li>
-        //         <li>
-        //             <Link to="/signin">Sign In</Link>
-        //         </li>
-        //         <li>
-        //             <Link to="/signup">Sign Up</Link>
-        //         </li>
-        //     </ul>
-        // </nav>
 
-        <AppBar position="relative">
+        <AppBar>
           <Toolbar>
   
             <Typography variant="h6" color="inherit" noWrap>
