@@ -25,20 +25,20 @@ function Copyright() {
 }
 
 const useStyles = makeStyles(theme => ({
-  icon: {
-    marginRight: theme.spacing(2),
-  },
+  
   heroContent: {
     backgroundColor: theme.palette.background.paper,
-    padding: theme.spacing(8, 0, 6),
+    padding: theme.spacing(6, 0, 40),
   },
   heroButtons: {
     marginTop: theme.spacing(4),
   },
 
   footer: {
-    backgroundColor: theme.palette.background.paper,
-    padding: theme.spacing(35),
+    // backgroundColor: theme.palette.background.paper,
+    backgroundColor: "#3f51b5",
+    color:"white",
+    padding: theme.spacing(10),
   },
 }));
 
@@ -86,7 +86,7 @@ const HomePage = () => {
       {/* Footer */}
       <footer className={classes.footer}>
         <Typography variant="h6" align="center" gutterBottom>
-          Footer
+          Your Dependable Bank
         </Typography>
         <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
           Developed by Ridwan Balogun
