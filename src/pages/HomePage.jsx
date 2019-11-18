@@ -11,7 +11,7 @@ import Link from '@material-ui/core/Link';
 
 
 
-function Copyright() {
+const Copyright = () => {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
       {'Copyright © '}
