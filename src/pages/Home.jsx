@@ -35,11 +35,7 @@ const useStyles = makeStyles(theme => ({
 
 const Home = () => {
   const classes = useStyles();
-  const background = {
-    backgroundImage: `url(${Image})`,
-    backgroundSize: 'cover',
-    overflow: 'hidden',
-  };
+
   return (
     <React.Fragment>
       <main>
