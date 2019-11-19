@@ -48,7 +48,7 @@ export default function Footer() {
         <Typography variant="h6" align="center" gutterBottom>
           Your Dependable Bank
         </Typography>
-        <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
+        <Typography variant="subtitle1" align="center" color='textPrimary' component="p">
           Developed by Ridwan Balogun.
         </Typography>
         <Copyright />

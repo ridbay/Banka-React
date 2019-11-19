@@ -11,18 +11,6 @@ import Link from '@material-ui/core/Link';
 
 import Image from '../img/bg.jpg'
 
-// const Copyright = () => {
-//   return (
-//     <Typography variant="body2" color="textSecondary" align="center">
-//       {'Copyright © '}
-//       <Link color="inherit" href="https://balogunridwan.com/">
-//       RidBank
-//       </Link>{' '}
-//       {new Date().getFullYear()}
-//       {'.'}
-//     </Typography>
-//   );
-// }
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -46,17 +34,11 @@ const useStyles = makeStyles(theme => ({
     marginTop: theme.spacing(4),
   },
 
-  footer: {
-    // backgroundColor: theme.palette.background.paper,
-    backgroundColor: "#3f51b5",
-    color: "white",
-    padding: theme.spacing(0, 8),
-  },
 }));
 
 
 
-const HomePage = () => {
+const Home = () => {
   const classes = useStyles();
   const background = {
     backgroundImage: `url(${Image})`,
@@ -104,4 +86,4 @@ const HomePage = () => {
   );
 }
 
-export default HomePage;
+export default Home;
