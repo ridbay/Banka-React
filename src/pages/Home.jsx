@@ -9,7 +9,7 @@ import Container from '@material-ui/core/Container';
 import Link from '@material-ui/core/Link';
 
 
-import Image from '../img/bg.jpg'
+import Image from '../img/bg.jpg';
 
 
 const useStyles = makeStyles(theme => ({
@@ -23,7 +23,7 @@ const useStyles = makeStyles(theme => ({
     backgroundPosition: "center center",
     backgroundSize: "cover",
     backgroundAttachment: "fixed",
-    height: "100%"
+    height: "100%",
   },
   heroButtons: {
     marginTop: theme.spacing(4),
