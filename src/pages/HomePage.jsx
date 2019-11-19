@@ -28,7 +28,7 @@ const useStyles = makeStyles(theme => ({
   
   heroContent: {
     backgroundColor: theme.palette.background.paper,
-    padding: theme.spacing(6, 0, 60),
+    padding: theme.spacing(0, 0, 27),
   },
   heroButtons: {
     marginTop: theme.spacing(4),
@@ -38,7 +38,7 @@ const useStyles = makeStyles(theme => ({
     // backgroundColor: theme.palette.background.paper,
     backgroundColor: "#3f51b5",
     color:"white",
-    padding: theme.spacing(0.2, 8),
+    padding: theme.spacing(0, 8),
   },
 }));
 
@@ -84,7 +84,7 @@ const HomePage = () => {
 
       </main>
       {/* Footer */}
-      <footer className={classes.footer}>
+      {/* <footer className={classes.footer}>
         <Typography variant="h6" align="center" gutterBottom>
           Your Dependable Bank
         </Typography>
@@ -92,7 +92,7 @@ const HomePage = () => {
           Developed by Ridwan Balogun
         </Typography>
         <Copyright />
-      </footer>
+      </footer> */}
       {/* End footer */}
     </React.Fragment>
   );

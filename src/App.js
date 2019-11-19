@@ -4,7 +4,7 @@ import HomePage from '../src/pages/HomePage';
 import SignIn from '../src/pages/SignIn';
 import SignUp from '../src/pages/SignUp';
 import NavBar from '../src/components/NavBar'
-
+import Footer from '../src/components/Footer'
 
 import {
   BrowserRouter as Router,
@@ -29,6 +29,7 @@ function App() {
         </Switch>
         </div>
       </Router>
+      <Footer />
     </div>
         );
       }
