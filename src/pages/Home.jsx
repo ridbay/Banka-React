@@ -11,52 +11,29 @@ import Link from '@material-ui/core/Link';
 
 import Image from '../img/bg.jpg'
 
-// const Copyright = () => {
-//   return (
-//     <Typography variant="body2" color="textSecondary" align="center">
-//       {'Copyright © '}
-//       <Link color="inherit" href="https://balogunridwan.com/">
-//       RidBank
-//       </Link>{' '}
-//       {new Date().getFullYear()}
-//       {'.'}
-//     </Typography>
-//   );
-// }
 
 const useStyles = makeStyles(theme => ({
-  root: {
-    display: 'flex',
-    flexDirection: 'column',
-    minHeight: '20vh',
-  },
-  paperContainer: {
+ 
+
+  heroContent: {
+    backgroundColor: theme.palette.background.paper,
     backgroundImage: `url(${Image})`,
+    padding: theme.spacing(10, 0, 60),
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center center",
     backgroundSize: "cover",
     backgroundAttachment: "fixed",
     height: "100%"
   },
-  heroContent: {
-    backgroundColor: theme.palette.background.paper,
-    padding: theme.spacing(0, 0, 27),
-  },
   heroButtons: {
     marginTop: theme.spacing(4),
   },
 
-  footer: {
-    // backgroundColor: theme.palette.background.paper,
-    backgroundColor: "#3f51b5",
-    color: "white",
-    padding: theme.spacing(0, 8),
-  },
 }));
 
 
 
-const HomePage = () => {
+const Home = () => {
   const classes = useStyles();
   const background = {
     backgroundImage: `url(${Image})`,
@@ -64,12 +41,8 @@ const HomePage = () => {
     overflow: 'hidden',
   };
   return (
-    <React.Fragment className={classes.root}>
-
-      {/* <NavBar/> */}
+    <React.Fragment>
       <main>
-        <div style={{...background}}>
-        {/* Hero unit */}
         <div className={classes.heroContent}>
           <Container maxWidth="sm">
             <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
@@ -99,21 +72,11 @@ const HomePage = () => {
             </div>
           </Container>
         </div>
-        </div>
+        
       </main>
-      {/* Footer */}
-      {/* <footer className={classes.footer}>
-        <Typography variant="h6" align="center" gutterBottom>
-          Your Dependable Bank
-        </Typography>
-        <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
-          Developed by Ridwan Balogun
-        </Typography>
-        <Copyright />
-      </footer> */}
-      {/* End footer */}
+
     </React.Fragment>
   );
 }
 
-export default HomePage;
+export default Home;
