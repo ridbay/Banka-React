@@ -9,7 +9,7 @@ import Container from '@material-ui/core/Container';
 import Link from '@material-ui/core/Link';
 
 
-import Image from '../img/bg.jpg'
+import Image from '../img/bg.jpg';
 
 
 const useStyles = makeStyles(theme => ({
