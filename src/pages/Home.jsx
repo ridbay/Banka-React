@@ -16,7 +16,7 @@ const useStyles = makeStyles(theme => ({
  
 
   heroContent: {
-    // backgroundColor: theme.palette.background.paper,
+    backgroundColor: theme.palette.background.paper,
     backgroundImage: `url(${Image})`,
     padding: theme.spacing(10, 0, 60),
     backgroundRepeat: "no-repeat",
@@ -39,7 +39,6 @@ const Home = () => {
   return (
     <React.Fragment>
       <main>
-        
         <div className={classes.heroContent}>
           <Container maxWidth="sm">
             <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
