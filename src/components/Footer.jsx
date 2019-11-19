@@ -5,12 +5,12 @@ import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Link from '@material-ui/core/Link';
 
-function Copyright() {
+const Copyright = () => {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
       {'Copyright © '}
-      <Link color="inherit" href="https://material-ui.com/">
-        Your Website
+      <Link color="inherit" href="https://balogunridwan.com/">
+      RidBank
       </Link>{' '}
       {new Date().getFullYear()}
       {'.'}
@@ -22,7 +22,7 @@ const useStyles = makeStyles(theme => ({
   root: {
     display: 'flex',
     flexDirection: 'column',
-    minHeight: '100vh',
+    minHeight: '20vh',
   },
   main: {
     marginTop: theme.spacing(8),
@@ -31,7 +31,10 @@ const useStyles = makeStyles(theme => ({
   footer: {
     padding: theme.spacing(2),
     marginTop: 'auto',
-    backgroundColor: 'white',
+    // backgroundColor: 'white',
+    backgroundColor: "#3f51b5",
+    color:"white",
+    // padding: theme.spacing(0, 8),
   },
 }));
 
@@ -40,22 +43,14 @@ export default function Footer() {
 
   return (
     <div className={classes.root}>
-      <CssBaseline />
-      <Container component="main" className={classes.main} maxWidth="sm">
-        <Typography variant="h2" component="h1" gutterBottom>
-          Sticky footer
-        </Typography>
-        <Typography variant="h5" component="h2" gutterBottom>
-          {'Pin a footer to the bottom of the viewport.'}
-          {'The footer will move as the main element of the page grows.'}
-        </Typography>
-        <Typography variant="body1">Sticky footer placeholder.</Typography>
-      </Container>
       <footer className={classes.footer}>
-        <Container maxWidth="sm">
-          <Typography variant="body1">My sticky footer can be found here.</Typography>
-          <Copyright />
-        </Container>
+        <Typography variant="h6" align="center" gutterBottom>
+          Your Dependable Bank
+        </Typography>
+        <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
+          Developed by Ridwan Balogun
+        </Typography>
+        <Copyright />
       </footer>
     </div>
   );

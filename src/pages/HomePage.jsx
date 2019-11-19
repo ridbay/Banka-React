@@ -25,7 +25,11 @@ const Copyright = () => {
 }
 
 const useStyles = makeStyles(theme => ({
-  
+  root: {
+    display: 'flex',
+    flexDirection: 'column',
+    minHeight: '20vh',
+  },
   heroContent: {
     backgroundColor: theme.palette.background.paper,
     padding: theme.spacing(0, 0, 27),
@@ -48,7 +52,7 @@ const HomePage = () => {
   const classes = useStyles();
 
   return (
-    <React.Fragment>
+    <React.Fragment className={classes.root}>
      
       {/* <NavBar/> */}
       <main>
