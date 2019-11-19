@@ -1,10 +1,10 @@
 import React from 'react';
 import './App.css';
-import HomePage from '../src/pages/HomePage';
-import SignIn from '../src/pages/SignIn';
-import SignUp from '../src/pages/SignUp';
-import NavBar from '../src/components/NavBar'
-
+import HomePage from './pages/HomePage';
+import SignIn from './pages/SignIn';
+import SignUp from './pages/SignUp';
+import NavBar from './components/NavBar'
+import Footer from './components/Footer'
 
 import {
   BrowserRouter as Router,
@@ -12,11 +12,12 @@ import {
   Route,
 } from "react-router-dom";
 
-
+import CssBaseline from '@material-ui/core/CssBaseline';
 
 function App() {
   return (
     <div className='App'>
+       <CssBaseline />
       <NavBar />
       <Router>
         <div className='container'>
@@ -28,6 +29,7 @@ function App() {
         </Switch>
         </div>
       </Router>
+      <Footer />
     </div>
         );
       }
