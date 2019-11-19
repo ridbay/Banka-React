@@ -18,15 +18,6 @@ const Copyright = () => {
 }
 
 const useStyles = makeStyles(theme => ({
-  root: {
-    display: 'flex',
-    flexDirection: 'column',
-    minHeight: '20vh',
-  },
-  main: {
-    marginTop: theme.spacing(8),
-    marginBottom: theme.spacing(2),
-  },
   footer: {
     padding: theme.spacing(2),
     marginTop: 'auto',
@@ -43,7 +34,7 @@ export default function Footer() {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
+    
       <footer className={classes.footer}>
         <Typography variant="h6" align="center" gutterBottom>
           Your Dependable Bank
@@ -53,6 +44,6 @@ export default function Footer() {
         </Typography>
         <Copyright />
       </footer>
-    </div>
+    
   );
 }
