@@ -9,7 +9,7 @@ const Copyright = () => {
     <Typography variant="body2" color="textSecondary" align="center">
       {'Copyright © '}
       <Link color="inherit" href="https://balogunridwan.com/">
-      RidBank
+        RidBank
       </Link>{' '}
       {new Date().getFullYear()}
       {'.'}
@@ -31,7 +31,7 @@ const useStyles = makeStyles(theme => ({
     padding: theme.spacing(2),
     marginTop: 'auto',
     backgroundColor: "#3f51b5",
-    color:"white",
+    color: "white",
     position: 'absolute',
     left: 0,
     bottom: 0,
@@ -49,7 +49,7 @@ export default function Footer() {
           Your Dependable Bank
         </Typography>
         <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
-          Developed by Ridwan Balogun
+          Developed by Ridwan Balogun.
         </Typography>
         <Copyright />
       </footer>
