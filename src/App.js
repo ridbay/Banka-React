@@ -12,11 +12,12 @@ import {
   Route,
 } from "react-router-dom";
 
-
+import CssBaseline from '@material-ui/core/CssBaseline';
 
 function App() {
   return (
     <div className='App'>
+       <CssBaseline />
       <NavBar />
       <Router>
         <div className='container'>
