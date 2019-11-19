@@ -13,16 +13,16 @@ import {
 } from "react-router-dom";
 
 import CssBaseline from '@material-ui/core/CssBaseline';
-import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
+import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
 
 
 const theme = createMuiTheme({
-  palette : {
+  palette: {
     primary: {
       light: '#6746c3',
       main: '#673ab7',
       dark: '#000063',
-      contrastText:'#fff',
+      contrastText: '#fff',
     },
     secondary: {
       light: '#bc477b',
@@ -35,21 +35,25 @@ const theme = createMuiTheme({
 
 function App() {
   return (
-    <div className='App'>
-      <CssBaseline />
-      <NavBar />
-      <Router>
-        <div className='container'>
-          <Switch>
-            <Route exact path="/signin" component={SignIn} />
-            <Route exact path="/signup" component={SignUp} />
-            <Route exact path="/" component={Home} />
+    <MuiThemeProvider theme={theme}>
+      <div className='App'>
+        <CssBaseline />
+        <NavBar />
+        <Router>
+          <div className='container'>
+            <Switch>
+              <Route exact path="/signin" component={SignIn} />
+              <Route exact path="/signup" component={SignUp} />
+              <Route exact path="/" component={Home} />
 
-          </Switch>
-        </div>
-      </Router>
-      <Footer />
-    </div>
+            </Switch>
+          </div>
+        </Router>
+        <Footer />
+      </div>
+
+    </MuiThemeProvider>
+
   );
 }
 
