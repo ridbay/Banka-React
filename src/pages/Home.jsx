@@ -13,22 +13,17 @@ import Image from '../img/bg.jpg'
 
 
 const useStyles = makeStyles(theme => ({
-  root: {
-    display: 'flex',
-    flexDirection: 'column',
-    minHeight: '20vh',
-  },
-  paperContainer: {
+ 
+
+  heroContent: {
+    // backgroundColor: theme.palette.background.paper,
     backgroundImage: `url(${Image})`,
+    padding: theme.spacing(10, 0, 60),
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center center",
     backgroundSize: "cover",
     backgroundAttachment: "fixed",
     height: "100%"
-  },
-  heroContent: {
-    backgroundColor: theme.palette.background.paper,
-    padding: theme.spacing(30, 0, 60),
   },
   heroButtons: {
     marginTop: theme.spacing(4),
@@ -40,16 +35,11 @@ const useStyles = makeStyles(theme => ({
 
 const Home = () => {
   const classes = useStyles();
-  const background = {
-    backgroundImage: `url(${Image})`,
-    backgroundSize: 'cover',
-    overflow: 'hidden',
-  };
+
   return (
-    <React.Fragment className={classes.root}>
+    <React.Fragment>
       <main>
-        <div style={{...background}}>
-        {/* Hero unit */}
+        
         <div className={classes.heroContent}>
           <Container maxWidth="sm">
             <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
@@ -79,7 +69,7 @@ const Home = () => {
             </div>
           </Container>
         </div>
-        </div>
+        
       </main>
 
     </React.Fragment>
