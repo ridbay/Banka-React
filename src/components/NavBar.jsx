@@ -1,5 +1,4 @@
 import React from 'react';
-// import {Link} from "react-router-dom";
 
 import Link from '@material-ui/core/Link';
 
@@ -17,7 +16,20 @@ const useStyles = makeStyles(theme => ({
 
   title: {
     flexGrow: 1,
-  },
+    display: 'none',
+    [theme.breakpoints.up('sm')]: {
+      display: 'block',
+    },
+    links: {
+      position: 'relative',
+      marginLeft: 0,
+      width: '100%',
+      [theme.breakpoints.up('sm')]: {
+        marginLeft: theme.spacing(1),
+        width: 'auto',
+      },
+    }
+  }
 }));
 const NavBar = () => {
   const classes = useStyles();
