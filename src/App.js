@@ -13,8 +13,25 @@ import {
 } from "react-router-dom";
 
 import CssBaseline from '@material-ui/core/CssBaseline';
-import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
-import createMuiTheme from '@material-ui/core/styles/createMuiTheme'
+import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
+
+
+const theme = createMuiTheme({
+  palette : {
+    primary: {
+      light: '#6746c3',
+      main: '#673ab7',
+      dark: '#000063',
+      contrastText:'#fff',
+    },
+    secondary: {
+      light: '#bc477b',
+      main: '#f50057',
+      dark: '#560027',
+      contrastText: '#fff'
+    }
+  }
+})
 
 function App() {
   return (
