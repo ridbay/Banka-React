@@ -65,8 +65,6 @@ const HomePage = () => {
   };
   return (
     <React.Fragment className={classes.root}>
-
-      {/* <NavBar/> */}
       <main>
         <div style={{...background}}>
         {/* Hero unit */}
@@ -101,17 +99,7 @@ const HomePage = () => {
         </div>
         </div>
       </main>
-      {/* Footer */}
-      {/* <footer className={classes.footer}>
-        <Typography variant="h6" align="center" gutterBottom>
-          Your Dependable Bank
-        </Typography>
-        <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
-          Developed by Ridwan Balogun
-        </Typography>
-        <Copyright />
-      </footer> */}
-      {/* End footer */}
+
     </React.Fragment>
   );
 }
