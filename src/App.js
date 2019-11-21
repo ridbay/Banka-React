@@ -3,8 +3,9 @@ import './App.css';
 import Home from './pages/Home';
 import SignIn from './pages/SignIn';
 import SignUp from './pages/SignUp';
-import NavBar from './components/NavBar'
-import Footer from './components/Footer'
+import NavBar from './components/NavBar';
+import Footer from './components/Footer';
+import Dashboard from './pages/Dashboard';
 
 import {
   BrowserRouter as Router,
@@ -42,9 +43,10 @@ function App() {
         <Router>
           <div className='container'>
             <Switch>
+            <Route exact path="/" component={Home} />
               <Route exact path="/signin" component={SignIn} />
               <Route exact path="/signup" component={SignUp} />
-              <Route exact path="/" component={Home} />
+              <Route exact path="/dashboard" component={Dashboard} />
 
             </Switch>
           </div>
