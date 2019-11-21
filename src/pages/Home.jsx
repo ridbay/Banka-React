@@ -13,17 +13,17 @@ import Image from '../img/bg.jpg';
 
 
 const useStyles = makeStyles(theme => ({
- 
-
+  container: {
+    marginTop: '0px'
+  },
   heroContent: {
     backgroundColor: theme.palette.background.paper,
     backgroundImage: `url(${Image})`,
-    padding: theme.spacing(10, 0, 60),
+    padding: theme.spacing(10, 0, 50),
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center center",
     backgroundSize: "cover",
     backgroundAttachment: "fixed",
-    height: "100%",
   },
   heroButtons: {
     marginTop: theme.spacing(4),
@@ -31,16 +31,14 @@ const useStyles = makeStyles(theme => ({
 
 }));
 
-
-
 const Home = () => {
   const classes = useStyles();
 
   return (
     <React.Fragment>
-      <main>
+
         <div className={classes.heroContent}>
-          <Container maxWidth="sm">
+          <Container className={classes.container}>
             <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
               Welcome to RidBank
               
@@ -68,8 +66,7 @@ const Home = () => {
             </div>
           </Container>
         </div>
-        
-      </main>
+      
 
     </React.Fragment>
   );
