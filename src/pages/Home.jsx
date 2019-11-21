@@ -13,6 +13,9 @@ import Image from '../img/bg.jpg';
 
 
 const useStyles = makeStyles(theme => ({
+  container: {
+    marginTop: '0px'
+  },
   heroContent: {
     backgroundColor: theme.palette.background.paper,
     backgroundImage: `url(${Image})`,
@@ -28,16 +31,14 @@ const useStyles = makeStyles(theme => ({
 
 }));
 
-
-
 const Home = () => {
   const classes = useStyles();
 
   return (
     <React.Fragment>
-      <main>
+
         <div className={classes.heroContent}>
-          <Container maxWidth="sm">
+          <Container className={classes.container}>
             <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
               Welcome to RidBank
               
@@ -65,8 +66,7 @@ const Home = () => {
             </div>
           </Container>
         </div>
-        
-      </main>
+      
 
     </React.Fragment>
   );
