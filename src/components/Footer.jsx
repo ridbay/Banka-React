@@ -19,14 +19,14 @@ const Copyright = () => {
 
 const useStyles = makeStyles(theme => ({
   footer: {
-    padding: theme.spacing(2),
-    marginTop: 'auto',
     backgroundColor: theme.palette.secondary.main,
     color: "white",
     position: 'absolute',
     left: 0,
     bottom: 0,
     right: 0,
+    marginTop: theme.spacing(8),
+    padding: theme.spacing(1, 0),
   },
 }));
 

@@ -19,10 +19,9 @@ const useStyles = makeStyles(theme => ({
     backgroundImage: `url(${Image})`,
     padding: theme.spacing(10, 0, 60),
     backgroundRepeat: "no-repeat",
-    backgroundPosition: "center center",
+    backgroundPosition: "center",
     backgroundSize: "cover",
-    backgroundAttachment: "fixed",
-    // marginTop: theme.spacing(0),
+    position: 'relative',
   },
   heroButtons: {
     marginTop: theme.spacing(4),
