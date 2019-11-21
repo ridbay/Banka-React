@@ -61,6 +61,7 @@ git push -u
 The core team is monitoring for Pull Requests. We will review your Pull Request and either merge it, request changes to it, or close it with an explanation.
 
 
+
 ## License
 
 By contributing your code to the RidBank GitHub repository, you agree to license your contribution under the MIT license.
