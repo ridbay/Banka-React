@@ -25,7 +25,7 @@ Your app is ready to be deployed!
 
 ## Contributing
 
-Read our [contributing guide](/CONTRIBUTING.md) to learn about our development process, how to propose bugfixes and improvements.
+Read our [contributing guide](/Contributing.md) to learn about our development process, how to propose bugfixes and improvements.
 
 Notice that contributions go far beyond pull requests and commits.
 
