@@ -13,8 +13,6 @@ import Image from '../img/bg.jpg';
 
 
 const useStyles = makeStyles(theme => ({
- 
-
   heroContent: {
     backgroundColor: theme.palette.background.paper,
     backgroundImage: `url(${Image})`,
