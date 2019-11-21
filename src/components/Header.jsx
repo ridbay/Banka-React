@@ -29,17 +29,17 @@ export default function Header() {
     return (
         <div className={classes.root}>
         <React.Fragment>
-            <AppBar position="static" color="default" elevation={0} className={classes.appBar}>
+            <AppBar elevation={0} className={classes.appBar}>
                 <Toolbar className={classes.toolbar}>
                     <Typography variant="h6" color="inherit" noWrap className={classes.toolbarTitle}>
                     <Link color="inherit" href="/" underline='none'>Home</Link>
           </Typography>
                     <nav>
-                        <Link variant="button" color="textPrimary" href="#" className={classes.link}>About Us </Link>
-                        <Link variant="button" color="textPrimary" href="#" className={classes.link}>Contact Us</Link>
+                        <Link variant="button" color="inherit" href="/about" className={classes.link}>About Us </Link>
+                        <Link variant="button" color="inherit" href="/contact" className={classes.link}>Contact Us</Link>
                     </nav>
-                    <Button href="/signin" color="primary" variant="outlined" className={classes.link}>Login</Button>
-                    <Button href="/signup" color="primary" variant="outlined" className={classes.link}>SignUp</Button>
+                    <Button href="/signin" color="inherit" variant="outlined" className={classes.link}>Login</Button>
+                    <Button href="/signup" color="inherit" variant="outlined" className={classes.link}>SignUp</Button>
                 </Toolbar>
             </AppBar>
         </React.Fragment>
