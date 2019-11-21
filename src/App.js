@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import SignIn from './pages/SignIn';
 import SignUp from './pages/SignUp';
 import NavBar from './components/NavBar';
+import Header from './components/Header';
 import Footer from './components/Footer';
 import Dashboard from './pages/Dashboard';
 
@@ -39,7 +40,8 @@ function App() {
     <ThemeProvider theme={theme}>
       <div className='App'>
         <CssBaseline />
-        <NavBar />
+        {/* <NavBar /> */}
+        <Header />
         <Router>
           <div className='container'>
             <Switch>
