@@ -18,7 +18,7 @@ const useStyles = makeStyles(theme => ({
         flexGrow: 1,
     },
     link: {
-        margin: theme.spacing(1, 1.5),
+        margin: theme.spacing(0.1, 1.5),
     },
 }));
 
@@ -27,6 +27,7 @@ export default function Header() {
     const classes = useStyles();
 
     return (
+        <div className={classes.root}>
         <React.Fragment>
             <AppBar position="static" color="default" elevation={0} className={classes.appBar}>
                 <Toolbar className={classes.toolbar}>
@@ -42,5 +43,6 @@ export default function Header() {
                 </Toolbar>
             </AppBar>
         </React.Fragment>
+        </div>
     )
 }

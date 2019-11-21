@@ -16,12 +16,11 @@ const useStyles = makeStyles(theme => ({
   heroContent: {
     backgroundColor: theme.palette.background.paper,
     backgroundImage: `url(${Image})`,
-    padding: theme.spacing(10, 0, 60),
+    padding: theme.spacing(10, 0, 50),
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center center",
     backgroundSize: "cover",
     backgroundAttachment: "fixed",
-    height: "100%",
   },
   heroButtons: {
     marginTop: theme.spacing(4),
