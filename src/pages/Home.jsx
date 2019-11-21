@@ -19,7 +19,7 @@ const useStyles = makeStyles(theme => ({
   heroContent: {
     backgroundColor: theme.palette.background.paper,
     backgroundImage: `url(${Image})`,
-    padding: theme.spacing(10, 0, 50),
+    padding: theme.spacing(10, 0, 60),
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center center",
     backgroundSize: "cover",
@@ -38,7 +38,7 @@ const Home = () => {
     <React.Fragment>
 
         <div className={classes.heroContent}>
-          <Container className={classes.container}>
+          <Container component="main" className={classes.container}>
             <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
               Welcome to RidBank
               
