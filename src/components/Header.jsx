@@ -31,22 +31,14 @@ export default function Header() {
             <AppBar position="static" color="default" elevation={0} className={classes.appBar}>
                 <Toolbar className={classes.toolbar}>
                     <Typography variant="h6" color="inherit" noWrap className={classes.toolbarTitle}>
-                        Company name
+                    <Link color="inherit" href="/" underline='none' >Banking App</Link>
           </Typography>
                     <nav>
-                        <Link variant="button" color="textPrimary" href="#" className={classes.link}>
-                            Features
-            </Link>
-                        <Link variant="button" color="textPrimary" href="#" className={classes.link}>
-                            Enterprise
-            </Link>
-                        <Link variant="button" color="textPrimary" href="#" className={classes.link}>
-                            Support
-            </Link>
+                        <Link variant="button" color="textPrimary" href="#" className={classes.link}>About Us </Link>
+                        <Link variant="button" color="textPrimary" href="#" className={classes.link}>Contact Us</Link>
                     </nav>
-                    <Button href="#" color="primary" variant="outlined" className={classes.link}>
-                        Login
-          </Button>
+                    <Button href="/signin" color="primary" variant="outlined" className={classes.link}>Login</Button>
+                    <Button href="/signup" color="primary" variant="outlined" className={classes.link}>SignUp</Button>
                 </Toolbar>
             </AppBar>
         </React.Fragment>
