@@ -32,7 +32,7 @@ export default function Header() {
             <AppBar position="static" color="default" elevation={0} className={classes.appBar}>
                 <Toolbar className={classes.toolbar}>
                     <Typography variant="h6" color="inherit" noWrap className={classes.toolbarTitle}>
-                    <Link color="inherit" href="/" underline='none' >Banking App</Link>
+                    <Link color="inherit" href="/" underline='none'>Home</Link>
           </Typography>
                     <nav>
                         <Link variant="button" color="textPrimary" href="#" className={classes.link}>About Us </Link>
