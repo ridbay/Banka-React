@@ -23,4 +23,13 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.<br />
 Your app is ready to be deployed!
 
+## Contributing
 
+Read our [contributing guide](/CONTRIBUTING.md) to learn about our development process, how to propose bugfixes and improvements.
+
+Notice that contributions go far beyond pull requests and commits.
+
+
+## License
+
+This project is licensed under the terms of the MIT license.
