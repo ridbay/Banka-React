@@ -41,9 +41,13 @@ const useStyles = makeStyles(theme => ({
 export default function SignIn() {
   const classes = useStyles();
   const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const handleChange = event => {
+//   const [password, setPassword] = useState('');
+  const handleEmailChange = event => {
     setEmail(event.target.value);
+    
+  };
+  const handlePasswordChange = event => {
+    setPassword(event.target.value);
   };
 
   return (
@@ -67,6 +71,7 @@ export default function SignIn() {
             name="email"
             autoComplete="email"
             autoFocus
+            onChange={handleEmailChange}
           />
           <TextField
             variant="outlined"
@@ -78,6 +83,7 @@ export default function SignIn() {
             type="password"
             id="password"
             autoComplete="current-password"
+            onChange={handlePasswordChange}
           />
           <FormControlLabel
             control={<Checkbox value="remember" color="primary" />}
