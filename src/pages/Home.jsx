@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
 
-import CssBaseline from '@material-ui/core/CssBaseline';
+
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
@@ -9,57 +9,43 @@ import Container from '@material-ui/core/Container';
 import Link from '@material-ui/core/Link';
 
 
+import Image from '../img/bg.jpg';
 
+import NavBar from '../components/NavBar'
 
-const Copyright = () => {
-  return (
-    <Typography variant="body2" color="textSecondary" align="center">
-      {'Copyright © '}
-      <Link color="inherit" href="https://balogunridwan.com/">
-      RidBank
-      </Link>{' '}
-      {new Date().getFullYear()}
-      {'.'}
-    </Typography>
-  );
-}
 
 const useStyles = makeStyles(theme => ({
-  
+
   heroContent: {
     backgroundColor: theme.palette.background.paper,
-    padding: theme.spacing(6, 0, 60),
+    backgroundImage: `url(${Image})`,
+    padding: theme.spacing(10, 0, 60),
+    backgroundRepeat: "no-repeat",
+    backgroundPosition: "center",
+    backgroundSize: "cover",
+    // backgroundAttachment: "fixed",
+    // marginTop: theme.spacing(0),
   },
   heroButtons: {
     marginTop: theme.spacing(4),
   },
 
-  footer: {
-    // backgroundColor: theme.palette.background.paper,
-    backgroundColor: "#3f51b5",
-    color:"white",
-    padding: theme.spacing(0.2, 8),
-  },
 }));
 
-
-
-const HomePage = () => {
+const Home = () => {
   const classes = useStyles();
 
   return (
     <React.Fragment>
-      <CssBaseline />
-      {/* <NavBar/> */}
-      <main>
-        {/* Hero unit */}
+      <NavBar />
         <div className={classes.heroContent}>
-          <Container maxWidth="sm">
+          <Container component="main">
             <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
               Welcome to RidBank
+              
             </Typography>
             <Typography variant="h5" align="center" color="textSecondary" paragraph>
-            RidBank is a light-weight core banking application that powers banking operations like account creation, customer deposit and withdrawals.
+              RidBank is a light-weight core banking application that powers banking operations like account creation, customer deposit and withdrawals.
             </Typography>
             <div className={classes.heroButtons}>
               <Grid container spacing={2} justify="center">
@@ -81,21 +67,10 @@ const HomePage = () => {
             </div>
           </Container>
         </div>
+      
 
-      </main>
-      {/* Footer */}
-      <footer className={classes.footer}>
-        <Typography variant="h6" align="center" gutterBottom>
-          Your Dependable Bank
-        </Typography>
-        <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
-          Developed by Ridwan Balogun
-        </Typography>
-        <Copyright />
-      </footer>
-      {/* End footer */}
     </React.Fragment>
   );
 }
 
-export default HomePage;
+export default Home;
