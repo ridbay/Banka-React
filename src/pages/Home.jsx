@@ -58,7 +58,7 @@ const Home = () => {
                 </Grid>
                 <Grid item>
                   <Button variant="outlined" color="primary">
-                    <Link href="/signup" underline='none'>
+                    <Link color="inherit" href="/signup" underline='none'>
                       Sign Up
                   </Link>
                   </Button>

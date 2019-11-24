@@ -111,7 +111,10 @@ export default function SignIn() {
             className={classes.submit}
             
           >
-            Sign In
+            
+            <Link href="/dashboard" variant="body2" color="inherit" underline='none'>
+            Sign In 
+              </Link>
           </Button>
           <Grid container>
             <Grid item xs>
