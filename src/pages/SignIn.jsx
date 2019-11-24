@@ -48,12 +48,19 @@ export default function SignIn() {
     setEmail(event.target.value);
   };
   const handlePasswordChange = event => {
+   
     setPassword(event.target.value);
   };
 
   const handleSubmit = event => {
     event.preventDefault();
-    console.log(event)
+    const obj = {
+        email,
+        password
+    }
+    console.log(obj);
+    setEmail('');
+    setPassword('')
   }
   return (
     <Container component="main" maxWidth="xs">
@@ -65,7 +72,7 @@ export default function SignIn() {
         <Typography component="h1" variant="h5">
           Sign in
         </Typography>
-        <form className={classes.form} noValidate>
+        <form className={classes.form} noValidate onSubmit={handleSubmit}>
           <TextField
             variant="outlined"
             margin="normal"
@@ -102,7 +109,7 @@ export default function SignIn() {
             variant="contained"
             color="primary"
             className={classes.submit}
-            onSubmit={handleSubmit}
+            
           >
             Sign In
           </Button>
