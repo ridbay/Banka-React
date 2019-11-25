@@ -28,11 +28,11 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function Orders() {
+export default function Transactions() {
   const classes = useStyles();
   return (
     <React.Fragment>
-      <p>Recent Orders</p>
+      <p>Recent Transactions</p>
       <Table size="small">
         <TableHead>
           <TableRow>
