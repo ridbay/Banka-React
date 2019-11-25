@@ -38,7 +38,7 @@ export default function Header() {
                         <Link variant="button" color="inherit" href="/about" className={classes.link}>About Us </Link>
                         <Link variant="button" color="inherit" href="/contact" className={classes.link}>Contact Us</Link>
                     </nav>
-                    <Button href="/signin" color="inherit" variant="outlined" className={classes.link}>Login</Button>
+                    <Button href="/signin" color="inherit" variant="outlined" className={classes.link}>SignIn</Button>
                     <Button href="/signup" color="inherit" variant="outlined" className={classes.link}>SignUp</Button>
                 </Toolbar>
             </AppBar>

@@ -11,6 +11,8 @@ import Link from '@material-ui/core/Link';
 
 import Image from '../img/bg.jpg';
 
+import NavBar from '../components/NavBar'
+
 
 const useStyles = makeStyles(theme => ({
 
@@ -35,7 +37,7 @@ const Home = () => {
 
   return (
     <React.Fragment>
-
+      <NavBar />
         <div className={classes.heroContent}>
           <Container component="main">
             <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
@@ -56,7 +58,7 @@ const Home = () => {
                 </Grid>
                 <Grid item>
                   <Button variant="outlined" color="primary">
-                    <Link href="/signup" underline='none'>
+                    <Link color="inherit" href="/signup" underline='none'>
                       Sign Up
                   </Link>
                   </Button>

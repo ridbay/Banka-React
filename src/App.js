@@ -3,9 +3,9 @@ import './App.css';
 import Home from './pages/Home';
 import SignIn from './pages/SignIn';
 import SignUp from './pages/SignUp';
-import NavBar from './components/NavBar';
+
 import Footer from './components/Footer';
-import Dashboard from './pages/Dashboard';
+import Dashboard from './pages/dashboard/Dashboard';
 
 import {
   BrowserRouter as Router,
@@ -39,7 +39,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <div className='App'>
         <CssBaseline />
-        <NavBar />
+       
         <Router>
           <div className='container'>
             <Switch>

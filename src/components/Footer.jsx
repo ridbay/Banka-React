@@ -11,10 +11,10 @@ const Copyright = () => {
       <Link color="inherit" href="https://balogunridwan.com/">
         RidBank
       </Link>{' '}
-      {new Date().getFullYear()}
-      {'.'}
-    </Typography>
-  );
+            {new Date().getFullYear()}
+            {'.'}
+        </Typography>
+    );
 }
 
 const useStyles = makeStyles(theme => ({
@@ -26,8 +26,8 @@ const useStyles = makeStyles(theme => ({
     left: 0,
     bottom: 0,
     right: 0,
-    marginTop: theme.spacing(8),
-    padding: theme.spacing(1, 0),
+    marginTop: theme.spacing(2),
+    padding: theme.spacing(0, 0),
     // padding: theme.spacing(2),
     // marginTop: 'auto',
   },
