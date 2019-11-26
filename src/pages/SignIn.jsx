@@ -62,6 +62,7 @@ export default function SignIn() {
   };
 
   const handleRoleChange = event => {
+    
     setRole(event.target.value);
   }
 
@@ -70,7 +71,8 @@ export default function SignIn() {
     event.preventDefault();
     const obj = {
       email,
-      password
+      password,
+      role
     }
     console.log(obj);
     setEmail('');
@@ -126,11 +128,12 @@ export default function SignIn() {
                 name: 'role',
                 id: 'role',
               }}
+              required
             >
               <option value="" />
-              <option value={10}>Customer</option>
-              <option value={20}>Staff</option>
-              <option value={30}>Admin</option>
+              <option value={"customer"}>Customer</option>
+              <option value={"staff"}>Staff</option>
+              <option value={"admin"}>Admin</option>
             </Select>
             <FormHelperText>Required</FormHelperText>
           </FormControl>
@@ -147,7 +150,7 @@ export default function SignIn() {
 
           >
 
-            <Link href="/dashboard" variant="body2" color="inherit" underline='none'>
+            <Link variant="body2" color="inherit" underline='none'>
               Sign In
               </Link>
           </Button>
@@ -168,3 +171,5 @@ export default function SignIn() {
     </Container>
   );
 }
+
+// href="/dashboard" 
