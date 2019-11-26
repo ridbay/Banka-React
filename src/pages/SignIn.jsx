@@ -37,7 +37,7 @@ const useStyles = makeStyles(theme => ({
     marginTop: theme.spacing(1),
   },
   formControl: {
-    margin: theme.spacing(1),
+    margin: theme.spacing(2),
     minWidth: 120,
   },
   submit: {
@@ -127,7 +127,7 @@ export default function SignIn() {
                 name: 'role',
                 id: 'role',
               }}
-              required
+             
             >
               <option value="" />
               <option value={"customer"}>Customer</option>
