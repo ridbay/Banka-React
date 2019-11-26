@@ -11,6 +11,10 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
+import InputLabel from '@material-ui/core/InputLabel';
+import FormHelperText from '@material-ui/core/FormHelperText';
+import FormControl from '@material-ui/core/FormControl';
+import Select from '@material-ui/core/Select';
 
 
 const useStyles = makeStyles(theme => ({
@@ -99,6 +103,27 @@ export default function SignIn() {
             value={password}
             onChange={handlePasswordChange}
           />
+                <FormControl variant="outlined" className={classes.formControl}>
+        <InputLabel ref={inputLabel} htmlFor="outlined-age-native-simple">
+          Age
+        </InputLabel>
+        <Select
+          native
+          value={state.age}
+          onChange={handleChange('age')}
+          labelWidth={labelWidth}
+          inputProps={{
+            name: 'age',
+            id: 'outlined-age-native-simple',
+          }}
+        >
+          <option value="" />
+          <option value={10}>Tenk</option>
+          <option value={20}>Twenty</option>
+          <option value={30}>Thirty</option>
+        </Select>
+        <FormHelperText>Required</FormHelperText>
+      </FormControl>
           <FormControlLabel
             control={<Checkbox value="remember" color="primary" />}
             label="Remember me"
