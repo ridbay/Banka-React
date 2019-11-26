@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -37,6 +37,10 @@ const useStyles = makeStyles(theme => ({
     width: '100%', // Fix IE 11 issue.
     marginTop: theme.spacing(1),
   },
+  formControl: {
+    margin: theme.spacing(1),
+    minWidth: 120,
+  },
   submit: {
     margin: theme.spacing(3, 0, 2),
   },
@@ -46,21 +50,27 @@ export default function SignIn() {
   const classes = useStyles();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [role, setRole] = useState('')
 
 
   const handleEmailChange = event => {
     setEmail(event.target.value);
   };
   const handlePasswordChange = event => {
-   
+
     setPassword(event.target.value);
   };
 
+  const handleRoleChange = event => {
+    setRole(event.target.value);
+  }
+
+  const inputLabel = React.useRef(null);
   const handleSubmit = event => {
     event.preventDefault();
     const obj = {
-        email,
-        password
+      email,
+      password
     }
     console.log(obj);
     setEmail('');
@@ -103,27 +113,27 @@ export default function SignIn() {
             value={password}
             onChange={handlePasswordChange}
           />
-                <FormControl variant="outlined" className={classes.formControl}>
-        <InputLabel ref={inputLabel} htmlFor="outlined-age-native-simple">
-          Age
+          <FormControl variant="outlined" className={classes.formControl}>
+            <InputLabel ref={inputLabel} htmlFor="role">
+              Role
         </InputLabel>
-        <Select
-          native
-          value={state.age}
-          onChange={handleChange('age')}
-          labelWidth={labelWidth}
-          inputProps={{
-            name: 'age',
-            id: 'outlined-age-native-simple',
-          }}
-        >
-          <option value="" />
-          <option value={10}>Tenk</option>
-          <option value={20}>Twenty</option>
-          <option value={30}>Thirty</option>
-        </Select>
-        <FormHelperText>Required</FormHelperText>
-      </FormControl>
+            <Select
+              native
+              value={role}
+              onChange={handleRoleChange}
+              labelWidth={100}
+              inputProps={{
+                name: 'role',
+                id: 'role',
+              }}
+            >
+              <option value="" />
+              <option value={10}>Customer</option>
+              <option value={20}>Staff</option>
+              <option value={30}>Admin</option>
+            </Select>
+            <FormHelperText>Required</FormHelperText>
+          </FormControl>
           <FormControlLabel
             control={<Checkbox value="remember" color="primary" />}
             label="Remember me"
@@ -134,11 +144,11 @@ export default function SignIn() {
             variant="contained"
             color="primary"
             className={classes.submit}
-            
+
           >
-            
+
             <Link href="/dashboard" variant="body2" color="inherit" underline='none'>
-            Sign In 
+              Sign In
               </Link>
           </Button>
           <Grid container>
