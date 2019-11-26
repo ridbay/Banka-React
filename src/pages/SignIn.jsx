@@ -12,7 +12,6 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import InputLabel from '@material-ui/core/InputLabel';
-import FormHelperText from '@material-ui/core/FormHelperText';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 
@@ -123,7 +122,7 @@ export default function SignIn() {
               native
               value={role}
               onChange={handleRoleChange}
-              labelWidth={100}
+              labelWidth={0}
               inputProps={{
                 name: 'role',
                 id: 'role',
@@ -135,7 +134,7 @@ export default function SignIn() {
               <option value={"staff"}>Staff</option>
               <option value={"admin"}>Admin</option>
             </Select>
-            <FormHelperText>Required</FormHelperText>
+            
           </FormControl>
           <FormControlLabel
             control={<Checkbox value="remember" color="primary" />}
