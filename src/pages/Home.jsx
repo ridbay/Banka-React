@@ -11,7 +11,8 @@ import Link from '@material-ui/core/Link';
 
 import Image from '../img/bg.jpg';
 
-import NavBar from '../components/NavBar'
+import NavBar from '../components/NavBar';
+import Footer from '../components/Footer';
 
 
 const useStyles = makeStyles(theme => ({
@@ -68,7 +69,7 @@ const Home = () => {
           </Container>
         </div>
       
-
+<Footer/>
     </React.Fragment>
   );
 }

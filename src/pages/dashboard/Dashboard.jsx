@@ -19,7 +19,7 @@ import NotificationsIcon from '@material-ui/icons/Notifications';
 import { mainListItems, secondaryListItems } from './listItems';
 import Chart from './Chart';
 import Deposits from './Deposits';
-import Orders from './Orders';
+import Transactions from './Transactions';
 
 
 const drawerWidth = 240;
@@ -106,6 +106,7 @@ const useStyles = makeStyles(theme => ({
 export default function Dashboard() {
   const classes = useStyles();
   const [open, setOpen] = useState(true);
+
   const handleDrawerOpen = () => {
     setOpen(true);
   };
@@ -132,7 +133,7 @@ export default function Dashboard() {
             Dashboard
           </Typography>
           <IconButton color="inherit">
-            <Badge badgeContent={4} color="secondary">
+            <Badge badgeContent={30} color="secondary">
               <NotificationsIcon />
             </Badge>
           </IconButton>
@@ -171,10 +172,10 @@ export default function Dashboard() {
                 <Deposits />
               </Paper>
             </Grid>
-            {/* Recent Orders */}
+            {/* Recent Transactions */}
             <Grid item xs={12}>
               <Paper className={classes.paper}>
-                <Orders />
+                <Transactions />
               </Paper>
             </Grid>
           </Grid>
