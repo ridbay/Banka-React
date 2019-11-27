@@ -44,7 +44,7 @@ const useStyles = makeStyles(theme => ({
     margin: theme.spacing(3, 0, 2),
   },
   progress: {
-    
+
   }
 }));
 
@@ -159,7 +159,7 @@ export default function SignIn() {
               Sign In
               </Link>
               {loading && (
-                <CircularProgress className={classes.progress}/>
+                <CircularProgress size={30} className={classes.progress}/>
               )}
           </Button>
           <Grid container>
