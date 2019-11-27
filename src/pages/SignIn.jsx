@@ -159,7 +159,7 @@ export default function SignIn() {
               Sign In
               </Link>
               {loading && (
-                <CircularProgress size={30} className={classes.progress}/>
+                <CircularProgress size={30} value={100} className={classes.progress}/>
               )}
           </Button>
           <Grid container>
