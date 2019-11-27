@@ -14,7 +14,7 @@ import Container from '@material-ui/core/Container';
 import InputLabel from '@material-ui/core/InputLabel';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
-
+import clsx from 'clsx';
 
 const useStyles = makeStyles(theme => ({
   '@global': {
@@ -37,8 +37,8 @@ const useStyles = makeStyles(theme => ({
     marginTop: theme.spacing(1),
   },
   formControl: {
-    margin: theme.spacing(2),
-    minWidth: 120,
+    margin: theme.spacing(0),
+    minWidth: '100%',
   },
   submit: {
     margin: theme.spacing(3, 0, 2),
@@ -122,7 +122,7 @@ export default function SignIn() {
               native
               value={role}
               onChange={handleRoleChange}
-              labelWidth={0}
+              labelWidth={10}
               inputProps={{
                 name: 'role',
                 id: 'role',
