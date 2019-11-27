@@ -155,7 +155,7 @@ export default function SignIn() {
 
           >
 
-            <Link variant="body2" color="inherit" underline='none'>
+            <Link href="/dashboard" variant="body2" color="inherit" underline='none'>
               Sign In
               </Link>
               {loading && (
@@ -179,5 +179,4 @@ export default function SignIn() {
     </Container>
   );
 }
-
-// href="/dashboard" 
+ 
