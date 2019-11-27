@@ -61,7 +61,7 @@ export default function SignIn() {
   };
 
   const handleRoleChange = event => {
-    
+
     setRole(event.target.value);
   }
 
@@ -89,6 +89,7 @@ export default function SignIn() {
         </Typography>
         <form className={classes.form} noValidate onSubmit={handleSubmit}>
           <TextField
+            type='email'
             variant="outlined"
             margin="normal"
             required
@@ -127,14 +128,14 @@ export default function SignIn() {
                 name: 'role',
                 id: 'role',
               }}
-             
+
             >
-              
+
               <option value={"customer"}>Customer</option>
               <option value={"staff"}>Staff</option>
               <option value={"admin"}>Admin</option>
             </Select>
-            
+
           </FormControl>
           <FormControlLabel
             control={<Checkbox value="remember" color="primary" />}
