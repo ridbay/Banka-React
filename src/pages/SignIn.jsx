@@ -49,7 +49,7 @@ export default function SignIn() {
   const classes = useStyles();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [role, setRole] = useState('')
+  const [role, setRole] = useState('customer')
 
 
   const handleEmailChange = event => {
@@ -129,7 +129,7 @@ export default function SignIn() {
               }}
              
             >
-              <option value="" />
+              
               <option value={"customer"}>Customer</option>
               <option value={"staff"}>Staff</option>
               <option value={"admin"}>Admin</option>
