@@ -7,7 +7,7 @@ import SignUp from './pages/SignUp';
 import Dashboard from './pages/dashboard/Dashboard';
 
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Switch,
   Route,
 } from "react-router-dom";
