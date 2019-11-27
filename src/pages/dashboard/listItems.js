@@ -9,9 +9,17 @@ import PeopleIcon from '@material-ui/icons/People';
 import BarChartIcon from '@material-ui/icons/BarChart';
 import LayersIcon from '@material-ui/icons/Layers';
 import AssignmentIcon from '@material-ui/icons/Assignment';
+import HomeIcon from '@material-ui/icons/Home';
+import Link from '@material-ui/core/Link';
 
 export const mainListItems = (
   <div>
+    <ListItem button>
+      <ListItemIcon>
+      <Link color="inherit" href="/" underline='none'><HomeIcon /></Link> 
+      </ListItemIcon>
+      <ListItemText primary="Home" />
+    </ListItem>
     <ListItem button>
       <ListItemIcon>
         <DashboardIcon />
