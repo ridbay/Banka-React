@@ -14,7 +14,7 @@ import Container from '@material-ui/core/Container';
 import InputLabel from '@material-ui/core/InputLabel';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
-import clsx from 'clsx';
+import CircularProgress from '@material-ui/core/CircularProgress';
 
 const useStyles = makeStyles(theme => ({
   '@global': {
@@ -43,13 +43,17 @@ const useStyles = makeStyles(theme => ({
   submit: {
     margin: theme.spacing(3, 0, 2),
   },
+  progress: {
+
+  }
 }));
 
 export default function SignIn() {
   const classes = useStyles();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [role, setRole] = useState('customer')
+  const [role, setRole] = useState('customer');
+  const [loading, setLoading] = useState(false);
 
 
   const handleEmailChange = event => {
@@ -61,13 +65,14 @@ export default function SignIn() {
   };
 
   const handleRoleChange = event => {
-    
+
     setRole(event.target.value);
   }
 
   const inputLabel = React.useRef(null);
   const handleSubmit = event => {
     event.preventDefault();
+    setLoading(true);
     const obj = {
       email,
       password,
@@ -89,6 +94,7 @@ export default function SignIn() {
         </Typography>
         <form className={classes.form} noValidate onSubmit={handleSubmit}>
           <TextField
+            type='email'
             variant="outlined"
             margin="normal"
             required
@@ -127,14 +133,14 @@ export default function SignIn() {
                 name: 'role',
                 id: 'role',
               }}
-             
+
             >
-              
+
               <option value={"customer"}>Customer</option>
               <option value={"staff"}>Staff</option>
               <option value={"admin"}>Admin</option>
             </Select>
-            
+
           </FormControl>
           <FormControlLabel
             control={<Checkbox value="remember" color="primary" />}
@@ -152,6 +158,9 @@ export default function SignIn() {
             <Link variant="body2" color="inherit" underline='none'>
               Sign In
               </Link>
+              {loading && (
+                <CircularProgress size={30} value={100} className={classes.progress}/>
+              )}
           </Button>
           <Grid container>
             <Grid item xs>
