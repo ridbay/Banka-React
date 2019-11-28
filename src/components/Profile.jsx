@@ -28,11 +28,17 @@ export default function Profile() {
     return (
         <div className={classes.root}>
             <Paper className={classes.paper}>
-            <img src={image} alt="" height="50px" width="50px" />
-            <p>{firstName}, {lastName}</p>
-            <p>{accountNumber}</p>
-            <p>{accountType}</p>
-            <p>You're {customerType}</p>
+                <div className={classes.profile}>
+                    <div className={classes.profile-image}>
+                    <img src={image} alt="" height="50px" width="50px" />
+                    </div>
+                    <hr/>
+                    <Typography>{firstName}, {lastName}</Typography>
+                    <Typography>{accountNumber}</Typography>
+                    <Typography>{accountType}</Typography>
+                    <Typography>You're {customerType}</Typography>
+
+                </div>
             </Paper>
 
             
