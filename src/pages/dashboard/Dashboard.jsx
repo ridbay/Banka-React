@@ -16,10 +16,11 @@ import Paper from '@material-ui/core/Paper';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import NotificationsIcon from '@material-ui/icons/Notifications';
-import { mainListItems, secondaryListItems } from './listItems';
+import { mainListItems } from './listItems';
 import Chart from './Chart';
 import Deposits from './Deposits';
 import Transactions from './Transactions';
+import Profile from '../../components/Profile'
 
 
 const drawerWidth = 240;
@@ -152,9 +153,12 @@ export default function Dashboard() {
           </IconButton>
         </div>
         <Divider />
-        <List>{mainListItems}</List>
+        <List><Profile /></List>
+        
         <Divider />
-        <List>{secondaryListItems}</List>
+        <List>{mainListItems}</List>
+       
+        
       </Drawer>
       <main className={classes.content}>
         <div className={classes.appBarSpacer} />
