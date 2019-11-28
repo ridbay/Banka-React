@@ -1,9 +1,16 @@
+import image from '../img/ridbayy.jpg';
+
+
 export const user = {
-fistName: "Ridwan",
+firstName: "Ridwan",
 lastName: 'Balogun',
 phone: "08078197526",
 address: "Lagos, Nigeria",
 gender: 'male',
 email: 'balogunridwan@gmail.com',
-dob: '1989-04-21'
+dob: '1989-04-21',
+image,
+accountNumber: 3042901179,
+accountType: 'savings',
+customerType: 'customer'
 }
