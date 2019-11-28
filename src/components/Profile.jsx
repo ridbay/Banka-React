@@ -1,13 +1,13 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import { user } from '../../src/Data/userData';
 
 
 import { makeStyles } from '@material-ui/core/styles';
 
-import Button from '@material-ui/core/Button';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
+import Divider from '@material-ui/core/Divider';
 
 
 const useStyles = makeStyles(theme => ({
@@ -32,7 +32,7 @@ export default function Profile() {
                     <div className={classes.profile-image}>
                     <img src={image} alt="" height="50px" width="50px" />
                     </div>
-                    <hr/>
+                    <Divider />
                     <Typography>{firstName}, {lastName}</Typography>
                     <Typography>{accountNumber}</Typography>
                     <Typography>{accountType}</Typography>
