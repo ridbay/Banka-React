@@ -13,7 +13,8 @@ import {
 } from "react-router-dom";
 
 import CssBaseline from '@material-ui/core/CssBaseline';
-import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
+import createMuiTheme from '@material-ui/core/styles/createMuiTheme';
+import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
 
 
 const theme = createMuiTheme({
@@ -35,7 +36,7 @@ const theme = createMuiTheme({
 
 function App() {
   return (
-    <ThemeProvider theme={theme}>
+    <MuiThemeProvider theme={theme}>
       <div className='App'>
         <CssBaseline />
 
@@ -53,7 +54,7 @@ function App() {
 
       </div>
 
-    </ThemeProvider>
+    </MuiThemeProvider>
 
   );
 }
