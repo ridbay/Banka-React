@@ -19,12 +19,10 @@ import Menu from '@material-ui/core/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import AccountCircle from '@material-ui/icons/AccountCircle';
-import { mainListItems, secondaryListItems } from './listItems';
+import { mainListItems } from './listItems';
 import Chart from './Chart';
 import Deposits from './Deposits';
 import Transactions from './Transactions';
-import Profile from '../../components/Profile'
-
 
 const drawerWidth = 240;
 

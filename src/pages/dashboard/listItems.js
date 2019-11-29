@@ -17,12 +17,15 @@ import Profile from '../../components/Profile';
 
 export const mainListItems = (
   <div>
+    <Link color="inherit" href="/" underline='none'>
     <ListItem button>
       <ListItemIcon>
-      <Link color="inherit" href="/" underline='none'><HomeIcon /></Link> 
+      <HomeIcon />
       </ListItemIcon>
       <ListItemText primary="Home" />
+      
     </ListItem>
+    </Link> 
 
     <ListItem button>
       <ListItemIcon>
@@ -74,7 +77,7 @@ export const secondaryListItems = (
         <AssignmentIcon />
         <Profile/>
       </ListItemIcon>
-      <Profile/>
+      <ListItemText primary="Last quarter" />
     </ListItem>
 
 
