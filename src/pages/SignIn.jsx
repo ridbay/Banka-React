@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -180,13 +179,5 @@ const SignIn =()=> {
     </Container>
   );
 }
-
-
-SignIn.propTypes = {
-  classes: PropTypes.object.isRequired,
-  email: PropTypes.string.isRequired,
-  password: PropTypes.string.isRequired,
-  role: PropTypes.string.isRequired
-};
 
 export default SignIn;
