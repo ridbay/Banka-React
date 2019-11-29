@@ -11,21 +11,30 @@ import LayersIcon from '@material-ui/icons/Layers';
 import AssignmentIcon from '@material-ui/icons/Assignment';
 import HomeIcon from '@material-ui/icons/Home';
 import Link from '@material-ui/core/Link';
+import Profile from '../../components/Profile';
+
+
 
 export const mainListItems = (
   <div>
+    <Link color="inherit" href="/" underline='none'>
     <ListItem button>
       <ListItemIcon>
-      <Link color="inherit" href="/" underline='none'><HomeIcon /></Link> 
+      <HomeIcon />
       </ListItemIcon>
       <ListItemText primary="Home" />
+      
     </ListItem>
+    </Link> 
+
     <ListItem button>
       <ListItemIcon>
         <DashboardIcon />
       </ListItemIcon>
       <ListItemText primary="Dashboard" />
     </ListItem>
+
+    
     <ListItem button>
       <ListItemIcon>
         <MonetizationOnIcon />
@@ -62,12 +71,16 @@ export const secondaryListItems = (
       </ListItemIcon>
       <ListItemText primary="Current month" />
     </ListItem>
+
     <ListItem button>
       <ListItemIcon>
         <AssignmentIcon />
+        <Profile/>
       </ListItemIcon>
       <ListItemText primary="Last quarter" />
     </ListItem>
+
+
     <ListItem button>
       <ListItemIcon>
         <AssignmentIcon />

@@ -14,13 +14,15 @@ import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import MenuIcon from '@material-ui/icons/Menu';
+import MenuItem from '@material-ui/core/MenuItem';
+import Menu from '@material-ui/core/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import NotificationsIcon from '@material-ui/icons/Notifications';
-import { mainListItems, secondaryListItems } from './listItems';
+import AccountCircle from '@material-ui/icons/AccountCircle';
+import { mainListItems } from './listItems';
 import Chart from './Chart';
 import Deposits from './Deposits';
 import Transactions from './Transactions';
-
 
 const drawerWidth = 240;
 
@@ -106,6 +108,11 @@ const useStyles = makeStyles(theme => ({
 export default function Dashboard() {
   const classes = useStyles();
   const [open, setOpen] = useState(true);
+  const [anchorEl, setAnchorEl] = useState(null);
+
+
+  const isMenuOpen = Boolean(anchorEl);
+
 
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -113,6 +120,30 @@ export default function Dashboard() {
   const handleDrawerClose = () => {
     setOpen(false);
   };
+
+
+  const handleProfileMenuOpen = event => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleProfileMenuClose = () => {
+    setAnchorEl(null);
+  };
+
+  const renderMenu = (
+    <Menu
+      anchorEl={anchorEl}
+      anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
+      // id={menuId}
+      keepMounted
+      transformOrigin={{ vertical: 'top', horizontal: 'right' }}
+      open={isMenuOpen}
+      onClose={handleProfileMenuClose}
+    >
+      <MenuItem onClick={handleProfileMenuClose}>Profile</MenuItem>
+      <MenuItem onClick={handleProfileMenuClose}>My account</MenuItem>
+    </Menu>
+  );
+
   const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
 
   return (
@@ -137,8 +168,19 @@ export default function Dashboard() {
               <NotificationsIcon />
             </Badge>
           </IconButton>
+          <IconButton
+              edge="end"
+              aria-label="account of current user"
+              // aria-controls={menuId}
+              aria-haspopup="true"
+              onClick={handleProfileMenuOpen}
+              color="inherit"
+            >
+              <AccountCircle />
+            </IconButton>
         </Toolbar>
       </AppBar>
+      {renderMenu}
       <Drawer
         variant="permanent"
         classes={{
@@ -151,10 +193,11 @@ export default function Dashboard() {
             <ChevronLeftIcon />
           </IconButton>
         </div>
+        
         <Divider />
         <List>{mainListItems}</List>
-        <Divider />
-        <List>{secondaryListItems}</List>
+       
+        
       </Drawer>
       <main className={classes.content}>
         <div className={classes.appBarSpacer} />
