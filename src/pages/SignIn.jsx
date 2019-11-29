@@ -183,6 +183,7 @@ const SignIn =()=> {
 
 
 SignIn.propTypes = {
+  classes: PropTypes.object.isRequired,
   email: PropTypes.string
 };
 
