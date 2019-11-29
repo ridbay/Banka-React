@@ -34,7 +34,7 @@ const theme = createMuiTheme({
   }
 })
 
-const App =()=> {
+const App = () => {
   return (
     <MuiThemeProvider theme={theme}>
       <div className='App'>
