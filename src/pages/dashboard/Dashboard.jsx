@@ -195,12 +195,9 @@ export default function Dashboard() {
             <ChevronLeftIcon />
           </IconButton>
         </div>
-        <Divider />
-        <Profile />
         
         <Divider />
         <List>{mainListItems}</List>
-      <List>{secondaryListItems}</List>
        
         
       </Drawer>
