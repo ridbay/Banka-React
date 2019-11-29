@@ -16,7 +16,8 @@ import Paper from '@material-ui/core/Paper';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import NotificationsIcon from '@material-ui/icons/Notifications';
-import { mainListItems } from './listItems';
+import AccountCircle from '@material-ui/icons/AccountCircle';
+import { mainListItems, secondaryListItems } from './listItems';
 import Chart from './Chart';
 import Deposits from './Deposits';
 import Transactions from './Transactions';
@@ -138,6 +139,16 @@ export default function Dashboard() {
               <NotificationsIcon />
             </Badge>
           </IconButton>
+          <IconButton
+              edge="end"
+              aria-label="account of current user"
+              // aria-controls={menuId}
+              aria-haspopup="true"
+              // onClick={handleProfileMenuOpen}
+              color="inherit"
+            >
+              <AccountCircle />
+            </IconButton>
         </Toolbar>
       </AppBar>
       <Drawer
@@ -153,10 +164,11 @@ export default function Dashboard() {
           </IconButton>
         </div>
         <Divider />
-        <List><Profile /></List>
+        <Profile />
         
         <Divider />
         <List>{mainListItems}</List>
+      <List>{secondaryListItems}</List>
        
         
       </Drawer>
