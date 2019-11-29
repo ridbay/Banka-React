@@ -38,11 +38,11 @@ function App() {
     <ThemeProvider theme={theme}>
       <div className='App'>
         <CssBaseline />
-       
+
         <Router>
           <div className='container'>
             <Switch>
-            <Route exact path="/" component={Home} />
+              <Route exact path="/" component={Home} />
               <Route exact path="/signin" component={SignIn} />
               <Route exact path="/signup" component={SignUp} />
               <Route exact path="/dashboard" component={Dashboard} />
