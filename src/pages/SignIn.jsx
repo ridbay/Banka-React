@@ -184,7 +184,9 @@ const SignIn =()=> {
 
 SignIn.propTypes = {
   classes: PropTypes.object.isRequired,
-  email: PropTypes.string
+  email: PropTypes.string.isRequired,
+  password: PropTypes.string.isRequired,
+  role: PropTypes.string.isRequired
 };
 
 export default SignIn;
