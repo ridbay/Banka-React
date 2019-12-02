@@ -6,6 +6,7 @@ import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
+import Button from '@material-ui/core/Button';
 import Title from './Title';
 
 // Generate Order Data
@@ -53,7 +54,8 @@ export default function Transactions() {
               <TableCell>{row.name}</TableCell>
               <TableCell>{row.shipTo}</TableCell>
               <TableCell>{row.paymentMethod}</TableCell>
-              <TableCell align="right">{row.amount}</TableCell>
+              <TableCell>{row.amount}</TableCell>
+              <TableCell align="right"><Button color="primary" variant="outlined">View</Button></TableCell>
             </TableRow>
           ))}
         </TableBody>
