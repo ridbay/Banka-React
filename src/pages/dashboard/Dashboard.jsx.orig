@@ -19,7 +19,6 @@ import Menu from '@material-ui/core/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import AccountCircle from '@material-ui/icons/AccountCircle';
-import Link from '@material-ui/core/Link';
 import { mainListItems } from './listItems';
 import Chart from './Chart';
 import Deposits from './Deposits';
@@ -116,6 +115,10 @@ const Dashboard = () => {
 
 
   const isMenuOpen = Boolean(anchorEl);
+<<<<<<< HEAD
+=======
+
+>>>>>>> 3c8c2194328e67d7655628f1c5486f71c624f955
 
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -125,8 +128,13 @@ const Dashboard = () => {
     setOpen(false);
   };
 
+<<<<<<< HEAD
   const handleProfileMenuOpen = event => {
     console.log(event.currentTarget)
+=======
+
+  const handleProfileMenuOpen = event => {
+>>>>>>> 3c8c2194328e67d7655628f1c5486f71c624f955
     setAnchorEl(event.currentTarget);
   };
   const handleProfileMenuClose = () => {
@@ -137,7 +145,7 @@ const Dashboard = () => {
     <Menu
       anchorEl={anchorEl}
       anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
-      id="profile-menu"
+      // id={menuId}
       keepMounted
       transformOrigin={{ vertical: 'top', horizontal: 'right' }}
       open={isMenuOpen}
@@ -145,7 +153,6 @@ const Dashboard = () => {
     >
       <MenuItem onClick={handleProfileMenuClose}>Profile</MenuItem>
       <MenuItem onClick={handleProfileMenuClose}>My account</MenuItem>
-      <MenuItem> <Link color="inherit" href="/" underline='none'>SignOut</Link></MenuItem>
     </Menu>
   );
 
@@ -174,6 +181,7 @@ const Dashboard = () => {
             </Badge>
           </IconButton>
           <IconButton
+<<<<<<< HEAD
             edge="end"
             aria-label="account of current user"
             // aria-controls={menuId}
@@ -183,6 +191,17 @@ const Dashboard = () => {
           >
             <AccountCircle />
           </IconButton>
+=======
+              edge="end"
+              aria-label="account of current user"
+              // aria-controls={menuId}
+              aria-haspopup="true"
+              onClick={handleProfileMenuOpen}
+              color="inherit"
+            >
+              <AccountCircle />
+            </IconButton>
+>>>>>>> 3c8c2194328e67d7655628f1c5486f71c624f955
         </Toolbar>
       </AppBar>
       {renderMenu}
@@ -198,6 +217,7 @@ const Dashboard = () => {
             <ChevronLeftIcon />
           </IconButton>
         </div>
+<<<<<<< HEAD
 
         <Divider />
         <List>{mainListItems}</List>
@@ -205,6 +225,13 @@ const Dashboard = () => {
         <List>{mainListItems}</List>
 
 
+=======
+        
+        <Divider />
+        <List>{mainListItems}</List>
+       
+        
+>>>>>>> 3c8c2194328e67d7655628f1c5486f71c624f955
       </Drawer>
       <main className={classes.content}>
         <div className={classes.appBarSpacer} />

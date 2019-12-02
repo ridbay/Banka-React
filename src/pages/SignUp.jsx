@@ -36,7 +36,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function SignUp() {
+const SignUp =() => {
   const classes = useStyles();
 
   return (
@@ -97,12 +97,6 @@ export default function SignUp() {
                 autoComplete="current-password"
               />
             </Grid>
-            {/* <Grid item xs={12}>
-              <FormControlLabel
-                control={<Checkbox value="allowExtraEmails" color="primary" />}
-                label="I want to receive inspiration, marketing promotions and updates via email."
-              />
-            </Grid> */}
           </Grid>
           <Button
             type="submit"
@@ -126,3 +120,5 @@ export default function SignUp() {
     </Container>
   );
 }
+
+export default SignUp;

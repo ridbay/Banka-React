@@ -13,7 +13,8 @@ import {
 } from "react-router-dom";
 
 import CssBaseline from '@material-ui/core/CssBaseline';
-import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
+import createMuiTheme from '@material-ui/core/styles/createMuiTheme';
+import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
 
 
 const theme = createMuiTheme({
@@ -33,16 +34,16 @@ const theme = createMuiTheme({
   }
 })
 
-function App() {
+const App = () => {
   return (
-    <ThemeProvider theme={theme}>
+    <MuiThemeProvider theme={theme}>
       <div className='App'>
         <CssBaseline />
-       
+
         <Router>
           <div className='container'>
             <Switch>
-            <Route exact path="/" component={Home} />
+              <Route exact path="/" component={Home} />
               <Route exact path="/signin" component={SignIn} />
               <Route exact path="/signup" component={SignUp} />
               <Route exact path="/dashboard" component={Dashboard} />
@@ -53,7 +54,7 @@ function App() {
 
       </div>
 
-    </ThemeProvider>
+    </MuiThemeProvider>
 
   );
 }

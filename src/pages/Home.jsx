@@ -8,12 +8,10 @@ import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Link from '@material-ui/core/Link';
 
-
 import Image from '../img/bg.jpg';
 
 import NavBar from '../components/NavBar';
 import Footer from '../components/Footer';
-
 
 const useStyles = makeStyles(theme => ({
 
