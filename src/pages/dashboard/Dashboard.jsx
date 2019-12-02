@@ -19,7 +19,7 @@ import Menu from '@material-ui/core/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import AccountCircle from '@material-ui/icons/AccountCircle';
-import Link from '@material-ui/core/Link';
+import ProfileMenu from '../../components/ProfileMenu'
 import { mainListItems } from './listItems';
 import Chart from './Chart';
 import Deposits from './Deposits';
@@ -133,22 +133,7 @@ const Dashboard = () => {
     setAnchorEl(null);
   };
 
-  const renderMenu = (
-    <Menu
-      anchorEl={anchorEl}
-      anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
-      id="profile-menu"
-      keepMounted
-      transformOrigin={{ vertical: 'top', horizontal: 'right' }}
-      open={isMenuOpen}
-      onClose={handleProfileMenuClose}
-    >
-      <MenuItem onClick={handleProfileMenuClose}>Profile</MenuItem>
-      <MenuItem onClick={handleProfileMenuClose}>My account</MenuItem>
-      <MenuItem> <Link color="inherit" href="/" underline='none'>SignOut</Link></MenuItem>
-    </Menu>
-  );
-
+  
   const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
 
   return (
@@ -185,7 +170,7 @@ const Dashboard = () => {
           </IconButton>
         </Toolbar>
       </AppBar>
-      {renderMenu}
+      <ProfileMenu isMenuOpen={isMenuOpen} handleProfileMenuClose={handleProfileMenuClose} anchorEl={anchorEl} />
       <Drawer
         variant="permanent"
         classes={{
