@@ -8,7 +8,7 @@ import Link from '@material-ui/core/Link';
 
 
 const ProfileMenu = (props) => {
-    const {anchorEl, handleProfileMenuClose, isMenuOpen} = this.props
+    const {anchorEl, handleProfileMenuClose, isMenuOpen} = props;
     return (
         <Menu
             anchorEl={anchorEl}
