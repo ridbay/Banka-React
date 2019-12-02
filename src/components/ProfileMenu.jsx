@@ -1,6 +1,5 @@
-import React, { useState } from 'react'
+import React from 'react'
 
-import MenuIcon from '@material-ui/icons/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
 import Link from '@material-ui/core/Link';
