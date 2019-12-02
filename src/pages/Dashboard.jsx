@@ -15,7 +15,7 @@ import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import ProfileMenu from '../components/ProfileMenu';
-import DashboardMain from '../components/client/DashboadMain';
+import Overview from '../components/client/Overview';
 import CreateAccountButton from '../components/client/CreateAccountButton';
 import Title from '../components/Title'
 import { mainListItems } from '../components/client/listItems';
@@ -169,7 +169,7 @@ const Dashboard = () => {
         <List><CreateAccountButton/></List>
       </Drawer>
       
-      <DashboardMain />
+      <Overview />
     </div>
   );
 }
