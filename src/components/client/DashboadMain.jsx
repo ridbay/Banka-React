@@ -5,9 +5,9 @@ import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 
-import Chart from '../../src/pages/dashboard/Chart';
-import Deposits from '../../src/pages/dashboard/Deposits';
-import Transactions from '../../src/pages/dashboard/Transactions';
+import Chart from './Chart';
+import Deposits from './Deposits';
+import Transactions from './Transactions';
 
 
 

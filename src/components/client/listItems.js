@@ -11,7 +11,7 @@ import LayersIcon from '@material-ui/icons/Layers';
 import AssignmentIcon from '@material-ui/icons/Assignment';
 import HomeIcon from '@material-ui/icons/Home';
 import Link from '@material-ui/core/Link';
-import Profile from '../../components/Profile';
+import Profile from '../Profile';
 
 
 

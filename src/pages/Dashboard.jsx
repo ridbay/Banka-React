@@ -14,10 +14,10 @@ import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import AccountCircle from '@material-ui/icons/AccountCircle';
-import ProfileMenu from '../../components/ProfileMenu';
-import DashboardMain from '../../components/DashboadMain';
-import CreateAccountButton from '../../components/CreateAccountButton';
-import { mainListItems } from './listItems';
+import ProfileMenu from '../components/ProfileMenu';
+import DashboardMain from '../components/client/DashboadMain';
+import CreateAccountButton from '../components/client/CreateAccountButton';
+import { mainListItems } from '../components/client/listItems';
 
 
 const drawerWidth = 240;
