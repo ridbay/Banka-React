@@ -17,6 +17,7 @@ import AccountCircle from '@material-ui/icons/AccountCircle';
 import ProfileMenu from '../components/ProfileMenu';
 import DashboardMain from '../components/client/DashboadMain';
 import CreateAccountButton from '../components/client/CreateAccountButton';
+import Title from '../components/Title'
 import { mainListItems } from '../components/client/listItems';
 
 
@@ -127,9 +128,10 @@ const Dashboard = () => {
           >
             <MenuIcon />
           </IconButton>
-          <Typography component="h1" variant="h6" color="inherit" noWrap className={classes.title}>
+          {/* <Typography component="h1" variant="h6" color="inherit" noWrap className={classes.title}>
             Dashboard
-          </Typography>
+          </Typography> */}
+          <Title>Dashboard</Title>
           <IconButton color="inherit">
             <Badge badgeContent={30} color="secondary">
               <NotificationsIcon />
