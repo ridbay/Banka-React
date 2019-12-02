@@ -116,15 +116,16 @@ const Dashboard = () => {
 
   const isMenuOpen = Boolean(anchorEl);
 
-
   const handleDrawerOpen = () => {
     setOpen(true);
   };
+
   const handleDrawerClose = () => {
     setOpen(false);
   };
 
   const handleProfileMenuOpen = event => {
+    console.log(event.currentTarget)
     setAnchorEl(event.currentTarget);
   };
   const handleProfileMenuClose = () => {
@@ -196,6 +197,8 @@ const Dashboard = () => {
           </IconButton>
         </div>
 
+        <Divider />
+        <List>{mainListItems}</List>
         <Divider />
         <List>{mainListItems}</List>
 
