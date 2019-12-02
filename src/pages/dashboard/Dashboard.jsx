@@ -16,6 +16,7 @@ import NotificationsIcon from '@material-ui/icons/Notifications';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import ProfileMenu from '../../components/ProfileMenu';
 import DashboardMain from '../../components/DashboadMain';
+import CreateAccountButton from '../../components/CreateAccountButton';
 import { mainListItems } from './listItems';
 
 
@@ -163,7 +164,7 @@ const Dashboard = () => {
         <Divider />
         <List>{mainListItems}</List>
         <Divider />
-        <List>{mainListItems}</List>
+        <List><CreateAccountButton/></List>
 
 
       </Drawer>
