@@ -165,8 +165,6 @@ const Dashboard = () => {
         <List>{mainListItems}</List>
         <Divider />
         <List><CreateAccountButton/></List>
-
-
       </Drawer>
       
       <DashboardMain />

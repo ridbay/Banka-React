@@ -57,7 +57,7 @@ export default function Transactions() {
       </Table>
       <div className={classes.seeMore}>
         <Link color="primary" href="javascript:;">
-          See more orders
+          See more transactions
         </Link>
       </div>
     </React.Fragment>
