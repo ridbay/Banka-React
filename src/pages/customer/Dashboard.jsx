@@ -16,7 +16,7 @@ import AccountCircle from '@material-ui/icons/AccountCircle';
 import ProfileMenu from '../../components/ProfileMenu';
 import Overview from '../../components/customer/Overview';
 import CreateAccountButton from '../../components/customer/CreateAccountButton';
-import Title from '../../components/Title'
+import Title from '../../components/customer/Title'
 import { mainListItems } from '../../components/customer/listItems';
 
 
