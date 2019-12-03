@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { user } from '../../src/Data/userData';
+import { CUSTOMER_DATA } from '../../src/Data/userData';
 
 
 import { makeStyles } from '@material-ui/core/styles';
@@ -22,7 +22,7 @@ const useStyles = makeStyles(theme => ({
 export default function Profile() {
     const classes = useStyles();
 
-    const { firstName, lastName, image, accountNumber, accountType, customerType } = user;
+    const { firstName, lastName, image, accountNumber, accountType, customerType } = CUSTOMER_DATA;
 
 
     return (
