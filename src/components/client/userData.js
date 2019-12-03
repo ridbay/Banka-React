@@ -2,7 +2,6 @@ export const USER_DATA = [
   {
     id: 1,
     role: 'customer',
-    routeName: 'customer',
     fname: 'Ridwan',
     lname: 'Balogun',
     phone: "08078197526",
@@ -56,18 +55,17 @@ export const USER_DATA = [
     ]
   },
   {
-    id: 1,
+    id: 2,
     role: 'customer',
-    routeName: 'customer',
-    fname: 'Ridwan',
-    lname: 'Balogun',
-    phone: "08078197526",
-    address: "Lagos, Nigeria",
+    fname: 'Kamar',
+    lname: 'Olayanju',
+    phone: "07063818194",
+    address: "Iseyin, Oyo, Nigeria",
     gender: 'male',
-    email: 'balogunridwan@gmail.com',
-    dob: '1989-04-21',
-    accountNumber: 3042901179,
-    balance: 34030.90,
+    email: 'olakams@gmail.com',
+    dob: '1956-11-25',
+    accountNumber: 5623894782,
+    balance: 1000890.90,
     imageUrl: 'https://i.ibb.co/ZYW3VTp/brown-brim.png',
 
 
