@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { CUSTOMER_DATA } from '../../src/Data/userData';
+import { CUSTOMER_DATA } from '../../Data/userData';
 
 
 import { makeStyles } from '@material-ui/core/styles';

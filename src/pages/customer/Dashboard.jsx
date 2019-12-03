@@ -16,7 +16,8 @@ import AccountCircle from '@material-ui/icons/AccountCircle';
 import ProfileMenu from '../../components/ProfileMenu';
 import Overview from '../../components/customer/Overview';
 import CreateAccountButton from '../../components/customer/CreateAccountButton';
-import Title from '../../components/customer/Title'
+import Title from '../../components/customer/Title';
+import Profile from '../../components/customer/Profile'
 import { mainListItems } from '../../components/customer/listItems';
 
 
@@ -169,6 +170,7 @@ const Dashboard = () => {
       </Drawer>
       
       <Overview />
+      <Profile/>
     </div>
   );
 }
