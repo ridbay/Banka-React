@@ -1,4 +1,4 @@
-const USER_DATA = [
+export const USER_DATA = [
   {
     id: 1,
     role: 'customer',
@@ -114,5 +114,5 @@ const USER_DATA = [
   
 ];
 
-export default USER_DATA;
+
 
