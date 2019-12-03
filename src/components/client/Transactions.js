@@ -54,8 +54,7 @@ export default function Transactions() {
               <TableCell>{row.name}</TableCell>
               <TableCell>{row.shipTo}</TableCell>
               <TableCell>{row.paymentMethod}</TableCell>
-              <TableCell>{row.amount}</TableCell>
-              <TableCell align="right"><Button color="primary" variant="outlined">View</Button></TableCell>
+              <TableCell align="right">{row.amount}</TableCell>
             </TableRow>
           ))}
         </TableBody>
