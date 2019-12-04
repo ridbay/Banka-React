@@ -128,9 +128,6 @@ const Dashboard = () => {
           >
             <MenuIcon />
           </IconButton>
-          {/* <Typography component="h1" variant="h6" color="inherit" noWrap className={classes.title}>
-            Dashboard
-          </Typography> */}
           <Title>Dashboard</Title>
           <IconButton color="inherit">
             <Badge badgeContent={30} color="secondary">
