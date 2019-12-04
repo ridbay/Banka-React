@@ -8,7 +8,7 @@ import SignUp from './pages/SignUp';
 import CustomerDashboard from './pages/customer/CustomerDashboad';
 
 import {
-  BrowserRouter as Router,
+  Router,
   Switch,
   Route,
 } from "react-router-dom";
