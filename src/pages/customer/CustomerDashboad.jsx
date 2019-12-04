@@ -25,7 +25,7 @@ import routes from "../../routes";
 const switchRoutes = (
   <Switch>
     {routes.map((prop, key) => {
-      if (prop.layout === "/admin") {
+      if (prop.layout === "/customer") {
         return (
           <Route
             path={prop.layout + prop.path}
@@ -36,7 +36,7 @@ const switchRoutes = (
       }
       return null;
     })}
-    <Redirect from="/admin" to="/admin/dashboard" />
+    <Redirect from="/customer" to="/customer/dashboard" />
   </Switch>
 );
 const drawerWidth = 240;
