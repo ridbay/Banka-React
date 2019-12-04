@@ -34,13 +34,15 @@ const theme = createMuiTheme({
   }
 })
 
+
+const hist = createBrowserHistory();
 const App = () => {
   return (
     <MuiThemeProvider theme={theme}>
       <div className='App'>
         <CssBaseline />
 
-        <Router>
+        <Router history={hist}>
           <div className='container'>
             <Switch>
               <Route exact path="/" component={Home} />

@@ -8,7 +8,7 @@ import MonetizationOnIcon from '@material-ui/icons/MonetizationOn';
 // core components/views for Admin layout
 
 
-import DashboardPage from "../src/pages/customer/Dashboard";
+import Overview from "../src/components/customer/Overview";
 import Transactions from "../src/pages/customer/Transactions";
 import UserProfile from "../src/pages/customer/Profile";
 
@@ -17,7 +17,7 @@ const dashboardRoutes = [
     path: "/dashboard",
     name: "Dashboard",
     icon: Dashboard,
-    component: DashboardPage,
+    component: Overview,
     layout: "/admin"
   },
   {
