@@ -9,8 +9,8 @@ import MonetizationOnIcon from '@material-ui/icons/MonetizationOn';
 
 
 import Dashboard from "./components/customer/Dashboard";
-import Transactions from "../src/pages/customer/Transactions";
-import UserProfile from "../src/pages/customer/Profile";
+import Transactions from "./components/customer/Transactions";
+import UserProfile from "./components/customer/Profile";
 
 const dashboardRoutes = [
   {
