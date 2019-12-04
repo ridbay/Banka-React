@@ -5,7 +5,7 @@ import Home from './pages/Home';
 import SignIn from './pages/SignIn';
 import SignUp from './pages/SignUp';
 
-import Dashboard from './pages/customer/Dashboard';
+import CustomerDashboard from './pages/customer/CustomerDashboad';
 
 import {
   BrowserRouter as Router,
@@ -49,7 +49,7 @@ const App = () => {
               <Route exact path="/" component={Home} />
               <Route exact path="/signin" component={SignIn} />
               <Route exact path="/signup" component={SignUp} />
-              <Route exact path="/customer" component={Dashboard} />
+              <Route exact path="/customer" component={CustomerDashboard} />
 
             </Switch>
           </div>
