@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import { createBrowserHistory } from "history";
 import Home from './pages/Home';
 import SignIn from './pages/SignIn';
 import SignUp from './pages/SignUp';
