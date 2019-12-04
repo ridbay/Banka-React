@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Switch, Route, Redirect } from "react-router-dom";
 import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -14,13 +15,30 @@ import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import ProfileMenu from '../../components/ProfileMenu';
-import Overview from '../../components/customer/Overview';
+// import Overview from '../../components/customer/Overview';
 import CreateAccountButton from '../../components/customer/CreateAccountButton';
 import Title from '../../components/customer/Title';
 import Profile from '../../components/customer/Profile'
 import { mainListItems } from '../../components/customer/listItems';
+import routes from "../../routes";
 
-
+const switchRoutes = (
+  <Switch>
+    {routes.map((prop, key) => {
+      if (prop.layout === "/admin") {
+        return (
+          <Route
+            path={prop.layout + prop.path}
+            component={prop.component}
+            key={key}
+          />
+        );
+      }
+      return null;
+    })}
+    <Redirect from="/admin" to="/admin/dashboard" />
+  </Switch>
+);
 const drawerWidth = 240;
 
 const useStyles = makeStyles(theme => ({
@@ -166,7 +184,8 @@ const Dashboard = () => {
         <List><CreateAccountButton/></List>
       </Drawer>
       
-      <Overview />
+      {/* <Overview /> */}
+      <div>{switchRoutes}</div>
       <Profile/>
     </div>
   );
