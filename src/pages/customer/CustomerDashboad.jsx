@@ -186,7 +186,7 @@ const Dashboard = () => {
       
       {/* <Overview /> */}
       <div>{switchRoutes}</div>
-      <Profile/>
+      {/* <Profile/> */}
     </div>
   );
 }
