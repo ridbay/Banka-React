@@ -18,21 +18,21 @@ const dashboardRoutes = [
     name: "Dashboard",
     icon: Dashboard,
     component: Overview,
-    layout: "/admin"
+    layout: "/customer"
   },
   {
     path: "/user",
     name: "Profile",
     icon: Person,
     component: UserProfile,
-    layout: "/admin"
+    layout: "/customer"
   },
   {
     path: "/table",
     name: "Transactions",
     icon: MonetizationOnIcon,
     component: Transactions,
-    layout: "/admin"
+    layout: "/customer"
   },
   
   
