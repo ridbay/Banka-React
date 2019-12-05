@@ -21,20 +21,21 @@ const dashboardRoutes = [
     layout: "/customer"
   },
   {
-    path: "/user",
-    name: "Profile",
-    icon: Person,
-    component: UserProfile,
-    layout: "/customer"
-  },
-  {
-    path: "/table",
+    path: "/transactions",
     name: "Transactions",
     icon: MonetizationOnIcon,
     component: Transactions,
     layout: "/customer"
   },
   
+  {
+    path: "/user",
+    name: "Profile",
+    icon: Person,
+    component: UserProfile,
+    layout: "/customer"
+  },
+ 
   
 ];
 
