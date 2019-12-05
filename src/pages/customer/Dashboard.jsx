@@ -4,6 +4,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Drawer from '@material-ui/core/Drawer';
 import AppBar from '@material-ui/core/AppBar';
+import Typography from '@material-ui/core/Typography';
 import Toolbar from '@material-ui/core/Toolbar';
 import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
@@ -131,7 +132,7 @@ const Dashboard = () => {
           {/* <Typography component="h1" variant="h6" color="inherit" noWrap className={classes.title}>
             Dashboard
           </Typography> */}
-          <Title>Dashboard</Title>
+          <Title className={classes.title}>Dashboard</Title>
           <IconButton color="inherit">
             <Badge badgeContent={30} color="secondary">
               <NotificationsIcon />
