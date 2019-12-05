@@ -16,7 +16,7 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import createMuiTheme from '@material-ui/core/styles/createMuiTheme';
 import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
 
-
+// declare the theme
 const theme = createMuiTheme({
   palette: {
     primary: {
