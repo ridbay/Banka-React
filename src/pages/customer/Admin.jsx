@@ -18,7 +18,7 @@ import ProfileMenu from '../../components/ProfileMenu';
 // import Overview from '../../components/customer/Overview';
 import CreateAccountButton from '../../components/customer/CreateAccountButton';
 import Title from '../../components/customer/Title';
-import Profile from '../../components/customer/Profile'
+// import Profile from '../../components/customer/Profile'
 import { mainListItems } from '../../components/customer/listItems';
 import routes from "../../routes";
 
@@ -26,6 +26,7 @@ const switchRoutes = (
   <Switch>
     {routes.map((prop, key) => {
       if (prop.layout === "/customer") {
+        console.log(prop.layout + prop.path)
         return (
           <Route
             path={prop.layout + prop.path}
@@ -105,7 +106,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 
-const Dashboard = () => {
+const Admin = () => {
   const classes = useStyles();
 
   const [open, setOpen] = useState(true);
@@ -191,4 +192,4 @@ const Dashboard = () => {
   );
 }
 
-export default Dashboard;
+export default Admin;
