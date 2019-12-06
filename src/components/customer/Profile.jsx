@@ -37,6 +37,7 @@ export default function Profile() {
                     <Typography>{accountNumber}</Typography>
                     <Typography>{accountType}</Typography>
                     <Typography>You're {customerType}</Typography>
+                    <Typography>This is profile viewwwwww</Typography>
 
                 </div>
             </Paper>
