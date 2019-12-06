@@ -33,7 +33,7 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-const DashboadMain = () => {
+const Overview = () => {
     const classes = useStyles();
 
     const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
@@ -68,4 +68,4 @@ const DashboadMain = () => {
     )
 }
 
-export default DashboadMain;
+export default Overview;

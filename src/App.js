@@ -5,6 +5,7 @@ import SignIn from './pages/SignIn';
 import SignUp from './pages/SignUp';
 
 import Dashboard from './pages/customer/Dashboard';
+import Profile from './pages/customer/Profile';
 
 import {
   BrowserRouter as Router,
@@ -46,8 +47,8 @@ const App = () => {
               <Route exact path="/" component={Home} />
               <Route exact path="/signin" component={SignIn} />
               <Route exact path="/signup" component={SignUp} />
-              <Route exact path="/dashboard" component={Dashboard} />
-
+              <Route path="/dashboard" component={Dashboard} />
+              <Route path="/profile" component={Profile} />
             </Switch>
           </div>
         </Router>
@@ -59,4 +60,5 @@ const App = () => {
   );
 }
 
+//Export the app
 export default App;

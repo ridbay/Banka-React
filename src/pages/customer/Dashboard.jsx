@@ -4,6 +4,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Drawer from '@material-ui/core/Drawer';
 import AppBar from '@material-ui/core/AppBar';
+import Typography from '@material-ui/core/Typography';
 import Toolbar from '@material-ui/core/Toolbar';
 import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
@@ -13,12 +14,15 @@ import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import AccountCircle from '@material-ui/icons/AccountCircle';
+
+
 import ProfileMenu from '../../components/ProfileMenu';
 import Overview from '../../components/customer/Overview';
 import CreateAccountButton from '../../components/customer/CreateAccountButton';
 import Title from '../../components/customer/Title';
 import Profile from '../../components/customer/Profile'
 import { mainListItems } from '../../components/customer/listItems';
+import AdminNavbar from '../../components/AdminNavbar'
 
 
 const drawerWidth = 240;
@@ -117,38 +121,7 @@ const Dashboard = () => {
   return (
     <div className={classes.root}>
       <CssBaseline />
-      <AppBar position="absolute" className={clsx(classes.appBar, open && classes.appBarShift)}>
-        <Toolbar className={classes.toolbar}>
-          <IconButton
-            edge="start"
-            color="inherit"
-            aria-label="open drawer"
-            onClick={handleDrawerOpen}
-            className={clsx(classes.menuButton, open && classes.menuButtonHidden)}
-          >
-            <MenuIcon />
-          </IconButton>
-          {/* <Typography component="h1" variant="h6" color="inherit" noWrap className={classes.title}>
-            Dashboard
-          </Typography> */}
-          <Title>Dashboard</Title>
-          <IconButton color="inherit">
-            <Badge badgeContent={30} color="secondary">
-              <NotificationsIcon />
-            </Badge>
-          </IconButton>
-          <IconButton
-            edge="end"
-            aria-label="account of current user"
-            // aria-controls={menuId}
-            aria-haspopup="true"
-            onClick={handleProfileMenuOpen}
-            color="inherit"
-          >
-            <AccountCircle />
-          </IconButton>
-        </Toolbar>
-      </AppBar>
+      <AdminNavbar handleDrawerOpen={handleDrawerOpen} handleProfileMenuOpen={handleProfileMenuOpen} open={open}/>
       <ProfileMenu isMenuOpen={isMenuOpen} handleProfileMenuClose={handleProfileMenuClose} anchorEl={anchorEl} />
       <Drawer
         variant="permanent"

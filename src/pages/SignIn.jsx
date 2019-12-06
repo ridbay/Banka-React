@@ -15,6 +15,7 @@ import InputLabel from '@material-ui/core/InputLabel';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import CircularProgress from '@material-ui/core/CircularProgress';
+import { green, purple } from '@material-ui/core/colors';
 
 const useStyles = makeStyles(theme => ({
   '@global': {
@@ -44,7 +45,14 @@ const useStyles = makeStyles(theme => ({
     margin: theme.spacing(3, 0, 2),
   },
   progress: {
-
+  },
+  googleButton : {
+    color: theme.palette.getContrastText(green[500]),
+    backgroundColor: green[500],
+    '&:hover': {
+      backgroundColor: purple[700],
+    },
+    margin: theme.spacing(0, 0, 2),
   }
 }));
 
@@ -161,6 +169,19 @@ const SignIn =()=> {
               {loading && (
                 <CircularProgress size={30} value={100} className={classes.progress}/>
               )}
+          </Button>
+          <Button
+            type="submit"
+            fullWidth
+            variant="contained"
+            color="secondary"
+            className={classes.googleButton}
+
+          >
+
+            <Link href="/dashboard" variant="body2" color="inherit" underline='none'>
+              Sign In with Google
+              </Link>
           </Button>
           <Grid container>
             <Grid item xs>
