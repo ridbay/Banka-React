@@ -18,36 +18,46 @@ import Profile from './Profile';
 export const mainListItems = (
   <div>
     <Link color="inherit" href="/" underline='none'>
-    <ListItem button>
-      <ListItemIcon>
-      <HomeIcon />
-      </ListItemIcon>
-      <ListItemText primary="Home" />
-      
-    </ListItem>
-    </Link> 
+      <ListItem button>
+        <ListItemIcon>
+          <HomeIcon />
+        </ListItemIcon>
+        <ListItemText primary="Home" />
 
-    <ListItem button>
-      <ListItemIcon>
-        <DashboardIcon />
-      </ListItemIcon>
-      <ListItemText primary="Dashboard" />
-    </ListItem>
+      </ListItem>
+    </Link>
 
-    
-    <ListItem button>
-      <ListItemIcon>
-        <MonetizationOnIcon />
-      </ListItemIcon>
-      <ListItemText primary="Transactions" />
-    </ListItem>
-    <ListItem button>
-      <ListItemIcon>
-        <PeopleIcon />
-      </ListItemIcon>
-      <ListItemText primary="Customers" />
-    </ListItem>
-    <ListItem button>
+    <Link color="inherit" href="/customer/dashboard" underline='none'>
+      <ListItem button>
+        <ListItemIcon>
+          <DashboardIcon />
+        </ListItemIcon>
+        <ListItemText primary="Dashboard" />
+      </ListItem>
+    </Link>
+
+
+    <Link color="inherit" href="/customer/transactions" underline='none'>
+      <ListItem button>
+        <ListItemIcon>
+          <MonetizationOnIcon />
+        </ListItemIcon>
+        <ListItemText primary="Transactions" />
+      </ListItem>
+    </Link>
+
+
+    <Link color="inherit" href="/customer/profile" underline='none'>
+      <ListItem button>
+        <ListItemIcon>
+          <PeopleIcon />
+        </ListItemIcon>
+        <ListItemText primary="Profile" />
+      </ListItem>
+    </Link>
+
+
+    {/* <ListItem button>
       <ListItemIcon>
         <BarChartIcon />
       </ListItemIcon>
@@ -58,7 +68,7 @@ export const mainListItems = (
         <LayersIcon />
       </ListItemIcon>
       <ListItemText primary="Integrations" />
-    </ListItem>
+    </ListItem> */}
   </div>
 );
 
@@ -75,7 +85,7 @@ export const secondaryListItems = (
     <ListItem button>
       <ListItemIcon>
         <AssignmentIcon />
-        <Profile/>
+        <Profile />
       </ListItemIcon>
       <ListItemText primary="Last quarter" />
     </ListItem>
