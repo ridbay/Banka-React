@@ -22,9 +22,6 @@ const rows = [
   createData(4, '15 Mar, 2019', 'Bruce Springsteen', '3042863673', 'Current', 212.79),
 ];
 
-function preventDefault(event) {
-  event.preventDefault();
-}
 
 const useStyles = makeStyles(theme => ({
   seeMore: {
@@ -32,7 +29,13 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
+
+
 export default function Transactions() {
+
+  const getRoute = () => {
+    return window.location.pathname === "/customer/dashboard";
+  };
   const classes = useStyles();
   return (
     <React.Fragment>
@@ -60,9 +63,10 @@ export default function Transactions() {
         </TableBody>
       </Table>
       <div className={classes.seeMore}>
-        <Link color="primary" href="#" onClick={preventDefault}>
+        {getRoute() ? (<Link color="primary" href="/customer/transactions">
           See more transactions
-        </Link>
+        </Link>) : null }
+        
       </div>
     </React.Fragment>
   );

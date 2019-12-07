@@ -91,7 +91,7 @@ const Dashboard = () => {
   };
 
   const handleProfileMenuOpen = event => {
-    console.log(event.currentTarget)
+    
     setAnchorEl(event.currentTarget);
   };
 

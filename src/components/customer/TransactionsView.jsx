@@ -1,9 +1,11 @@
-import React from 'react'
+import React from 'react';
+
+import Transactions from './Transactions'
 
 const TransactionsView = () => {
     return (
         <div>
-            This is Trasanctions Views
+            <Transactions />
         </div>
     )
 }
