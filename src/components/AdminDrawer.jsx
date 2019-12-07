@@ -64,7 +64,7 @@ const AdminDrawer = (props) => {
         <Divider />
         <List>{mainListItems}</List>
         <Divider />
-        <List><CreateAccountButton/></List>
+    <List>{open ? (<CreateAccountButton/>): null}</List>
       </Drawer>
     )
 }
