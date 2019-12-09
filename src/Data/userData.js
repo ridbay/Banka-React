@@ -1,6 +1,5 @@
-export const CUSTOMER_DATA = [
-  {
-    id: 1,
+export const CUSTOMER = {
+  "1" : {
     role: 'customer',
     fname: 'Ridwan',
     lname: 'Balogun',
@@ -11,8 +10,7 @@ export const CUSTOMER_DATA = [
     dob: '1989-04-21',
     accountNumber: 3042901179,
     balance: 34030.90,
-    imageUrl: '../../../src/img/ridwan.jpg',
-
+    imageUrl: '../img/ridwan.jpg',
 
     transactions: [
       {
@@ -52,10 +50,9 @@ export const CUSTOMER_DATA = [
         status: 'Failed',
       },
       
-    ]
+    ],
   },
-  {
-    id: 2,
+  "2": {
     role: 'customer',
     fname: 'Kamar',
     lname: 'Olayanju',
@@ -110,7 +107,7 @@ export const CUSTOMER_DATA = [
     ]
   },
   
-];
+}
 
 export const STAFF_DATA = [
   {
