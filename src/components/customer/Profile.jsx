@@ -30,7 +30,7 @@ const useStyles = makeStyles(theme => ({
     },
     content: {
         flexGrow: 1,
-        height: '100vh',
+        // height: '100vh',
         width: '70vw',
         // overflow: 'auto',
     },
