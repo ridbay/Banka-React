@@ -31,8 +31,8 @@ const useStyles = makeStyles(theme => ({
     content: {
         flexGrow: 1,
         height: '100vh',
-        width: '100vw',
-        overflow: 'auto',
+        width: '70vw',
+        // overflow: 'auto',
     },
     container: {
         paddingTop: theme.spacing(4),
@@ -53,7 +53,6 @@ export default function Profile() {
     const classes = useStyles();
 
     const { role, fname, lName, imageUrl, phone } = CUSTOMER[1];
-    console.log(fname)
     const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
 
     return (
