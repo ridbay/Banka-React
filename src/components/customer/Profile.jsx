@@ -19,19 +19,19 @@ import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles(theme => ({
     root: {
-        padding: theme.spacing(10, 21),
+        // padding: theme.spacing(1, 2),
     },
     card: {
         maxWidth: 345,
+        
     },
     media: {
         height: 240,
     },
     content: {
         flexGrow: 1,
-        // height: '100vh',
         width: '70vw',
-        // overflow: 'auto',
+
     },
     container: {
         paddingTop: theme.spacing(4),
