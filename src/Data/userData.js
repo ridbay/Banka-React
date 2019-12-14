@@ -1,3 +1,5 @@
+import Image from '../img/ridwan.jpg';
+
 export const CUSTOMER = {
   "1" : {
     role: 'customer',
@@ -10,7 +12,7 @@ export const CUSTOMER = {
     dob: '1989-04-21',
     accountNumber: 3042901179,
     balance: 34030.90,
-    imageUrl: '../img/ridwan.jpg',
+    image: Image,
 
     transactions: [
       {

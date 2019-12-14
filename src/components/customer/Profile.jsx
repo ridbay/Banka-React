@@ -17,7 +17,6 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 
-
 const useStyles = makeStyles(theme => ({
     root: {
         padding: theme.spacing(10, 21),
@@ -26,7 +25,7 @@ const useStyles = makeStyles(theme => ({
         maxWidth: 345,
     },
     media: {
-        height: 140,
+        height: 240,
     },
     content: {
         flexGrow: 1,
@@ -52,40 +51,56 @@ const useStyles = makeStyles(theme => ({
 export default function Profile() {
     const classes = useStyles();
 
-    const { role, fname, lName, imageUrl, phone } = CUSTOMER[1];
+    const { role, fname, lname, image, phone, accountNumber,email } = CUSTOMER[1];
+    console.log(Image)
     const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
 
     return (
-        <div  className={classes.root}>
+        <div className={classes.root}>
             <main className={classes.content}>
+                <img src="../../img/ridwan.jpg" alt="" height="50px" width="50px" />
                 <div className={classes.appBarSpacer} />
                 <Container maxWidth="lg" className={classes.container}>
-                    <Grid container spacing={3}>
-                        {/* Chart */}
+                    <Grid container justify="center" spacing={3}>
+
                         <Grid item xs={12} sm={12} md={8} lg={9}>
+                            
                             <Card className={classes.card}>
                                 <CardActionArea>
                                     <CardMedia
                                         className={classes.media}
-                                        image={`${imageUrl}`}
+                                        image={image}
                                         title={`${fname}'s picture`}
                                     />
+                                    <CardContent>
+                                        <Typography gutterBottom variant="h5" component="h2">
+                                            {fname} {lname} 
+                                        </Typography>
+                                        <Typography variant="body2" color="textSecondary" component="p"> 
+                                        {role}
+                                        </Typography>
+                                        <Typography variant="body2" color="textSecondary" component="p"> 
+                                        Email: {email}
+                                        </Typography>
+                                    </CardContent>
                                 </CardActionArea>
-
+                                <CardActions>
+                                <Typography variant="body2" color="textSecondary" component="p"> 
+                                        Account Number: {accountNumber}
+                                        </Typography>
+                                        <Typography variant="body2" color="textSecondary" component="p"> 
+                                        Phone Number: {phone}
+                                        </Typography>
+                                </CardActions>
                             </Card>
                         </Grid>
-                        {/* Recent Deposits */}
-                        <Grid item xs={12} sm={12} md={4} lg={3}>
+
+                        {/* <Grid item xs={12} sm={12} md={4} lg={3}>
                             <Paper className={fixedHeightPaper}>
                                 This is the second side
                             </Paper>
-                        </Grid>
-                        {/* Recent Transactions */}
-                        <Grid item xs={12}>
-                            <Paper className={classes.paper}>
-                                This is the bottom
-                            </Paper>
-                        </Grid>
+                        </Grid> */}
+
                     </Grid>
                 </Container>
             </main>
