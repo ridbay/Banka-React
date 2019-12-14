@@ -163,7 +163,7 @@ const SignIn =()=> {
 
           >
 
-            <Link href="/dashboard" variant="body2" color="inherit" underline='none'>
+            <Link href="/customer/dashboard" variant="body2" color="inherit" underline='none'>
               Sign In
               </Link>
               {loading && (
