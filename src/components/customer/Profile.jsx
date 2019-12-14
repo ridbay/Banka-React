@@ -7,17 +7,13 @@ import { makeStyles } from '@material-ui/core/styles';
 
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
-import Paper from '@material-ui/core/Paper';
-import Divider from '@material-ui/core/Divider';
 import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
 import CardHeader from '@material-ui/core/CardHeader';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Avatar from '@material-ui/core/Avatar';
 import { red } from '@material-ui/core/colors';
-import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles(theme => ({
@@ -52,13 +48,13 @@ const useStyles = makeStyles(theme => ({
     },
     avatar: {
         backgroundColor: red[500],
-      },
+    },
 }));
 
 export default function Profile() {
     const classes = useStyles();
 
-    const { role, fname, lname, image, phone, accountNumber, email, transactions } = CUSTOMER[1];
+    const { role, fname, lname, image, phone, accountNumber, transactions } = CUSTOMER[1];
 
     return (
         <div className={classes.root}>
@@ -75,8 +71,8 @@ export default function Profile() {
                                         </Avatar>
                                     }
 
-                                    title={fname}
-                                    subheader={role}
+                                    title={`${fname} ${lname}`}
+                                    subheader={role.charAt(0).toUpperCase() + role.slice(1)}
                                 />
                                 <CardMedia
                                     className={classes.media}
@@ -85,24 +81,20 @@ export default function Profile() {
                                 />
                                 <CardContent>
                                     <Typography variant="body2" color="textSecondary" component="p">
-                                    Account Number: {accountNumber} <br/>
-                                    Phone Number: {phone}
-        </Typography>
+                                        Account Number: {accountNumber} <br />
+                                        Phone Number: {phone}
+                                    </Typography>
                                 </CardContent>
                                 <CardActions disableSpacing>
                                     <Typography variant="body2" color="textSecondary" component="p">
                                         You have made a total of {transactions.length} transactions
-        </Typography>
+                                    </Typography>
                                 </CardActions>
 
                             </Card>
                         </Grid>
 
-                        {/* <Grid item xs={12} sm={12} md={4} lg={3}>
-                            <Paper className={fixedHeightPaper}>
-                                This is the second side
-                            </Paper>
-                        </Grid> */}
+
 
                     </Grid>
                 </Container>
