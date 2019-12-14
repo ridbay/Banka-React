@@ -58,7 +58,7 @@ const useStyles = makeStyles(theme => ({
 export default function Profile() {
     const classes = useStyles();
 
-    const { role, fname, lname, image, phone, accountNumber, email } = CUSTOMER[1];
+    const { role, fname, lname, image, phone, accountNumber, email, transactions } = CUSTOMER[1];
 
     return (
         <div className={classes.root}>
@@ -91,7 +91,7 @@ export default function Profile() {
                                 </CardContent>
                                 <CardActions disableSpacing>
                                     <Typography variant="body2" color="textSecondary" component="p">
-                                        Something can be here
+                                        You have made a total of {transactions.length} transactions
         </Typography>
                                 </CardActions>
 
