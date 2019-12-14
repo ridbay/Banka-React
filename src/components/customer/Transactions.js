@@ -9,18 +9,22 @@ import TableRow from '@material-ui/core/TableRow';
 
 import Title from './Title';
 
-// Generate Order Data
-function createData(id, date, name, shipTo, paymentMethod, amount) {
-  return { id, date, name, shipTo, paymentMethod, amount };
-}
 
-const rows = [
-  createData(0, '16 Mar, 2019', 'Elvis Presley', '3042863673', 'Savings', 312.44),
-  createData(1, '16 Mar, 2019', 'Paul McCartney', '3042863673', 'Current', 866.99),
-  createData(2, '16 Mar, 2019', 'Tom Scholz', '3042863673', 'Savings', 100.81),
-  createData(3, '16 Mar, 2019', 'Michael Jackson', '3042863673', 'Savings', 654.39),
-  createData(4, '15 Mar, 2019', 'Bruce Springsteen', '3042863673', 'Current', 212.79),
-];
+import { CUSTOMER } from '../../Data/userData';
+
+
+// Generate Order Data
+// function createData(id, date, name, accountNumber, accountType, amount) {
+//   return { id, date, name, accountNumber, accountType, amount };
+// }
+
+// const rows = [
+//   createData(0, '16 Mar, 2019', 'Elvis Presley', '3042863673', 'Savings', 312.44),
+//   createData(1, '16 Mar, 2019', 'Paul McCartney', '3042863673', 'Current', 866.99),
+//   createData(2, '16 Mar, 2019', 'Tom Scholz', '3042863673', 'Savings', 100.81),
+//   createData(3, '16 Mar, 2019', 'Michael Jackson', '3042863673', 'Savings', 654.39),
+//   createData(4, '15 Mar, 2019', 'Bruce Springsteen', '3042863673', 'Current', 212.79),
+// ];
 
 
 const useStyles = makeStyles(theme => ({
@@ -37,6 +41,9 @@ export default function Transactions() {
     return window.location.pathname === "/customer/dashboard";
   };
   const classes = useStyles();
+  
+  const {transactions} = CUSTOMER['1'];
+  console.log(transactions.id)
   return (
     <React.Fragment>
       <Title>Recent Transactions</Title>
@@ -46,17 +53,19 @@ export default function Transactions() {
             <TableCell>Date</TableCell>
             <TableCell>Name</TableCell>
             <TableCell>Account Number</TableCell>
-            <TableCell>Account Type</TableCell>
-            <TableCell align="right">Amount</TableCell>
+            <TableCell>Bank</TableCell>
+            <TableCell>Status</TableCell>
+            <TableCell align="right">Amount (&#8358;)</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
-          {rows.map(row => (
+          {transactions.map(row => (
             <TableRow key={row.id}>
               <TableCell>{row.date}</TableCell>
-              <TableCell>{row.name}</TableCell>
-              <TableCell>{row.shipTo}</TableCell>
-              <TableCell>{row.paymentMethod}</TableCell>
+              <TableCell>{row.beneficiary}</TableCell>
+              <TableCell>{row.accountNumber}</TableCell>
+              <TableCell>{row.bank}</TableCell>
+              <TableCell>{row.status}</TableCell>
               <TableCell align="right">{row.amount}</TableCell>
             </TableRow>
           ))}

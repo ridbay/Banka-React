@@ -26,7 +26,7 @@ export default function RecentTransaction() {
     <React.Fragment>
       <Title>Recent Transaction</Title>
       <Typography component="p" variant="h4">
-        N{transactions[0].amount}
+      &#8358;{transactions[0].amount}
       </Typography>
       <Typography color="textSecondary" className={classes.depositContext}>
         to {transactions[0].beneficiary}
