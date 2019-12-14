@@ -16,6 +16,7 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Avatar from '@material-ui/core/Avatar';
+import { red } from '@material-ui/core/colors';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 
@@ -25,11 +26,11 @@ const useStyles = makeStyles(theme => ({
     },
     card: {
         maxWidth: 345,
-        
+
     },
     media: {
         height: 0,
-    paddingTop: '56.25%', // 16:9
+        paddingTop: '56.25%', // 16:9
     },
     content: {
         flexGrow: 1,
@@ -49,51 +50,52 @@ const useStyles = makeStyles(theme => ({
     fixedHeight: {
         height: 240,
     },
+    avatar: {
+        backgroundColor: red[500],
+      },
 }));
 
 export default function Profile() {
     const classes = useStyles();
 
-    const { role, fname, lname, image, phone, accountNumber,email } = CUSTOMER[1];
+    const { role, fname, lname, image, phone, accountNumber, email } = CUSTOMER[1];
 
     return (
         <div className={classes.root}>
             <main className={classes.content}>
-                <img src="../../img/ridwan.jpg" alt="" height="50px" width="50px" />
-                <div className={classes.appBarSpacer} />
                 <Container maxWidth="lg" className={classes.container}>
                     <Grid container justify="center" spacing={3}>
 
                         <Grid item xs={12} sm={12} md={8} lg={9}>
-                        <Card className={classes.card}>
-      <CardHeader
-        avatar={
-          <Avatar aria-label="profile" className={classes.avatar}>
-            R
-          </Avatar>
-        }
-        
-        title={fname}
-        subheader={role}
-      />
-      <CardMedia
-        className={classes.media}
-        image={image}
-        title={`${fname}'s picture`}
-      />
-      <CardContent>
-        <Typography variant="body2" color="textSecondary" component="p">
-          This impressive paella is a perfect party dish and a fun meal to cook together with your
-          guests. Add 1 cup of frozen peas along with the mussels, if you like.
+                            <Card className={classes.card}>
+                                <CardHeader
+                                    avatar={
+                                        <Avatar aria-label="profile" className={classes.avatar}>
+                                            R
+                                        </Avatar>
+                                    }
+
+                                    title={fname}
+                                    subheader={role}
+                                />
+                                <CardMedia
+                                    className={classes.media}
+                                    image={image}
+                                    title={`${fname}'s picture`}
+                                />
+                                <CardContent>
+                                    <Typography variant="body2" color="textSecondary" component="p">
+                                    Account Number: {accountNumber} <br/>
+                                    Phone Number: {phone}
         </Typography>
-      </CardContent>
-      <CardActions disableSpacing>
-      <Typography variant="body2" color="textSecondary" component="p">
-          Something can be here
+                                </CardContent>
+                                <CardActions disableSpacing>
+                                    <Typography variant="body2" color="textSecondary" component="p">
+                                        Something can be here
         </Typography>
-      </CardActions>
-      
-    </Card>
+                                </CardActions>
+
+                            </Card>
                         </Grid>
 
                         {/* <Grid item xs={12} sm={12} md={4} lg={3}>
