@@ -71,7 +71,7 @@ export default function Profile() {
                                 <CardHeader
                                     avatar={
                                         <Avatar aria-label="profile" className={classes.avatar}>
-                                            R
+                                            {fname.charAt(0).toUpperCase()}
                                         </Avatar>
                                     }
 
