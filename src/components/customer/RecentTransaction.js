@@ -14,11 +14,11 @@ const useStyles = makeStyles({
   },
 });
 
-export default function Deposits() {
+export default function RecentTransaction() {
   const classes = useStyles();
   return (
     <React.Fragment>
-      <Title>Recent Deposits</Title>
+      <Title>Recent Transaction</Title>
       <Typography component="p" variant="h4">
         $3,024.00
       </Typography>
