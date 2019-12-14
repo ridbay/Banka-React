@@ -6,7 +6,7 @@ import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 
 import Chart from './Chart';
-import Deposits from './Deposits';
+import RecentTransaction from './RecentTransaction';
 import Transactions from './Transactions';
 
 
@@ -49,10 +49,10 @@ const Overview = () => {
                                 <Chart />
                             </Paper>
                         </Grid>
-                        {/* Recent Deposits */}
+                        {/* Recent RecentTransaction */}
                         <Grid item xs={12} md={4} lg={3}>
                             <Paper className={fixedHeightPaper}>
-                                <Deposits />
+                                <RecentTransaction />
                             </Paper>
                         </Grid>
                         {/* Recent Transactions */}
