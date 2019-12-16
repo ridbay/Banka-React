@@ -5,6 +5,7 @@ import Person from "@material-ui/icons/Person";
 import CustomerOverview from "./components/customer/Overview";
 import CustomerProfile from "./components/customer/Profile";
 import CustomerTransactions from "./components/customer/TransactionsView";
+import AdminOverview from "./components/admin/Overview";
 
 
 const dashboardRoutes = [
@@ -33,14 +34,14 @@ const dashboardRoutes = [
     path: "/dashboard",
     name: "Dashboard",
     icon: Dashboard,
-    component: Overview,
+    component: AdminOverview,
     layout: "/admin"
   },
   {
     path: "/accounts",
     name: "Accounts",
     icon: Dashboard,
-    component: Overview,
+    // component: AdminOverview,
     layout: "/admin"
   },
   
