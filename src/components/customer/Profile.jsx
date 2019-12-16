@@ -53,10 +53,7 @@ const useStyles = makeStyles(theme => ({
 
 export default function Profile() {
     const classes = useStyles();
-
     const { role, fname, lname, image, phone, accountNumber, transactions } = CUSTOMER[1];
-
-
     return (
         <div className={classes.root}>
             <main className={classes.content}>
