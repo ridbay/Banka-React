@@ -4,7 +4,9 @@ import Home from './pages/Home';
 import SignIn from './pages/SignIn';
 import SignUp from './pages/SignUp';
 
-import Dashboard from './pages/customer/Dashboard';
+import CustomerDashboard from './pages/customer/Dashboard';
+import AdminDashboard from './pages/admin/Dashboard';
+
 
 import {
   BrowserRouter as Router,
@@ -46,7 +48,8 @@ const App = () => {
               <Route exact path="/" component={Home} />
               <Route exact path="/signin" component={SignIn} />
               <Route exact path="/signup" component={SignUp} />
-              <Route path="/customer" component={Dashboard} />
+              <Route path="/customer" component={CustomerDashboard} />
+              <Route path="/admin" component={AdminDashboard} />
             </Switch>
           </div>
         </Router>
