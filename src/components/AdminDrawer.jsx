@@ -45,6 +45,7 @@ const useStyles = makeStyles(theme => ({
 })) 
 const AdminDrawer = (props) => {
     const classes = useStyles();
+    console.log(window.location.pathname.split("/")[1])
 
     const {open, handleDrawerClose} = props;
     return (

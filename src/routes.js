@@ -9,7 +9,7 @@ import AdminOverview from "./components/admin/Overview";
 import AdminAccounts from "./components/admin/AccountsView"
 
 
-const dashboardRoutes = [
+const routes = [
   {
     path: "/dashboard",
     name: "Dashboard",
@@ -48,4 +48,4 @@ const dashboardRoutes = [
   
 ];
 
-export default dashboardRoutes;
+export default routes;
