@@ -9,6 +9,7 @@ import Divider from '@material-ui/core/Divider';
 
 import {customerListItems, adminListItems} from '../components/AdminDrawerMenuList';
 import CreateAccountButton from '../components/CreateAccountButton';
+import CreateAdminStaffAccountButton from '../components/CreateAdminStaffAccountButton';
 
 
 const drawerWidth = 240;
@@ -67,7 +68,7 @@ const AdminDrawer = (props) => {
         {/* <List>{customerListItems}</List>
         <List>{adminListItems}</List> */}
         <Divider />
-    <List>{open ? (<CreateAccountButton/>): null}</List>
+      <List>{open ? (pathName === 'customer' ? (<CreateAccountButton/>) : (<CreateAdminStaffAccountButton/>)): null}</List>
       </Drawer>
     )
 }
