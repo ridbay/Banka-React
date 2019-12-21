@@ -42,7 +42,7 @@ export const mainListItems = (
     </Link>
 
 
-    <Link color="inherit" href="/customer/profile" underline='none'>
+    <Link color="inherit" href="/admin/profile" underline='none'>
       <ListItem button>
         <ListItemIcon>
           <PeopleIcon />
