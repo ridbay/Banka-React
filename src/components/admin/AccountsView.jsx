@@ -1,11 +1,11 @@
 import React from 'react';
 
-import Transactions from './Transactions'
+import Accounts from './Accounts'
 
 const TransactionsView = () => {
     return (
         <div>
-            <Transactions />
+            <Accounts />
         </div>
     )
 }

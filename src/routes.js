@@ -6,6 +6,7 @@ import CustomerOverview from "./components/customer/Overview";
 import CustomerProfile from "./components/customer/Profile";
 import CustomerTransactions from "./components/customer/TransactionsView";
 import AdminOverview from "./components/admin/Overview";
+import AdminAccounts from "./components/admin/AccountsView"
 
 
 const dashboardRoutes = [
@@ -41,7 +42,7 @@ const dashboardRoutes = [
     path: "/accounts",
     name: "Accounts",
     icon: Dashboard,
-    // component: AdminOverview,
+    component: AdminAccounts,
     layout: "/admin"
   },
   

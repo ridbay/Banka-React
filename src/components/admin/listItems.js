@@ -32,12 +32,12 @@ export const mainListItems = (
     </Link>
 
 
-    <Link color="inherit" href="/customer/transactions" underline='none'>
+    <Link color="inherit" href="/admin/accounts" underline='none'>
       <ListItem button>
         <ListItemIcon>
           <MonetizationOnIcon />
         </ListItemIcon>
-        <ListItemText primary="Transactions" />
+        <ListItemText primary="Accounts" />
       </ListItem>
     </Link>
 
