@@ -10,7 +10,50 @@ import Link from '@material-ui/core/Link';
 
 
 
-export const mainListItems = (
+export const customerListItems = (
+  <div>
+    <Link color="inherit" href="/" underline='none'>
+      <ListItem button>
+        <ListItemIcon>
+          <HomeIcon />
+        </ListItemIcon>
+        <ListItemText primary="Home" />
+
+      </ListItem>
+    </Link>
+
+    <Link color="inherit" href="/customer/dashboard" underline='none'>
+      <ListItem button>
+        <ListItemIcon>
+          <DashboardIcon />
+        </ListItemIcon>
+        <ListItemText primary="Dashboard" />
+      </ListItem>
+    </Link>
+
+
+    <Link color="inherit" href="/customer/transactions" underline='none'>
+      <ListItem button>
+        <ListItemIcon>
+          <MonetizationOnIcon />
+        </ListItemIcon>
+        <ListItemText primary="Transactions" />
+      </ListItem>
+    </Link>
+
+
+    <Link color="inherit" href="/customer/profile" underline='none'>
+      <ListItem button>
+        <ListItemIcon>
+          <PeopleIcon />
+        </ListItemIcon>
+        <ListItemText primary="Profile" />
+      </ListItem>
+    </Link>
+  </div>
+);
+
+export const adminListItems = (
   <div>
     <Link color="inherit" href="/" underline='none'>
       <ListItem button>
@@ -50,20 +93,6 @@ export const mainListItems = (
         <ListItemText primary="Profile" />
       </ListItem>
     </Link>
-
-
-    {/* <ListItem button>
-      <ListItemIcon>
-        <BarChartIcon />
-      </ListItemIcon>
-      <ListItemText primary="Reports" />
-    </ListItem>
-    <ListItem button>
-      <ListItemIcon>
-        <LayersIcon />
-      </ListItemIcon>
-      <ListItemText primary="Integrations" />
-    </ListItem> */}
   </div>
 );
 

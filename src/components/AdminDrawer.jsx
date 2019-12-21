@@ -7,7 +7,7 @@ import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
 
-import {mainListItems} from '../components/customer/listItems'
+import {customerListItems} from '../components/AdminDrawerMenuList';
 import CreateAccountButton from '../components/CreateAccountButton';
 
 
@@ -45,7 +45,7 @@ const useStyles = makeStyles(theme => ({
 })) 
 const AdminDrawer = (props) => {
     const classes = useStyles();
-    console.log(window.location.pathname.split("/")[1])
+    const pathName = window.location.pathname.split("/")[1];
 
     const {open, handleDrawerClose} = props;
     return (
@@ -63,7 +63,7 @@ const AdminDrawer = (props) => {
         </div>
 
         <Divider />
-        <List>{mainListItems}</List>
+        <List>{customerListItems}</List>
         <Divider />
     <List>{open ? (<CreateAccountButton/>): null}</List>
       </Drawer>
