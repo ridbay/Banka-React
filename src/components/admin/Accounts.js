@@ -50,7 +50,7 @@ export default function Transactions() {
       <Table size="small">
         <TableHead>
           <TableRow>
-            <TableCell>Date</TableCell>
+            <TableCell>Date Created</TableCell>
             <TableCell>Name</TableCell>
             <TableCell>Account Number</TableCell>
             <TableCell>Bank</TableCell>
