@@ -1,13 +1,15 @@
 import React from 'react';
 
-import Accounts from './Accounts'
+// import Accounts from './Accounts'
+import Account from './Account'
 
-const TransactionsView = () => {
+const AccountsView = () => {
     return (
         <div>
-            <Accounts />
+            {/* <Accounts /> */}
+            <Account />
         </div>
     )
 }
 
-export default TransactionsView
+export default AccountsView

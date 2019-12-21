@@ -65,8 +65,7 @@ const AdminDrawer = (props) => {
 
         <Divider />
         <List>{pathName === 'customer' ? (customerListItems) : (adminListItems)} </List>
-        {/* <List>{customerListItems}</List>
-        <List>{adminListItems}</List> */}
+  
         <Divider />
       <List>{open ? (pathName === 'customer' ? (<CreateAccountButton/>) : (<CreateAdminStaffAccountButton/>)): null}</List>
       </Drawer>
