@@ -8,7 +8,7 @@ import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import Select from '@material-ui/core/Select';
 
-const CreateAccountButton = () => {
+const CreateAdminStaffAccountButton = () =>{
   const [open, setOpen] = React.useState(false);
 
   const handleClickOpen = () => {
@@ -75,8 +75,8 @@ const CreateAccountButton = () => {
 
             >
 
-              <option value={"savings"}>Savings</option>
-              <option value={"staff"}>Current</option>
+              <option value={"savings"}>Staff</option>
+              <option value={"staff"}>Admin</option>
               
             </Select>
         </DialogContent>
@@ -92,5 +92,4 @@ const CreateAccountButton = () => {
     </div>
   );
 }
-
-export default CreateAccountButton
+export default CreateAdminStaffAccountButton;

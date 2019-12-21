@@ -6,6 +6,7 @@ import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
+import Button from '@material-ui/core/Button';
 
 import Title from './Title';
 
@@ -56,6 +57,7 @@ export default function Transactions() {
             <TableCell>Bank</TableCell>
             <TableCell>Status</TableCell>
             <TableCell align="right">Amount (&#8358;)</TableCell>
+            <TableCell>Actions</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -67,6 +69,7 @@ export default function Transactions() {
               <TableCell>{row.bank}</TableCell>
               <TableCell>{row.status}</TableCell>
               <TableCell align="right">{row.amount}</TableCell>
+              <TableCell align="right"><Button>Delete</Button> </TableCell>
             </TableRow>
           ))}
         </TableBody>
