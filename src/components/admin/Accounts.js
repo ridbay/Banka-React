@@ -46,7 +46,7 @@ export default function Transactions() {
   console.log(transactions.id)
   return (
     <React.Fragment>
-      <Title>Recent Transactions</Title>
+      <Title>Customers Accounts</Title>
       <Table size="small">
         <TableHead>
           <TableRow>
