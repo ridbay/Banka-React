@@ -65,7 +65,7 @@ export const adminListItems = (
       </ListItem>
     </Link>
 
-    <Link color="inherit" href="/customer/dashboard" underline='none'>
+    <Link color="inherit" href="/admin/dashboard" underline='none'>
       <ListItem button>
         <ListItemIcon>
           <DashboardIcon />
