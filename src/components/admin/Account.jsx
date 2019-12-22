@@ -1,7 +1,7 @@
 import React from 'react';
 import MaterialTable from 'material-table';
 
-export default function MaterialTableDemo() {
+const Account = () => {
   const [state, setState] = React.useState({
     columns: [
       { title: 'Name', field: 'name' },
@@ -26,7 +26,7 @@ export default function MaterialTableDemo() {
 
   return (
     <MaterialTable
-      title="Editable Example"
+      title="c"
       columns={state.columns}
       data={state.data}
       editable={{
@@ -69,3 +69,6 @@ export default function MaterialTableDemo() {
     />
   );
 }
+
+
+export default Account;
