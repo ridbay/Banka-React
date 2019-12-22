@@ -1,8 +1,8 @@
-import React from 'react';
+import React, {useState} from 'react';
 import MaterialTable from 'material-table';
 
 const Account = () => {
-  const [state, setState] = React.useState({
+  const [state, setState] = useState({
     columns: [
       { title: 'Name', field: 'name' },
       { title: 'Surname', field: 'surname' },
