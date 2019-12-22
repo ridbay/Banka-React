@@ -26,7 +26,7 @@ const Account = () => {
 
   return (
     <MaterialTable
-      title="c"
+      title="Account"
       columns={state.columns}
       data={state.data}
       editable={{
