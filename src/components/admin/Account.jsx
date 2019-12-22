@@ -6,20 +6,21 @@ const Account = () => {
     columns: [
       { title: 'Name', field: 'name' },
       { title: 'Surname', field: 'surname' },
-      { title: 'Birth Year', field: 'birthYear', type: 'numeric' },
+      { title: 'Account Number', field: 'accountNumber', type: 'numeric' },
       {
-        title: 'Birth Place',
-        field: 'birthCity',
-        lookup: { 34: 'İstanbul', 63: 'Şanlıurfa' },
+        title: 'Account Type',
+        field: 'accountType',
+
+        lookup: { 'Savings': 3042901179, 'Current': 5638268938 },
       },
     ],
     data: [
-      { name: 'Mehmet', surname: 'Baran', birthYear: 1987, birthCity: 63 },
+      { name: 'Ridwan', surname: 'Balogun', accountNumber: 3042901179, accountType: 'Savings' },
       {
-        name: 'Zerya Betül',
-        surname: 'Baran',
-        birthYear: 2017,
-        birthCity: 34,
+        name: 'Barakat',
+        surname: 'Obatade',
+        accountNumber: 5638268938,
+        accountType: 'Current',
       },
     ],
   });
