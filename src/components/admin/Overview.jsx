@@ -5,7 +5,6 @@ import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 
-import Chart from './Chart';
 import RecentTransaction from './RecentTransaction';
 import Accounts from './Accounts';
 

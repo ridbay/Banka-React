@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import MaterialTable from 'material-table';
+import ToggleOffOutlinedIcon from '@material-ui/icons/ToggleOffOutlined';;
 
 const Account = () => {
   const [state, setState] = useState({
@@ -75,7 +76,7 @@ console.log(activate)
       actions={[
         {
           tooltip: 'Deactivate All Selected Accounts',
-          icon: 'delete',
+          icon: ToggleOffOutlinedIcon,
           onClick: (evt, data) => {
             setActivate(!activate);
             console.log(activate)
