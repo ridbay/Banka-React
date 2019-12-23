@@ -74,7 +74,7 @@ const Account = () => {
         {
           tooltip: 'Deactivate All Selected Accounts',
           icon: 'delete',
-          onClick: (evt, data) => alert('You want to delete ' + data.length + ' rows')
+          onClick: (evt, data) => alert('You want to deactivate ' + data.length + ' accounts')
         }
       ]}
     />
