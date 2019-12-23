@@ -81,8 +81,12 @@ console.log(activate)
           onClick: (evt, data) => {
             setActivate(!activate);
             console.log(activate)
+
               return(
-                  alert('You want to deactivate ' + data.length + ' accounts')
+                  activate? (alert('You want to deactivate ' + data.length + ' accounts'))
+                  :
+                  (alert('You want to Activate ' + data.length + ' accounts'))
+                  
               )
             },
           
