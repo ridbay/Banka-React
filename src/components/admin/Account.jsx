@@ -67,6 +67,16 @@ const Account = () => {
             }, 600);
           }),
       }}
+      options={{
+        selection: true
+      }}
+      actions={[
+        {
+          tooltip: 'Deactivate All Selected Accounts',
+          icon: 'delete',
+          onClick: (evt, data) => alert('You want to delete ' + data.length + ' rows')
+        }
+      ]}
     />
   );
 }
