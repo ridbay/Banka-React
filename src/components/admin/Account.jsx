@@ -24,7 +24,8 @@ const Account = () => {
       },
     ],
   });
-
+const [activate, setActivate] = useState(false);
+console.log(activate)
   return (
     <MaterialTable
       title="Account"
@@ -70,13 +71,25 @@ const Account = () => {
       options={{
         selection: true
       }}
+      
       actions={[
         {
           tooltip: 'Deactivate All Selected Accounts',
           icon: 'delete',
-          onClick: (evt, data) => alert('You want to deactivate ' + data.length + ' accounts')
+          onClick: (evt, data) => {
+            setActivate(!activate);
+            console.log(activate)
+              return(
+                  alert('You want to deactivate ' + data.length + ' accounts')
+              )
+            },
+          
+          
         }
+        
       ]}
+
+      
     />
   );
 }
