@@ -11,7 +11,7 @@ const Account = () => {
         title: 'Account Type',
         field: 'accountType',
 
-        lookup: { 'Savings': 3042901179, 'Current': 5638268938 },
+        lookup: { 'Savings': 'Savings', 'Current': 'Current' },
       },
     ],
     data: [
