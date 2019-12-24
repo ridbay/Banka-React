@@ -1,13 +1,13 @@
 import React from 'react';
 
-// import Accounts from './Accounts'
-import Account from './Account'
+import Accounts from './Accounts.jsx'
+// import Account from './Account'
 
 const AccountsView = () => {
     return (
         <div>
-            {/* <Accounts /> */}
-            <Account />
+            <Accounts />
+            {/* <Account /> */}
         </div>
     )
 }

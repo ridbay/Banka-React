@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import MaterialTable from 'material-table';
 import ToggleOffOutlinedIcon from '@material-ui/icons/ToggleOffOutlined';
 import ToggleOnOutlinedIcon from '@material-ui/icons/ToggleOnOutlined';
@@ -9,25 +9,15 @@ const Account = () => {
       { title: 'Name', field: 'name' },
       { title: 'Surname', field: 'surname' },
       { title: 'Account Number', field: 'accountNumber', type: 'numeric' },
-      {
-        title: 'Account Type',
-        field: 'accountType',
-
-        lookup: { 'Savings': 'Savings', 'Current': 'Current' },
-      },
+      { title: 'Account Type', field: 'accountType', lookup: { 'Savings': 'Savings', 'Current': 'Current' } },
     ],
     data: [
       { name: 'Ridwan', surname: 'Balogun', accountNumber: 3042901179, accountType: 'Savings' },
-      {
-        name: 'Barakat',
-        surname: 'Obatade',
-        accountNumber: 5638268938,
-        accountType: 'Current',
-      },
+      { name: 'Barakat', surname: 'Obatade', accountNumber: 5638268938, accountType: 'Current' },
     ],
   });
-const [activate, setActivate] = useState(false);
-console.log(activate)
+  const [activate, setActivate] = useState(false);
+  console.log(activate)
   return (
     <MaterialTable
       title="Account"
@@ -73,7 +63,7 @@ console.log(activate)
       options={{
         selection: true
       }}
-      
+
       actions={[
         {
           tooltip: 'Deactivate All Selected Accounts',
@@ -82,20 +72,19 @@ console.log(activate)
             setActivate(!activate);
             console.log(activate)
 
-              return(
-                  activate? (alert('You want to deactivate ' + data.length + ' accounts'))
-                  :
-                  (alert('You want to Activate ' + data.length + ' accounts'))
-                  
-              )
-            },
-          
-          
+            return (
+              activate ? (alert('You want to deactivate ' + data.length + ' accounts'))
+                :
+                (alert('You want to Activate ' + data.length + ' accounts'))
+
+            )
+          },
+
+
         }
-        
+
       ]}
 
-      
     />
   );
 }

@@ -36,7 +36,7 @@ const useStyles = makeStyles(theme => ({
 
 
 
-export default function Transactions() {
+const Accounts = ()=> {
 
   const getRoute = () => {
     return window.location.pathname === "/customer/dashboard";
@@ -83,3 +83,5 @@ export default function Transactions() {
     </React.Fragment>
   );
 }
+
+export default Accounts;
