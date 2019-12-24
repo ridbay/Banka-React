@@ -1,11 +1,13 @@
 import Image from '../img/ridwan.jpg';
 
-export const CUSTOMER = {
-  "1" : {
+
+export const CUSTOMER = [
+  {
     role: 'customer',
-    fname: 'Ridwan',
-    lname: 'Balogun',
+    name: 'Ridwan',
+    surname: 'Balogun',
     phone: "08078197526",
+    accountType: 'Current',
     address: "Lagos, Nigeria",
     gender: 'male',
     email: 'balogunridwan@gmail.com',
@@ -54,11 +56,12 @@ export const CUSTOMER = {
       
     ],
   },
-  "2": {
+  {
     role: 'customer',
-    fname: 'Kamar',
-    lname: 'Olayanju',
+    name: 'Kamar',
+    surname: 'Olayanju',
     phone: "07063818194",
+    accountType: 'Savings',
     address: "Iseyin, Oyo, Nigeria",
     gender: 'male',
     email: 'olakams@gmail.com',
@@ -109,7 +112,7 @@ export const CUSTOMER = {
     ]
   },
   
-}
+]
 
 export const STAFF_DATA = [
   {

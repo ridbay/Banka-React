@@ -3,6 +3,8 @@ import MaterialTable from 'material-table';
 import ToggleOffOutlinedIcon from '@material-ui/icons/ToggleOffOutlined';
 import ToggleOnOutlinedIcon from '@material-ui/icons/ToggleOnOutlined';
 
+import { CUSTOMER } from '../../Data/userData';
+
 const Account = () => {
   const [state, setState] = useState({
     columns: [
@@ -11,14 +13,17 @@ const Account = () => {
       { title: 'Account Number', field: 'accountNumber', type: 'numeric' },
       { title: 'Account Type', field: 'accountType', lookup: { 'Savings': 'Savings', 'Current': 'Current' } },
     ],
-    data: [
-      { name: 'Ridwan', surname: 'Balogun', accountNumber: 3042901179, accountType: 'Savings' },
-      { name: 'Barakat', surname: 'Obatade', accountNumber: 5638268938, accountType: 'Current' },
-    ],
+    // data: [
+    //   { name: 'Ridwan', surname: 'Balogun', accountNumber: 3042901179, accountType: 'Savings' },
+    //   { name: 'Barakat', surname: 'Obatade', accountNumber: 5638268938, accountType: 'Current' },
+    // ],
+    data: CUSTOMER
   });
   const [activate, setActivate] = useState(false);
-  console.log(activate)
+  console.log(CUSTOMER)
+// const {"1"} = CUSTOMER
   return (
+
     <MaterialTable
       title="Account"
       columns={state.columns}
