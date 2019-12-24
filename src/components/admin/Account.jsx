@@ -18,10 +18,10 @@ const Account = () => {
     //   { name: 'Ridwan', surname: 'Balogun', accountNumber: 3042901179, accountType: 'Savings' },
     //   { name: 'Barakat', surname: 'Obatade', accountNumber: 5638268938, accountType: 'Current' },
     // ],
-    data: CUSTOMER
+    data: CUSTOMER,
+    
   });
   const [activate, setActivate] = useState(false);
-  console.log(CUSTOMER)
   return (
 
     <MaterialTable
@@ -66,7 +66,12 @@ const Account = () => {
           }),
       }}
       options={{
-        selection: true
+        selection: true,
+        
+        selectionProps: rowData => ({
+          disabled: rowData.name === 'Ridwan',
+          color: 'primary'
+        })
       }}
 
       actions={[
@@ -75,8 +80,7 @@ const Account = () => {
           icon: activate ? ToggleOffOutlinedIcon : ToggleOnOutlinedIcon,
           onClick: (evt, data) => {
             setActivate(!activate);
-            console.log(activate)
-
+            console.log("This is the data ", data)
             return (
               activate ? (alert('You want to deactivate ' + data.length + ' accounts'))
                 :
