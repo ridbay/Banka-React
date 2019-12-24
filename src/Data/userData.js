@@ -111,6 +111,61 @@ export const CUSTOMER = [
       
     ]
   },
+  {
+    role: 'customer',
+    name: 'Ibrahim',
+    surname: 'Mukaila',
+    phone: "07063818194",
+    accountType: 'Savings',
+    address: "Iseyin, Oyo, Nigeria",
+    gender: 'male',
+    email: 'olakams@gmail.com',
+    dob: '1956-11-25',
+    accountNumber: 7586648687,
+    balance: 68783.90,
+    imageUrl: '../../../src/img/olakams.jpg',
+
+
+    transactions: [
+      {
+        id: 1,
+        date: '09 Dec, 2019',
+        beneficiary: 'Ayo Tola',
+        bank: 'GTB',
+        accountNumber: "56738929930",
+        amount: 60000,
+        status: 'Successful',
+      },
+      {
+        id: 2,
+        date: '23 Apr, 2018',
+        beneficiary: 'Feyi Kemi',
+        bank: 'First Bank',
+        accountNumber: "12738929967",
+        amount: 13000,
+        status: 'Successful',
+      },
+      {
+        id: 3,
+        date: '12 Feb, 2019',
+        beneficiary: 'Temi Dayo',
+        bank: 'U.B.A',
+        accountNumber: "04738929997",
+        amount: 8000,
+        status: 'Failed',
+      },
+      {
+        id: 4,
+        date: '05 Jun, 2019',
+        beneficiary: 'Ismail Tutu',
+        bank: 'Zenith',
+        accountNumber: "89738567497",
+        amount: 15000,
+        status: 'Failed',
+      },
+      
+    ]
+  },
   
 ]
 

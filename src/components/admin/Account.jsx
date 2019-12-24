@@ -12,6 +12,7 @@ const Account = () => {
       { title: 'Surname', field: 'surname' },
       { title: 'Account Number', field: 'accountNumber', type: 'numeric' },
       { title: 'Account Type', field: 'accountType', lookup: { 'Savings': 'Savings', 'Current': 'Current' } },
+      { title: 'Balance', field: 'balance', type: 'numeric'}
     ],
     // data: [
     //   { name: 'Ridwan', surname: 'Balogun', accountNumber: 3042901179, accountType: 'Savings' },
@@ -21,7 +22,6 @@ const Account = () => {
   });
   const [activate, setActivate] = useState(false);
   console.log(CUSTOMER)
-// const {"1"} = CUSTOMER
   return (
 
     <MaterialTable
