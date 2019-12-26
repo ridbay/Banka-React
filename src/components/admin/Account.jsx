@@ -21,6 +21,7 @@ const Account = () => {
     data: CUSTOMER,
     
   });
+
   const [isActivated, setIsActivated] = useState(false);
   const activateAccoount = (something) => {
     alert('You want to deactivate ' + something.length + ' accounts')
@@ -37,7 +38,8 @@ const Account = () => {
       data={state.data}
       
       editable={{
-        isEditable: rowData => rowData.name !== "Ridwan",
+        // isEditable: rowData => rowData.name !== "Ridwan",
+        isEditable: rowData => isActivated,
         onRowAdd: newData =>
           new Promise(resolve => {
             setTimeout(() => {
@@ -76,13 +78,15 @@ const Account = () => {
       }}
       options={{
         selection: true,
-        
         selectionProps: rowData => ({
           disabled: isActivated,
           color: 'red'
+        }),
+        rowStyle: rowData => ({
+          backgroundColor: (isActivated) ? '#ffcccc' : '#FFF'
         })
       }}
-      // onRowClick={(event, rowData) => isActivated? (null): (disabled: isActivated)}
+
 
       actions={[
         rowData => ({
@@ -90,10 +94,9 @@ const Account = () => {
           icon: isActivated ? ToggleOffOutlinedIcon : ToggleOnOutlinedIcon,
           onClick: (evt, rowData) => {
             setIsActivated(!isActivated);
-            console.log(rowData[0].name === 'Ridwan')
               isActivated ? (activateAccoount(rowData)):(alert('You want to Activate ' + rowData.length + ' accounts'))
           },
-          disabled: rowData[0].name === 'Ridwan',
+          
         }),
 
       ]}
