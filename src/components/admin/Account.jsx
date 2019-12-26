@@ -99,7 +99,6 @@ const Account = () => {
         selection: true,
         rowStyle: rowData => ({
           backgroundColor: (selectedRow && selectedRow[0].tableData.id === rowData.tableData.id) ? '#ffcccc' : '#FFF'
-          // (this.state.selectedRow && this.state.selectedRow.tableData.id === rowData.tableData.id)
         })
       }}
 
