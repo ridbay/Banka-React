@@ -76,10 +76,6 @@ const Account = () => {
       }}
       options={{
         selection: true,
-        selectionProps: rowData => ({
-          disabled: isActivated,
-          color: 'red'
-        }),
         rowStyle: rowData => ({
           backgroundColor: (isActivated) ? '#ffcccc' : '#FFF'
         })
