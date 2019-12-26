@@ -23,13 +23,13 @@ const Account = () => {
   });
 
   const [isActivated, setIsActivated] = useState(false);
-  const activateAccoount = (something) => {
-    alert('You want to deactivate ' + something.length + ' accounts')
-    return ({
-      disabled: something.name === 'Ridwan'
-    })
 
+  const activatePopUp = (isActivated,rowData) => {
+    isActivated ? (alert('You want to Deactivate ' + rowData.length + ' accounts')):(alert('You want to Activate ' + rowData.length + ' accounts'))
+   
   }
+
+
   return (
 
     <MaterialTable
@@ -81,7 +81,6 @@ const Account = () => {
         })
       }}
 
-
       actions={[
         rowData => ({
           tooltip: 'Deactivate All Selected Accounts',
@@ -89,7 +88,7 @@ const Account = () => {
 
           onClick: (evt, rowData) => {
             setIsActivated(!isActivated);
-              isActivated ? (activateAccoount(rowData)):(alert('You want to Activate ' + rowData.length + ' accounts'))
+              (activatePopUp(isActivated, rowData))
           },
           
         }),
