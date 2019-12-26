@@ -38,8 +38,6 @@ const Account = () => {
       data={state.data}
       
       editable={{
-        // isEditable: rowData => rowData.name !== "Ridwan",
-        isEditable: rowData => isActivated,
         onRowAdd: newData =>
           new Promise(resolve => {
             setTimeout(() => {
@@ -92,6 +90,7 @@ const Account = () => {
         rowData => ({
           tooltip: 'Deactivate All Selected Accounts',
           icon: isActivated ? ToggleOffOutlinedIcon : ToggleOnOutlinedIcon,
+
           onClick: (evt, rowData) => {
             setIsActivated(!isActivated);
               isActivated ? (activateAccoount(rowData)):(alert('You want to Activate ' + rowData.length + ' accounts'))
