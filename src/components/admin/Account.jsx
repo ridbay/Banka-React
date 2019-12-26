@@ -75,14 +75,6 @@ const Account = () => {
             }, 600);
           }),
       }}
-      options={{
-        selection: true,
-        rowStyle: rowData => ({
-          backgroundColor: (selectedRow && selectedRow.tableData.id === rowData.tableData.id) ? '#ffcccc' : '#FFF'
-          // (this.state.selectedRow && this.state.selectedRow.tableData.id === rowData.tableData.id)
-        })
-      }}
-
       actions={[
         rowData => ({
           tooltip: 'Deactivate All Selected Accounts',
@@ -103,6 +95,15 @@ const Account = () => {
         }),
 
       ]}
+      options={{
+        selection: true,
+        rowStyle: rowData => ({
+          backgroundColor: (selectedRow && selectedRow[0].tableData.id === rowData.tableData.id) ? '#ffcccc' : '#FFF'
+          // (this.state.selectedRow && this.state.selectedRow.tableData.id === rowData.tableData.id)
+        })
+      }}
+
+      
 
     />
   );
