@@ -4,6 +4,7 @@ import Image from '../img/ridwan.jpg';
 export const CUSTOMER = [
   {
     role: 'customer',
+    status: 'active',
     name: 'Ridwan',
     surname: 'Balogun',
     phone: "08078197526",
@@ -59,6 +60,7 @@ export const CUSTOMER = [
   {
     role: 'customer',
     name: 'Kamar',
+    status: 'deactive',
     surname: 'Olayanju',
     phone: "07063818194",
     accountType: 'Savings',
