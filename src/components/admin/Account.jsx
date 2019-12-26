@@ -23,6 +23,7 @@ const Account = () => {
   });
 
   const [isActivated, setIsActivated] = useState(false);
+  const [selectedRow, setSelectedRow] = useState(null);
 
   const activatePopUp = (isActivated,rowData) => {
     isActivated ? (alert('You want to Deactivate ' + rowData.length + ' accounts')):(alert('You want to Activate ' + rowData.length + ' accounts'))
@@ -77,7 +78,8 @@ const Account = () => {
       options={{
         selection: true,
         rowStyle: rowData => ({
-          backgroundColor: (isActivated) ? '#ffcccc' : '#FFF'
+          backgroundColor: (selectedRow && selectedRow.tableData.id === rowData.tableData.id) ? '#ffcccc' : '#FFF'
+          // (this.state.selectedRow && this.state.selectedRow.tableData.id === rowData.tableData.id)
         })
       }}
 
@@ -87,8 +89,15 @@ const Account = () => {
           icon: isActivated ? ToggleOffOutlinedIcon : ToggleOnOutlinedIcon,
 
           onClick: (evt, rowData) => {
+            
             setIsActivated(!isActivated);
-              (activatePopUp(isActivated, rowData))
+            setSelectedRow(rowData)
+            
+            activatePopUp(isActivated, rowData)
+            console.log(isActivated)
+            console.log(rowData)
+            console.log(selectedRow)
+            
           },
           
         }),
