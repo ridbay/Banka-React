@@ -9,35 +9,32 @@ const Account = () => {
   const [state, setState] = useState({
     columns: [
       { title: 'Name', field: 'name' },
-      { title: 'Surname', field: 'surname',  },
-      { title: 'Account Number', field: 'accountNumber', type: 'numeric', editable: 'never'},
+      { title: 'Surname', field: 'surname', },
+      { title: 'Account Number', field: 'accountNumber', type: 'numeric', editable: 'never' },
       { title: 'Account Type', field: 'accountType', lookup: { 'Savings': 'Savings', 'Current': 'Current' } },
-      { title: 'Balance', field: 'balance', type: 'numeric'}
+      { title: 'Balance', field: 'balance', type: 'numeric' }
     ],
     // data: [
     //   { name: 'Ridwan', surname: 'Balogun', accountNumber: 3042901179, accountType: 'Savings' },
     //   { name: 'Barakat', surname: 'Obatade', accountNumber: 5638268938, accountType: 'Current' },
     // ],
     data: CUSTOMER,
-    
+
   });
 
   const [isActivated, setIsActivated] = useState(false);
   const [selectedRow, setSelectedRow] = useState(null);
 
-  const activatePopUp = (isActivated,rowData) => {
-    isActivated ? (alert('You want to Deactivate ' + rowData.length + ' accounts')):(alert('You want to Activate ' + rowData.length + ' accounts'))
-   
+  const activatePopUp = (isActivated, rowData) => {
+    isActivated ? (alert('You want to Deactivate ' + rowData.length + ' accounts')) : (alert('You want to Activate ' + rowData.length + ' accounts'))
   }
-
-
   return (
 
     <MaterialTable
       title="Account"
       columns={state.columns}
       data={state.data}
-      
+
       editable={{
         onRowAdd: newData =>
           new Promise(resolve => {
@@ -79,21 +76,12 @@ const Account = () => {
         rowData => ({
           tooltip: 'Deactivate All Selected Accounts',
           icon: isActivated ? ToggleOffOutlinedIcon : ToggleOnOutlinedIcon,
-
           onClick: (evt, rowData) => {
-            
             setIsActivated(!isActivated);
             setSelectedRow(rowData)
-            
             activatePopUp(isActivated, rowData)
-            console.log(isActivated)
-            console.log(rowData)
-            console.log(selectedRow)
-            
           },
-          
         }),
-
       ]}
       options={{
         selection: true,
@@ -101,9 +89,6 @@ const Account = () => {
           backgroundColor: (selectedRow && selectedRow[0].tableData.id === rowData.tableData.id) ? '#ffcccc' : '#FFF'
         })
       }}
-
-      
-
     />
   );
 }
