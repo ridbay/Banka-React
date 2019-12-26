@@ -9,8 +9,8 @@ const Account = () => {
   const [state, setState] = useState({
     columns: [
       { title: 'Name', field: 'name' },
-      { title: 'Surname', field: 'surname' },
-      { title: 'Account Number', field: 'accountNumber', type: 'numeric' },
+      { title: 'Surname', field: 'surname',  },
+      { title: 'Account Number', field: 'accountNumber', type: 'numeric', editable: 'never'},
       { title: 'Account Type', field: 'accountType', lookup: { 'Savings': 'Savings', 'Current': 'Current' } },
       { title: 'Balance', field: 'balance', type: 'numeric'}
     ],
@@ -21,14 +21,23 @@ const Account = () => {
     data: CUSTOMER,
     
   });
-  const [activate, setActivate] = useState(false);
+  const [isActivated, setIsActivated] = useState(false);
+  const activateAccoount = (something) => {
+    alert('You want to deactivate ' + something.length + ' accounts')
+    return ({
+      disabled: something.name === 'Ridwan'
+    })
+
+  }
   return (
 
     <MaterialTable
       title="Account"
       columns={state.columns}
       data={state.data}
+      
       editable={{
+        isEditable: rowData => rowData.name !== "Ridwan",
         onRowAdd: newData =>
           new Promise(resolve => {
             setTimeout(() => {
@@ -69,28 +78,23 @@ const Account = () => {
         selection: true,
         
         selectionProps: rowData => ({
-          disabled: rowData.name === 'Ridwan',
-          color: 'primary'
+          disabled: isActivated,
+          color: 'red'
         })
       }}
+      // onRowClick={(event, rowData) => isActivated? (null): (disabled: isActivated)}
 
       actions={[
-        {
+        rowData => ({
           tooltip: 'Deactivate All Selected Accounts',
-          icon: activate ? ToggleOffOutlinedIcon : ToggleOnOutlinedIcon,
-          onClick: (evt, data) => {
-            setActivate(!activate);
-            console.log("This is the data ", data)
-            return (
-              activate ? (alert('You want to deactivate ' + data.length + ' accounts'))
-                :
-                (alert('You want to Activate ' + data.length + ' accounts'))
-
-            )
+          icon: isActivated ? ToggleOffOutlinedIcon : ToggleOnOutlinedIcon,
+          onClick: (evt, rowData) => {
+            setIsActivated(!isActivated);
+            console.log(rowData[0].name === 'Ridwan')
+              isActivated ? (activateAccoount(rowData)):(alert('You want to Activate ' + rowData.length + ' accounts'))
           },
-
-
-        }
+          disabled: rowData[0].name === 'Ridwan',
+        }),
 
       ]}
 
