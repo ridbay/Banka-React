@@ -8,7 +8,7 @@ import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import Select from '@material-ui/core/Select';
 
-const CreateAdminStaffAccountButton = () =>{
+const CreateAdminStaffAccountButton = () => {
   const [open, setOpen] = React.useState(false);
 
   const handleClickOpen = () => {
@@ -55,30 +55,33 @@ const CreateAdminStaffAccountButton = () =>{
             type="email"
             fullWidth
           />
-          <TextField
-            autoFocus
-            margin="dense"
-            id="balance"
-            label="Opening Balance"
-            type="text"
-            fullWidth
-          />
+
           <Select
-              native
-              value='savings'
-              
-              labelWidth={10}
-              inputProps={{
-                name: 'acctType',
-                id: 'acctType',
-              }}
+            native
+            value='savings'
+            // fullWidth
+            labelWidth={20}
+            inputProps={{
+              name: 'acctType',
+              id: 'acctType',
+            }}
 
-            >
+          >
 
-              <option value={"savings"}>Staff</option>
-              <option value={"staff"}>Admin</option>
-              
-            </Select>
+            <option value={"savings"}>Staff</option>
+            <option value={"staff"}>Admin</option>
+
+          </Select>
+          <TextField
+              variant="outlined"
+              required
+              fullWidth
+              name="password"
+              label="Password"
+              type="password"
+              id="password"
+              autoComplete="current-password"
+            />
         </DialogContent>
         <DialogActions>
           <Button onClick={handleClose} color="primary">
