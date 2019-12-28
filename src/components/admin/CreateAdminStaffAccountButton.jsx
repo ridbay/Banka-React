@@ -48,14 +48,13 @@ const handleChange = name => event => {
   return (
     <div>
       <Button variant="outlined" color="primary" onClick={handleClickOpen}>
-        Create an Account
+      Create Admin account
       </Button>
       <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
-        <DialogTitle id="form-dialog-title">Create an Account</DialogTitle>
+        <DialogTitle id="form-dialog-title">Create Admin or Staff user account</DialogTitle>
         <DialogContent>
           <DialogContentText>
-            To create a bank Acount, please enter your email address here. We will send updates
-            occasionally.
+            To create an Admin or Staff user account, please enter the details before. 
           </DialogContentText>
           <TextField
             // autoFocus
