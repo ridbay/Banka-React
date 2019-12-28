@@ -57,8 +57,8 @@ const handleChange = name => event => {
             To create an Admin or Staff user account, please enter the details before. 
           </DialogContentText>
           <TextField
-            // autoFocus
-            // margin="dense"
+            autoFocus
+            margin="dense"
             id="fName"
             label="First Name"
             type="text"
@@ -91,10 +91,10 @@ const handleChange = name => event => {
             
             // labelWidth={20}
             onChange={handleChange('acctType')}
-            // inputProps={{
-            //   name: 'acctType',
-            //   id: 'acctType',
-            // }}
+            inputProps={{
+              name: 'acctType',
+              id: 'acctType',
+            }}
 
           >
             <option value="">Account Type</option> 
