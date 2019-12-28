@@ -8,8 +8,8 @@ import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
 
 import {customerListItems, adminListItems} from '../components/AdminDrawerMenuList';
-import CreateAccountButton from '../components/CreateAccountButton';
-import CreateAdminStaffAccountButton from '../components/CreateAdminStaffAccountButton';
+import CreateAccountButton from '../components/customer/CreateAccountButton';
+import CreateAdminStaffAccountButton from '../components/admin/CreateAdminStaffAccountButton';
 
 
 const drawerWidth = 240;
