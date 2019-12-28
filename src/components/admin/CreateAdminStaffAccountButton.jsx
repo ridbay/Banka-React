@@ -64,6 +64,7 @@ const handleChange = name => event => {
             label="First Name"
             type="text"
             fullWidth
+            onChange={handleChange('fName')}
           />
           <TextField
             autoFocus
@@ -72,6 +73,7 @@ const handleChange = name => event => {
             label="Last Name"
             type="text"
             fullWidth
+            onChange={handleChange('lName')}
           />
           <TextField
             autoFocus
@@ -80,6 +82,7 @@ const handleChange = name => event => {
             label="Email Address"
             type="email"
             fullWidth
+            onChange={handleChange('email')}
           />
 
           <Select
@@ -109,13 +112,14 @@ const handleChange = name => event => {
               type="password"
               id="password"
               autoComplete="current-password"
+              onChange={handleChange('password')}
             />
         </DialogContent>
         <DialogActions>
           <Button onClick={handleClose} color="primary">
             Cancel
           </Button>
-          <Button onClick={handleClose} color="primary">
+          <Button onClick={()=>(console.log(state))} color="primary">
             Create
           </Button>
         </DialogActions>
