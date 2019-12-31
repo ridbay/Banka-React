@@ -20,19 +20,19 @@ const useStyles = makeStyles({
 
 export default function RecentTransaction() {
   const classes = useStyles();
-  const { transactions } = USERS_DATA[1];
+  const { transactions } = USERS_DATA;
 
   return (
     <React.Fragment>
       <Title>Recent Transaction</Title>
       <Typography component="p" variant="h4">
-      &#8358;{transactions[0].amount}
+      {/* &#8358;{transactions[0].amount} */}
       </Typography>
       <Typography color="textSecondary" className={classes.depositContext}>
-        to {transactions[0].beneficiary}
+        {/* to {transactions[0].beneficiary} */}
       </Typography>
       <Typography color="textSecondary" className={classes.depositContext}>
-        on {transactions[0].date}
+        {/* on {transactions[0].date} */}
       </Typography>
       
       <div>

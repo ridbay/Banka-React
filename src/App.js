@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './App.css';
 import Home from './pages/Home';
 import SignIn from './pages/SignIn';
@@ -6,7 +6,7 @@ import SignUp from './pages/SignUp';
 
 import CustomerDashboard from './pages/customer/Dashboard';
 import AdminDashboard from './pages/admin/Dashboard';
-import  USERS_DATA from '../src/util/userData'
+
 
 import {
   BrowserRouter as Router,
@@ -37,8 +37,8 @@ const theme = createMuiTheme({
 })
 
 const App = () => {
-  const [state, setState] = React.useState(USERS_DATA);
-  console.log(state);
+
+  
   return (
     <MuiThemeProvider theme={theme}>
       <div className='App'>
@@ -48,7 +48,7 @@ const App = () => {
           <div className='container'>
             <Switch>
               <Route exact path="/" component={Home} />
-              <Route exact path="/signin" component={SignIn} />
+              <Route exact path="/signin" component={SignIn}/>
               <Route exact path="/signup" component={SignUp} />
               <Route path="/customer" component={CustomerDashboard} />
               <Route path="/admin" component={AdminDashboard} />

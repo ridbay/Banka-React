@@ -57,12 +57,12 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const SignIn =()=> {
+
   const classes = useStyles();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [role, setRole] = useState('customer');
   const [loading, setLoading] = useState(false);
-
 
   const handleEmailChange = event => {
     setEmail(event.target.value);

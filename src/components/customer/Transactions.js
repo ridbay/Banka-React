@@ -42,8 +42,8 @@ export default function Transactions() {
   };
   const classes = useStyles();
   
-  const {transactions} = USERS_DATA['1'];
-  console.log(transactions.id)
+  // const {transactions} = USERS_DATA['1'];
+ 
   return (
     <React.Fragment>
       <Title>Recent Transactions</Title>
@@ -59,7 +59,7 @@ export default function Transactions() {
           </TableRow>
         </TableHead>
         <TableBody>
-          {transactions.map(row => (
+          {/* {transactions.map(row => (
             <TableRow key={row.id}>
               <TableCell>{row.date}</TableCell>
               <TableCell>{row.beneficiary}</TableCell>
@@ -68,7 +68,7 @@ export default function Transactions() {
               <TableCell>{row.status}</TableCell>
               <TableCell align="right">{row.amount}</TableCell>
             </TableRow>
-          ))}
+          ))} */}
         </TableBody>
       </Table>
       <div className={classes.seeMore}>

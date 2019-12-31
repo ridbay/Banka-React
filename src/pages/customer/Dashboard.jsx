@@ -7,16 +7,18 @@ import ProfileMenu from '../../components/ProfileMenu';
 import AdminNavbar from '../../components/AdminNavbar';
 import AdminDrawer from '../../components/AdminDrawer';
 
-import routes from '../../routes'
+import routes from '../../routes';
+
+import  USERS_DATA from '../../util/userData'
 
 const switchRoutes = (
   <Switch>
-    {routes.map((prop, key) => {
-      if (prop.layout === "/customer") {
+    {routes.map((route, key) => {
+      if (route.layout === "/customer") {
         return (
           <Route
-            path={prop.layout + prop.path}
-            component={prop.component}
+            path={route.layout + route.path}
+            component={route.component}
             key={key}
           />
         );
@@ -77,7 +79,7 @@ const useStyles = makeStyles(theme => ({
 
 const Dashboard = () => {
   const classes = useStyles();
-
+  const [state, setState] = React.useState(USERS_DATA);
   const [open, setOpen] = useState(true);
   const [anchorEl, setAnchorEl] = useState(null);
   const isMenuOpen = Boolean(anchorEl);
@@ -98,8 +100,9 @@ const Dashboard = () => {
   const handleProfileMenuClose = () => {
     setAnchorEl(null);
   }; 
-
+  console.log(USERS_DATA)
   return (
+    
     <div className={classes.root}>
       <CssBaseline />
       <AdminNavbar handleDrawerOpen={handleDrawerOpen} handleProfileMenuOpen={handleProfileMenuOpen} open={open}/>
