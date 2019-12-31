@@ -6,7 +6,7 @@ const USERS_DATA = [
     id: 1,
     role: 'Customer',
     routeName: 'customer',
-    items: [
+    customers: [
       {
         role: 'customer',
         status: 'active',
@@ -179,7 +179,7 @@ const USERS_DATA = [
     id: 2,
     role: 'Staff',
     routeName: 'staff',
-    items: [
+    staffs: [
       {
         id: 1,
         name: 'Adidas NMD',
@@ -234,7 +234,7 @@ const USERS_DATA = [
     id: 3,
     role: 'Admin',
     routeName: 'admin',
-    items: [
+    admins: [
       {
         id: 1,
         name: 'Black Jean Shearling',

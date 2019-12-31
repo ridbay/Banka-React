@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import { Switch, Route, Redirect } from "react-router-dom";
 import { makeStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 
@@ -7,27 +6,10 @@ import ProfileMenu from '../../components/ProfileMenu';
 import AdminNavbar from '../../components/AdminNavbar';
 import AdminDrawer from '../../components/AdminDrawer';
 
-import routes from '../../routes';
+import switchRoutes from './switchRoutes'
 
 import  USERS_DATA from '../../util/userData'
 
-const switchRoutes = (
-  <Switch>
-    {routes.map((route, key) => {
-      if (route.layout === "/customer") {
-        return (
-          <Route
-            path={route.layout + route.path}
-            component={route.component}
-            key={key}
-          />
-        );
-      }
-      return null;
-    })}
-    <Redirect from="/customer" to="/customer/dashboard" />
-  </Switch>
-);
 
 
 
@@ -100,13 +82,13 @@ const Dashboard = () => {
   const handleProfileMenuClose = () => {
     setAnchorEl(null);
   }; 
-  console.log(USERS_DATA)
+ 
   return (
     
     <div className={classes.root}>
       <CssBaseline />
-      <AdminNavbar handleDrawerOpen={handleDrawerOpen} handleProfileMenuOpen={handleProfileMenuOpen} open={open}/>
-      <ProfileMenu isMenuOpen={isMenuOpen} handleProfileMenuClose={handleProfileMenuClose} anchorEl={anchorEl} />
+      <AdminNavbar handleDrawerOpen={handleDrawerOpen} handleProfileMenuOpen={handleProfileMenuOpen} open={open} state={state}/>
+      <ProfileMenu isMenuOpen={isMenuOpen} handleProfileMenuClose={handleProfileMenuClose} anchorEl={anchorEl} state={state}/>
       <AdminDrawer open={open} handleDrawerClose={handleDrawerClose} />
       <div className={classes.container}>{switchRoutes}</div>
     </div>
