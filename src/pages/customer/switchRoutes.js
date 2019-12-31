@@ -5,7 +5,9 @@ import { Switch, Route, Redirect } from "react-router-dom";
 
 
 const SwitchRoutes = (props)=> {
+
    console.log("this are props", props.state[0].role);
+  
     return (
     <Switch>
       {routes.map((route, key) => {

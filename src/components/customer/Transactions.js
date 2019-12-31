@@ -54,7 +54,7 @@ const Transactions=({transactions})=> {
           </TableRow>
         </TableHead>
         <TableBody>
-          {transactions.map(row => (
+          {/* {transactions.map(row => (
             <TableRow key={row.id}>
               <TableCell>{row.date}</TableCell>
               <TableCell>{row.beneficiary}</TableCell>
@@ -63,7 +63,7 @@ const Transactions=({transactions})=> {
               <TableCell>{row.status}</TableCell>
               <TableCell align="right">{row.amount}</TableCell>
             </TableRow>
-          ))}
+          ))} */}
         </TableBody>
       </Table>
       <div className={classes.seeMore}>
