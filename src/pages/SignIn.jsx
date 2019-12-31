@@ -59,36 +59,37 @@ const useStyles = makeStyles(theme => ({
 const SignIn =()=> {
 
   const classes = useStyles();
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [role, setRole] = useState('customer');
+  // const [email, setEmail] = useState('');
+  // const [password, setPassword] = useState('');
+  // const [role, setRole] = useState('customer');
   const [loading, setLoading] = useState(false);
+  const [state, setState] = useState({
+    email: '',
+    password: '',
+    role: 'customer',
+  });
+  
 
-  const handleEmailChange = event => {
-    setEmail(event.target.value);
+const handleChange = name => event => {
+    setState({
+      ...state,
+      [name]: event.target.value,
+    });
   };
-  const handlePasswordChange = event => {
 
-    setPassword(event.target.value);
-  };
-
-  const handleRoleChange = event => {
-
-    setRole(event.target.value);
-  }
 
   const inputLabel = React.useRef(null);
   const handleSubmit = event => {
     event.preventDefault();
     setLoading(true);
     const obj = {
-      email,
-      password,
-      role
+      email: state.email,
+      password: state.password,
+      role: state.role
     }
     console.log(obj);
-    setEmail('');
-    setPassword('')
+    // setEmail('');
+    // setPassword('')
   }
   return (
     <Container component="main" maxWidth="xs">
@@ -112,8 +113,8 @@ const SignIn =()=> {
             name="email"
             autoComplete="email"
             autoFocus
-            value={email}
-            onChange={handleEmailChange}
+            value={state.email}
+            onChange={handleChange('email')}
           />
           <TextField
             variant="outlined"
@@ -125,8 +126,8 @@ const SignIn =()=> {
             type="password"
             id="password"
             autoComplete="current-password"
-            value={password}
-            onChange={handlePasswordChange}
+            value={state.password}
+            onChange={handleChange('password')}
           />
           <FormControl variant="outlined" className={classes.formControl}>
             <InputLabel ref={inputLabel} htmlFor="role">
@@ -134,8 +135,8 @@ const SignIn =()=> {
         </InputLabel>
             <Select
               native
-              value={role}
-              onChange={handleRoleChange}
+              value={state.role}
+              onChange={handleChange('role')}
               labelWidth={10}
               inputProps={{
                 name: 'role',
@@ -163,12 +164,13 @@ const SignIn =()=> {
 
           >
 
-            <Link href="/customer/dashboard" variant="body2" color="inherit" underline='none'>
+            {/* <Link href="/customer/dashboard" variant="body2" color="inherit" underline='none'>
               Sign In
               </Link>
               {loading && (
                 <CircularProgress size={30} value={100} className={classes.progress}/>
-              )}
+              )} */}
+              Sign In
           </Button>
           <Button
             type="submit"

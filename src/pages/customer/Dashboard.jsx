@@ -11,8 +11,6 @@ import switchRoutes from './switchRoutes'
 import  USERS_DATA from '../../util/userData'
 
 
-
-
 const drawerWidth = 260;
 
 const transition = {
