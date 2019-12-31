@@ -56,6 +56,7 @@ const handleChange = name => event => {
 
 
   const handleSubmit = event => {
+
     event.preventDefault();
     const {firstName, lastName,email, password, confirmPassword} = state;
     const newUser= {
@@ -77,7 +78,7 @@ const handleChange = name => event => {
         <Typography component="h1" variant="h5">
           Sign up
         </Typography>
-        <form className={classes.form} noValidate>
+        <form className={classes.form} noValidate onSubmit={handleSubmit}>
           <Grid container spacing={2}>
             <Grid item xs={12} sm={6}>
               <TextField
