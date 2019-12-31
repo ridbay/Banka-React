@@ -38,7 +38,32 @@ const useStyles = makeStyles(theme => ({
 
 const SignUp =() => {
   const classes = useStyles();
+  const [state, setState] = useState({
+    email: '',
+    password: '',
+    role: 'customer',
+  });
+  
 
+const handleChange = name => event => {
+    setState({
+      ...state,
+      [name]: event.target.value,
+    });
+  };
+
+
+  const inputLabel = React.useRef(null);
+  const handleSubmit = event => {
+    event.preventDefault();
+    setLoading(true);
+    const obj = {
+      email: state.email,
+      password: state.password,
+      role: state.role
+    }
+    console.log(obj);
+  }
   return (
     <Container component="main" maxWidth="xs">
       <CssBaseline />
@@ -94,7 +119,19 @@ const SignUp =() => {
                 label="Password"
                 type="password"
                 id="password"
-                autoComplete="current-password"
+              
+              />
+            </Grid>
+            <Grid item xs={12}>
+              <TextField
+                variant="outlined"
+                required
+                fullWidth
+                name="confirmPassword"
+                label="Confirm Password"
+                type="password"
+                id="confirmPassword"
+                
               />
             </Grid>
           </Grid>
