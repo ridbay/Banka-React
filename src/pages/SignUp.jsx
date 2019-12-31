@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -39,9 +39,11 @@ const useStyles = makeStyles(theme => ({
 const SignUp =() => {
   const classes = useStyles();
   const [state, setState] = useState({
+    firstName: '',
+    lastName: '',
     email: '',
     password: '',
-    role: 'customer',
+    confirmPassword: '',
   });
   
 
@@ -53,16 +55,17 @@ const handleChange = name => event => {
   };
 
 
-  const inputLabel = React.useRef(null);
   const handleSubmit = event => {
     event.preventDefault();
-    setLoading(true);
-    const obj = {
-      email: state.email,
-      password: state.password,
-      role: state.role
+    const {firstName, lastName,email, password, confirmPassword} = state;
+    const newUser= {
+      firstName,
+      lastName,
+      email,
+      password,
+      confirmPassword
     }
-    console.log(obj);
+    console.log(newUser);
   }
   return (
     <Container component="main" maxWidth="xs">
@@ -78,7 +81,7 @@ const handleChange = name => event => {
           <Grid container spacing={2}>
             <Grid item xs={12} sm={6}>
               <TextField
-                autoComplete="fname"
+                autoComplete="firstName"
                 name="firstName"
                 variant="outlined"
                 required
@@ -86,6 +89,7 @@ const handleChange = name => event => {
                 id="firstName"
                 label="First Name"
                 autoFocus
+                onChange={handleChange('firstName')}
               />
             </Grid>
             <Grid item xs={12} sm={6}>
@@ -96,7 +100,8 @@ const handleChange = name => event => {
                 id="lastName"
                 label="Last Name"
                 name="lastName"
-                autoComplete="lname"
+                autoComplete="lastName"
+                onChange={handleChange('lastName')}
               />
             </Grid>
             <Grid item xs={12}>
@@ -108,6 +113,7 @@ const handleChange = name => event => {
                 label="Email Address"
                 name="email"
                 autoComplete="email"
+                onChange={handleChange('email')}
               />
             </Grid>
             <Grid item xs={12}>
@@ -119,6 +125,7 @@ const handleChange = name => event => {
                 label="Password"
                 type="password"
                 id="password"
+                onChange={handleChange('password')}
               
               />
             </Grid>
@@ -131,7 +138,7 @@ const handleChange = name => event => {
                 label="Confirm Password"
                 type="password"
                 id="confirmPassword"
-                
+                onChange={handleChange('confirmPassword')}
               />
             </Grid>
           </Grid>

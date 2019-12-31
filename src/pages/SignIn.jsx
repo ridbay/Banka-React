@@ -79,12 +79,13 @@ const handleChange = name => event => {
   const handleSubmit = event => {
     event.preventDefault();
     setLoading(true);
-    const obj = {
-      email: state.email,
-      password: state.password,
-      role: state.role
+    const {email, password, role} = state;
+    const user = {
+      email,
+      password,
+      role
     }
-    console.log(obj);
+    console.log(user);
   }
 
   // const signInRule = () => {
