@@ -5,7 +5,7 @@ import Typography from '@material-ui/core/Typography';
 import Title from './Title';
 
 
-import { CUSTOMER } from '../../Data/userData';
+import { CUSTOMER } from '../../util/userData';
 
 
 function preventDefault(event) {

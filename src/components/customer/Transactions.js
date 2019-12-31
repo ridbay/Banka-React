@@ -10,7 +10,7 @@ import TableRow from '@material-ui/core/TableRow';
 import Title from './Title';
 
 
-import { CUSTOMER } from '../../Data/userData';
+import { CUSTOMER } from '../../util/userData';
 
 
 // Generate Order Data
