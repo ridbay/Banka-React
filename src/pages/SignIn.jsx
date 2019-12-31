@@ -17,6 +17,8 @@ import Select from '@material-ui/core/Select';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import { green, purple } from '@material-ui/core/colors';
 
+// import USERS_DATA from '../util/userData'
+
 const useStyles = makeStyles(theme => ({
   '@global': {
     body: {
@@ -57,7 +59,6 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const SignIn =()=> {
-
   const classes = useStyles();
   const [loading, setLoading] = useState(false);
   const [state, setState] = useState({
@@ -76,6 +77,7 @@ const handleChange = name => event => {
 
 
   const inputLabel = React.useRef(null);
+
   const handleSubmit = event => {
     event.preventDefault();
     setLoading(true);
@@ -86,13 +88,10 @@ const handleChange = name => event => {
       role
     }
     console.log(user);
+    
   }
 
-  // const signInRule = () => {
-  //   state.email !== 'balogunridwan@gmail.com' && state.password === '123456' && state.role === 'customer' ? (<Link href="/customer/dashboard" variant="body2" color="inherit" underline='none'>
-  //   Sign In
-  //   </Link>):(null)
-  // }
+
   return (
     <Container component="main" maxWidth="xs">
       <CssBaseline />
@@ -166,13 +165,12 @@ const handleChange = name => event => {
 
           >
 
-            {/* <Link href="/customer/dashboard" variant="body2" color="inherit" underline='none'>
+            <Link href="/customer/dashboard" variant="body2" color="inherit" underline='none'>
               Sign In
-              </Link> */}
-              {/* {loading && (
+              </Link>
+              {loading && (
                 <CircularProgress size={30} value={100} className={classes.progress}/>
-              )} */}
-              Sign In
+              )}
           </Button>
           <Button
             type="submit"

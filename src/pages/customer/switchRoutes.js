@@ -4,7 +4,10 @@ import routes from '../../routes';
 import { Switch, Route, Redirect } from "react-router-dom";
 
 
-const switchRoutes = (
+const SwitchRoutes = (props)=> {
+   console.log("this are props", props.state)
+    return (
+
     <Switch>
       {routes.map((route, key) => {
         if (route.layout === "/customer") {
@@ -19,7 +22,7 @@ const switchRoutes = (
         return null;
       })}
       <Redirect from="/customer" to="/customer/dashboard" />
-    </Switch>
-  );
+    </Switch>)
+};
 
-  export default switchRoutes
+  export default SwitchRoutes

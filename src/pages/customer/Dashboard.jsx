@@ -6,7 +6,7 @@ import ProfileMenu from '../../components/ProfileMenu';
 import AdminNavbar from '../../components/AdminNavbar';
 import AdminDrawer from '../../components/AdminDrawer';
 
-import switchRoutes from './switchRoutes'
+import SwitchRoutes from './SwitchRoutes'
 
 import  USERS_DATA from '../../util/userData'
 
@@ -88,7 +88,8 @@ const Dashboard = () => {
       <AdminNavbar handleDrawerOpen={handleDrawerOpen} handleProfileMenuOpen={handleProfileMenuOpen} open={open} state={state}/>
       <ProfileMenu isMenuOpen={isMenuOpen} handleProfileMenuClose={handleProfileMenuClose} anchorEl={anchorEl} state={state}/>
       <AdminDrawer open={open} handleDrawerClose={handleDrawerClose} />
-      <div className={classes.container}>{switchRoutes}</div>
+      {/* <div className={classes.container}>{switchRoutes}</div> */}
+      <SwitchRoutes state={state}/>
     </div>
   );
 }
