@@ -59,9 +59,6 @@ const useStyles = makeStyles(theme => ({
 const SignIn =()=> {
 
   const classes = useStyles();
-  // const [email, setEmail] = useState('');
-  // const [password, setPassword] = useState('');
-  // const [role, setRole] = useState('customer');
   const [loading, setLoading] = useState(false);
   const [state, setState] = useState({
     email: '',
@@ -88,9 +85,13 @@ const handleChange = name => event => {
       role: state.role
     }
     console.log(obj);
-    // setEmail('');
-    // setPassword('')
   }
+
+  // const signInRule = () => {
+  //   state.email !== 'balogunridwan@gmail.com' && state.password === '123456' && state.role === 'customer' ? (<Link href="/customer/dashboard" variant="body2" color="inherit" underline='none'>
+  //   Sign In
+  //   </Link>):(null)
+  // }
   return (
     <Container component="main" maxWidth="xs">
       <CssBaseline />
@@ -166,8 +167,8 @@ const handleChange = name => event => {
 
             {/* <Link href="/customer/dashboard" variant="body2" color="inherit" underline='none'>
               Sign In
-              </Link>
-              {loading && (
+              </Link> */}
+              {/* {loading && (
                 <CircularProgress size={30} value={100} className={classes.progress}/>
               )} */}
               Sign In
