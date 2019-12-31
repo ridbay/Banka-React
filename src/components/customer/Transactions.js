@@ -10,7 +10,7 @@ import TableRow from '@material-ui/core/TableRow';
 import Title from './Title';
 
 
-import { CUSTOMER } from '../../util/userData';
+import  USERS_DATA from '../../util/userData';
 
 
 // Generate Order Data
@@ -42,7 +42,7 @@ export default function Transactions() {
   };
   const classes = useStyles();
   
-  const {transactions} = CUSTOMER['1'];
+  const {transactions} = USERS_DATA['1'];
   console.log(transactions.id)
   return (
     <React.Fragment>

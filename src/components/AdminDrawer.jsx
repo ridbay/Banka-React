@@ -8,7 +8,7 @@ import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
 
 import {customerListItems, adminListItems} from '../components/AdminDrawerMenuList';
-import CreateAccountButton from '../components/customer/CreateAccountButton';
+import CreateAccountButton from './customer/CreateAccountButton';
 import CreateAdminStaffAccountButton from '../components/admin/CreateAdminStaffAccountButton';
 
 

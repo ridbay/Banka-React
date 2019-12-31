@@ -5,7 +5,7 @@ import Typography from '@material-ui/core/Typography';
 import Title from './Title';
 
 
-import { CUSTOMER } from '../../util/userData';
+import  USERS_DATA  from '../../util/userData';
 
 
 function preventDefault(event) {
@@ -20,7 +20,7 @@ const useStyles = makeStyles({
 
 export default function RecentTransaction() {
   const classes = useStyles();
-  const { transactions } = CUSTOMER[1];
+  const { transactions } = USERS_DATA[1];
 
   return (
     <React.Fragment>

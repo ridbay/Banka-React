@@ -3,7 +3,7 @@ import MaterialTable from 'material-table';
 import ToggleOffOutlinedIcon from '@material-ui/icons/ToggleOffOutlined';
 import ToggleOnOutlinedIcon from '@material-ui/icons/ToggleOnOutlined';
 
-import { CUSTOMER } from '../../Data/userData';
+import USERS_DATA  from '../../util/userData';
 
 const Account = () => {
   const [state, setState] = useState({
@@ -18,7 +18,7 @@ const Account = () => {
     //   { name: 'Ridwan', surname: 'Balogun', accountNumber: 3042901179, accountType: 'Savings' },
     //   { name: 'Barakat', surname: 'Obatade', accountNumber: 5638268938, accountType: 'Current' },
     // ],
-    data: CUSTOMER,
+    data: USERS_DATA,
 
   });
 

@@ -11,7 +11,7 @@ import Button from '@material-ui/core/Button';
 import Title from './Title';
 
 
-import { CUSTOMER } from '../../util/userData';
+import USERS_DATA from '../../util/userData';
 
 
 // Generate Order Data
@@ -43,7 +43,7 @@ const Accounts = ()=> {
   };
   const classes = useStyles();
   
-  const {transactions} = CUSTOMER['1'];
+  const {transactions} = USERS_DATA['1'];
   console.log(transactions.id)
   return (
     <React.Fragment>

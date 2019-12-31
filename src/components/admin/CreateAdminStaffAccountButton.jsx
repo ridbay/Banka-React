@@ -88,7 +88,6 @@ const handleChange = name => event => {
             native
             value={state.acctType}
             className={classes.selectField}
-            
             // labelWidth={20}
             onChange={handleChange('acctType')}
             inputProps={{
