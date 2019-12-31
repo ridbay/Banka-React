@@ -10,9 +10,6 @@ import TableRow from '@material-ui/core/TableRow';
 import Title from './Title';
 
 
-import  USERS_DATA from '../../util/userData';
-
-
 // Generate Order Data
 // function createData(id, date, name, accountNumber, accountType, amount) {
 //   return { id, date, name, accountNumber, accountType, amount };
@@ -35,14 +32,12 @@ const useStyles = makeStyles(theme => ({
 
 
 
-export default function Transactions() {
-
+const Transactions=({transactions})=> {
   const getRoute = () => {
     return window.location.pathname === "/customer/dashboard";
   };
   const classes = useStyles();
   
-  // const {transactions} = USERS_DATA['1'];
  
   return (
     <React.Fragment>
@@ -59,7 +54,7 @@ export default function Transactions() {
           </TableRow>
         </TableHead>
         <TableBody>
-          {/* {transactions.map(row => (
+          {transactions.map(row => (
             <TableRow key={row.id}>
               <TableCell>{row.date}</TableCell>
               <TableCell>{row.beneficiary}</TableCell>
@@ -68,7 +63,7 @@ export default function Transactions() {
               <TableCell>{row.status}</TableCell>
               <TableCell align="right">{row.amount}</TableCell>
             </TableRow>
-          ))} */}
+          ))}
         </TableBody>
       </Table>
       <div className={classes.seeMore}>
@@ -80,3 +75,5 @@ export default function Transactions() {
     </React.Fragment>
   );
 }
+
+export default Transactions;
