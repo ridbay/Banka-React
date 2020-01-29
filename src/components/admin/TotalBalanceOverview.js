@@ -19,19 +19,17 @@ const useStyles = makeStyles({
 
 export default function RecentTransaction() {
   const classes = useStyles();
-  // const {customers} = USERS_DATA[0];
-  const [customers] = USERS_DATA
-  // console.log(customers.customers)
-  const balances = customers.customers.map(customer => customer.balance)
-  const allBalance = balances.reduce((accumulator, currentValue) => accumulator + currentValue)
-  // const firstCustomerTransactions = transactions[0]
+
+  const [customers] = USERS_DATA;
+  const balances = customers.customers.map(customer => customer.balance);
+  const allBalance = balances.reduce((accumulator, currentValue) => accumulator + currentValue);
 
   const numberWithCommas = (allBalance) => allBalance.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-  console.log(balances.length)
+
 
   return (
     <React.Fragment>
-      <Title>Total Balances</Title>
+      <Title>Total Balance</Title>
       <Typography component="p" variant="h4">
         &#8358;{numberWithCommas(allBalance)}
       </Typography>

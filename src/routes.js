@@ -7,6 +7,7 @@ import CustomerProfile from "./components/customer/Profile";
 import CustomerTransactions from "./components/customer/TransactionsView";
 import AdminOverview from "./components/admin/Overview";
 import AdminAccounts from "./components/admin/AccountsView"
+import AdminProfile from "./components/admin/Profile"
 
 
 const routes = [
@@ -43,6 +44,13 @@ const routes = [
     name: "Accounts",
     icon: Dashboard,
     component: AdminAccounts,
+    layout: "/admin"
+  },
+  {
+    path: "/profile",
+    name: "Profile",
+    icon: Dashboard,
+    component: AdminProfile,
     layout: "/admin"
   },
   
