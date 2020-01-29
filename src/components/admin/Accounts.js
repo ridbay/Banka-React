@@ -34,10 +34,6 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 const customersData = USERS_DATA[0].customers;
-console.log(customersData)
-// const transactions = customers.customers.map(customer=> customer.transactions)
-// const firstCustomerTransactions = transactions[0]
-
 
 const Accounts = ()=> {
 
@@ -46,7 +42,6 @@ const Accounts = ()=> {
   };
   const classes = useStyles();
   
-  const {transactions} = USERS_DATA['1'];
 
   return (
     <React.Fragment>

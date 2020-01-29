@@ -20,20 +20,22 @@ const useStyles = makeStyles({
 export default function RecentTransaction() {
   const classes = useStyles();
   const customers = USERS_DATA[0];
-  const transactions = customers.customers.map(customer=> customer.transactions)
+  const transactions = customers.customers.map(customer=> customer.balance)
+  const allBalance = transactions.reduce((accumulator, currentValue) => accumulator + currentValue)
   const firstCustomerTransactions = transactions[0]
+  
 
   return (
     <React.Fragment>
       <Title>Recent Transaction</Title>
       <Typography component="p" variant="h4">
-        &#8358;{firstCustomerTransactions[0].amount}
+        &#8358;{allBalance}
       </Typography>
       <Typography color="textSecondary" className={classes.depositContext}>
-        to {firstCustomerTransactions[0].beneficiary}
+        {/* to {firstCustomerTransactions[0].beneficiary} */}
       </Typography>
       <Typography color="textSecondary" className={classes.depositContext}>
-        on {firstCustomerTransactions[0].date}
+        {/* on {firstCustomerTransactions[0].date} */}
       </Typography>
 
       <div>
