@@ -5,7 +5,7 @@ import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 
-import RecentTransaction from './RecentTransaction';
+import TotalBalanceOverview from './TotalBalanceOverview';
 import Accounts from './Accounts';
 
 
@@ -51,7 +51,7 @@ const Overview = () => {
                         {/* Recent RecentTransaction */}
                         <Grid item xs={12} md={4} lg={3}>
                             <Paper className={fixedHeightPaper}>
-                                <RecentTransaction />
+                                <TotalBalanceOverview />
                             </Paper>
                         </Grid>
                         {/* Recent Accounts */}
