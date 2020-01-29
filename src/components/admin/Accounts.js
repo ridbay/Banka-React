@@ -33,8 +33,9 @@ const useStyles = makeStyles(theme => ({
     marginTop: theme.spacing(3),
   },
 }));
-const customersData = USERS_DATA[0].customers;
-
+const [customers] = USERS_DATA;
+const customersData = customers.customers;
+console.log(customersData)
 const Accounts = ()=> {
 
   const getRoute = () => {

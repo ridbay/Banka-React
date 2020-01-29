@@ -43,7 +43,7 @@ export default function RecentTransaction() {
       </Typography>
 
       <div>
-        <Link color="primary" href="#" onClick={preventDefault}>
+        <Link color="primary" href="/admin/accounts" onClick={preventDefault}>
           View accounts
         </Link>
       </div>
