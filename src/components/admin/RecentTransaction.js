@@ -19,12 +19,15 @@ const useStyles = makeStyles({
 
 export default function RecentTransaction() {
   const classes = useStyles();
-  const customers = USERS_DATA[0];
-  const transactions = customers.customers.map(customer=> customer.balance)
-  const allBalance = transactions.reduce((accumulator, currentValue) => accumulator + currentValue)
-  const firstCustomerTransactions = transactions[0]
+  // const {customers} = USERS_DATA[0];
+  const [customers] = USERS_DATA
+  // console.log(customers.customers)
+  const balances = customers.customers.map(customer=> customer.balance)
+  const allBalance = balances.reduce((accumulator, currentValue) => accumulator + currentValue)
+  // const firstCustomerTransactions = transactions[0]
   
   const numberWithCommas = (allBalance) => allBalance.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  console.log(balances.length)
 
   return (
     <React.Fragment>
@@ -33,7 +36,7 @@ export default function RecentTransaction() {
         &#8358;{numberWithCommas(allBalance)}
       </Typography>
       <Typography color="textSecondary" className={classes.depositContext}>
-        {/* to {firstCustomerTransactions[0].beneficiary} */}
+        from {balances.length} customer accounts
       </Typography>
       <Typography color="textSecondary" className={classes.depositContext}>
         {/* on {firstCustomerTransactions[0].date} */}
