@@ -35,7 +35,6 @@ const useStyles = makeStyles(theme => ({
 }));
 const [customers] = USERS_DATA;
 const customersData = customers.customers;
-console.log(customersData)
 const Accounts = ()=> {
 
   const getRoute = () => {
