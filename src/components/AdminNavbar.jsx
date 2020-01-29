@@ -50,6 +50,7 @@ const AdminNavbar = (props) => {
   const { handleDrawerOpen, open, handleProfileMenuOpen } = props;
 
   const pathName = window.location.pathname.split("/")[2];
+
   return (
     <AppBar position="absolute" className={clsx(classes.appBar, open && classes.appBarShift)}>
       <Toolbar className={classes.toolbar}>

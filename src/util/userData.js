@@ -8,8 +8,10 @@ const USERS_DATA = [
     routeName: 'customer',
     customers: [
       {
+        id: 1,
+        dateCreated: '28/01/2019',
         role: 'customer',
-        status: 'active',
+        status: 'Active',
         name: 'Ridwan',
         surname: 'Balogun',
         phone: "08078197526",
@@ -63,9 +65,11 @@ const USERS_DATA = [
         ],
       },
       {
+        id: 2,
+        dateCreated: '13/12/2019',
         role: 'customer',
         name: 'Kamar',
-        status: 'deactive',
+        status: 'Inactive',
         surname: 'Olayanju',
         phone: "07063818194",
         accountType: 'Savings',
@@ -119,9 +123,12 @@ const USERS_DATA = [
         ]
       },
       {
+        id: 3,
+        dateCreated: '8/01/2020',
         role: 'customer',
         name: 'Ibrahim',
         surname: 'Mukaila',
+        status: 'Active',
         phone: "07063818194",
         accountType: 'Savings',
         address: "Iseyin, Oyo, Nigeria",

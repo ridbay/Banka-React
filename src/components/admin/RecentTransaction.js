@@ -5,8 +5,7 @@ import Typography from '@material-ui/core/Typography';
 import Title from './Title';
 
 
-import  USERS_DATA  from '../../util/userData';
-
+import USERS_DATA from '../../util/userData';
 
 function preventDefault(event) {
   event.preventDefault();
@@ -20,21 +19,23 @@ const useStyles = makeStyles({
 
 export default function RecentTransaction() {
   const classes = useStyles();
-  const { transactions } = USERS_DATA[1];
+  const customers = USERS_DATA[0];
+  const transactions = customers.customers.map(customer=> customer.transactions)
+  const firstCustomerTransactions = transactions[0]
 
   return (
     <React.Fragment>
       <Title>Recent Transaction</Title>
       <Typography component="p" variant="h4">
-      &#8358;{transactions[0].amount}
+        &#8358;{firstCustomerTransactions[0].amount}
       </Typography>
       <Typography color="textSecondary" className={classes.depositContext}>
-        to {transactions[0].beneficiary}
+        to {firstCustomerTransactions[0].beneficiary}
       </Typography>
       <Typography color="textSecondary" className={classes.depositContext}>
-        on {transactions[0].date}
+        on {firstCustomerTransactions[0].date}
       </Typography>
-      
+
       <div>
         <Link color="primary" href="#" onClick={preventDefault}>
           View balance

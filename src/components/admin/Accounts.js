@@ -33,7 +33,10 @@ const useStyles = makeStyles(theme => ({
     marginTop: theme.spacing(3),
   },
 }));
-
+const customersData = USERS_DATA[0].customers;
+console.log(customersData)
+// const transactions = customers.customers.map(customer=> customer.transactions)
+// const firstCustomerTransactions = transactions[0]
 
 
 const Accounts = ()=> {
@@ -44,7 +47,7 @@ const Accounts = ()=> {
   const classes = useStyles();
   
   const {transactions} = USERS_DATA['1'];
-  console.log(transactions.id)
+
   return (
     <React.Fragment>
       <Title>Customers Accounts</Title>
@@ -54,21 +57,21 @@ const Accounts = ()=> {
             <TableCell>Date Created</TableCell>
             <TableCell>Name</TableCell>
             <TableCell>Account Number</TableCell>
-            <TableCell>Bank</TableCell>
+            <TableCell>Account Type</TableCell>
             <TableCell>Status</TableCell>
-            <TableCell align="right">Amount (&#8358;)</TableCell>
+            <TableCell align="right">Balance(&#8358;)</TableCell>
             <TableCell>Actions</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
-          {transactions.map(row => (
+          {customersData.map(row => (
             <TableRow key={row.id}>
-              <TableCell>{row.date}</TableCell>
-              <TableCell>{row.beneficiary}</TableCell>
+              <TableCell>{row.dateCreated}</TableCell>
+              <TableCell>{row.name}</TableCell>
               <TableCell>{row.accountNumber}</TableCell>
-              <TableCell>{row.bank}</TableCell>
+              <TableCell>{row.accountType}</TableCell>
               <TableCell>{row.status}</TableCell>
-              <TableCell align="right">{row.amount}</TableCell>
+              <TableCell align="right">{row.balance}</TableCell>
               <TableCell align="right"><Button>Delete</Button> </TableCell>
             </TableRow>
           ))}
