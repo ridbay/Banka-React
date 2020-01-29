@@ -24,12 +24,13 @@ export default function RecentTransaction() {
   const allBalance = transactions.reduce((accumulator, currentValue) => accumulator + currentValue)
   const firstCustomerTransactions = transactions[0]
   
+  const numberWithCommas = (allBalance) => allBalance.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 
   return (
     <React.Fragment>
-      <Title>Recent Transaction</Title>
+      <Title>Total Balances</Title>
       <Typography component="p" variant="h4">
-        &#8358;{allBalance}
+        &#8358;{numberWithCommas(allBalance)}
       </Typography>
       <Typography color="textSecondary" className={classes.depositContext}>
         {/* to {firstCustomerTransactions[0].beneficiary} */}
