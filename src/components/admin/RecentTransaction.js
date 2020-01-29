@@ -22,10 +22,10 @@ export default function RecentTransaction() {
   // const {customers} = USERS_DATA[0];
   const [customers] = USERS_DATA
   // console.log(customers.customers)
-  const balances = customers.customers.map(customer=> customer.balance)
+  const balances = customers.customers.map(customer => customer.balance)
   const allBalance = balances.reduce((accumulator, currentValue) => accumulator + currentValue)
   // const firstCustomerTransactions = transactions[0]
-  
+
   const numberWithCommas = (allBalance) => allBalance.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   console.log(balances.length)
 
@@ -44,7 +44,7 @@ export default function RecentTransaction() {
 
       <div>
         <Link color="primary" href="#" onClick={preventDefault}>
-          View balance
+          View accounts
         </Link>
       </div>
     </React.Fragment>
