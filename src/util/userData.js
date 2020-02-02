@@ -244,9 +244,13 @@ const USERS_DATA = [
     admins: [
       {
         id: 1,
-        name: 'Black Jean Shearling',
-        imageUrl: 'https://i.ibb.co/XzcwL5s/black-shearling.png',
-        price: 125
+        role : 'Admin', 
+        fname : 'Stephen', 
+        lname : 'Ajibade', 
+        phone: '00744028038083', 
+        accountNumber: "Not applicable", 
+        transactions: "Add later",
+        image: 'https://i.ibb.co/XzcwL5s/black-shearling.png',
       },
       {
         id: 2,

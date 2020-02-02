@@ -1,7 +1,5 @@
 import React from 'react';
 
-import USERS_DATA from '../../util/userData';
-
 
 import { makeStyles } from '@material-ui/core/styles';
 
@@ -15,6 +13,8 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Avatar from '@material-ui/core/Avatar';
 import { red } from '@material-ui/core/colors';
 import Typography from '@material-ui/core/Typography';
+
+import USERS_DATA from '../../util/userData';
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -51,9 +51,13 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
+// const admins = USERS_DATA[2].admins[0]
+
+// console.log(admins)
 export default function Profile() {
     const classes = useStyles();
-    const { role, fname, lname, image, phone, accountNumber, transactions } = USERS_DATA[1];
+    const { role, fname, lname, image, phone, accountNumber, transactions } = USERS_DATA[2].admins[0];
+    console.log(fname)
     return (
         <div className={classes.root}>
             <main className={classes.content}>
