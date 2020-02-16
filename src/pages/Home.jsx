@@ -33,7 +33,7 @@ const useStyles = makeStyles(theme => ({
 
 const Home = () => {
   const classes = useStyles();
-  const [state, setState] = useState({
+  const [currentUser, setCurrentUser] = useState({
     email: '',
     password: '',
     role: 'customer',
@@ -41,7 +41,7 @@ const Home = () => {
 
   return (
     <React.Fragment>
-      <NavBar state={state}/>
+      <NavBar />
         <div className={classes.heroContent}>
           <Container component="main">
             <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>

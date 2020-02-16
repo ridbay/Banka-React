@@ -87,7 +87,6 @@ const Dashboard = () => {
       <AdminNavbar handleDrawerOpen={handleDrawerOpen} handleProfileMenuOpen={handleProfileMenuOpen} open={open}/>
       <ProfileMenu isMenuOpen={isMenuOpen} handleProfileMenuClose={handleProfileMenuClose} anchorEl={anchorEl}/>
       <AdminDrawer open={open} handleDrawerClose={handleDrawerClose} />
-      {/* <div className={classes.container}>{switchRoutes}</div> */}
       <SwitchRoutes />
     </div>
   );
