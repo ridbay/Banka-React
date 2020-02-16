@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Button from '@material-ui/core/Button';
 
 
@@ -33,10 +33,15 @@ const useStyles = makeStyles(theme => ({
 
 const Home = () => {
   const classes = useStyles();
+  const [state, setState] = useState({
+    email: '',
+    password: '',
+    role: 'customer',
+  });
 
   return (
     <React.Fragment>
-      <NavBar />
+      <NavBar state={state}/>
         <div className={classes.heroContent}>
           <Container component="main">
             <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>

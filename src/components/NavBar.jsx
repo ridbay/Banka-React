@@ -23,7 +23,8 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-const NavBar = () => {
+const NavBar = ({state}) => {
+    console.log(`this is ${state.email} data`)
     const classes = useStyles();
     return (
         <div className={classes.root}>
@@ -37,8 +38,11 @@ const NavBar = () => {
                             <Link variant="button" color="inherit" href="/about" className={classes.link}>About Us </Link>
                             <Link variant="button" color="inherit" href="/contact" className={classes.link}>Contact Us</Link>
                         </nav>
-                        <Button href="/signin" color="inherit" variant="outlined" className={classes.link}>SignIn</Button>
+                        {state ? <Button href="/signout" color="inherit" variant="outlined" className={classes.link}>SignOut</Button> : (<div>
+                            <Button href="/signin" color="inherit" variant="outlined" className={classes.link}>SignIn</Button>
                         <Button href="/signup" color="inherit" variant="outlined" className={classes.link}>SignUp</Button>
+                        </div>)}
+                        
                     </Toolbar>
                 </AppBar>
             </React.Fragment>

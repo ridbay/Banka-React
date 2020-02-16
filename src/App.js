@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import Home from './pages/Home';
 import SignIn from './pages/SignIn';
@@ -18,10 +18,7 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import createMuiTheme from '@material-ui/core/styles/createMuiTheme';
 import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
 // Redux
-import {Provider} from 'react-redux';
-import store from './reduxx/store';
 
- 
 // declare the theme
 const theme = createMuiTheme({
   palette: {
@@ -42,10 +39,9 @@ const theme = createMuiTheme({
 
 const App = () => {
 
-  
   return (
     <MuiThemeProvider theme={theme}>
-      <Provider store={store}>
+
       <div className='App'>
         <CssBaseline />
 
@@ -53,7 +49,7 @@ const App = () => {
           <div className='container'>
             <Switch>
               <Route exact path="/" component={Home} />
-              <Route exact path="/signin" component={SignIn}/>
+              <Route exact path="/signin" component={SignIn} />
               <Route exact path="/signup" component={SignUp} />
               <Route path="/customer" component={CustomerDashboard} />
               <Route path="/admin" component={AdminDashboard} />
@@ -62,7 +58,6 @@ const App = () => {
         </Router>
 
       </div>
-      </Provider>
 
     </MuiThemeProvider>
 
