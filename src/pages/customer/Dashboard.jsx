@@ -59,7 +59,7 @@ const useStyles = makeStyles(theme => ({
 
 const Dashboard = () => {
   const classes = useStyles();
-  const [state, setState] = React.useState(USERS_DATA);
+  // const [state, setState] = React.useState(USERS_DATA);
   const [open, setOpen] = useState(true);
   const [anchorEl, setAnchorEl] = useState(null);
   const isMenuOpen = Boolean(anchorEl);
@@ -80,16 +80,15 @@ const Dashboard = () => {
   const handleProfileMenuClose = () => {
     setAnchorEl(null);
   }; 
- 
   return (
     
     <div className={classes.root}>
       <CssBaseline />
-      <AdminNavbar handleDrawerOpen={handleDrawerOpen} handleProfileMenuOpen={handleProfileMenuOpen} open={open} state={state}/>
-      <ProfileMenu isMenuOpen={isMenuOpen} handleProfileMenuClose={handleProfileMenuClose} anchorEl={anchorEl} state={state}/>
+      <AdminNavbar handleDrawerOpen={handleDrawerOpen} handleProfileMenuOpen={handleProfileMenuOpen} open={open}/>
+      <ProfileMenu isMenuOpen={isMenuOpen} handleProfileMenuClose={handleProfileMenuClose} anchorEl={anchorEl}/>
       <AdminDrawer open={open} handleDrawerClose={handleDrawerClose} />
       {/* <div className={classes.container}>{switchRoutes}</div> */}
-      <SwitchRoutes state={state}/>
+      <SwitchRoutes />
     </div>
   );
 }

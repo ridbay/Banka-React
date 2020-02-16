@@ -4,9 +4,8 @@ import routes from '../../routes';
 import { Switch, Route, Redirect } from "react-router-dom";
 
 
-const SwitchRoutes = (props)=> {
+const SwitchRoutes = ()=> {
 
-   console.log("this are props", props.state[0].role);
   
     return (
     <Switch>
