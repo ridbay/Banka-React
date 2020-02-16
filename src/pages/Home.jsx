@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import Button from '@material-ui/core/Button';
 
 
@@ -35,7 +35,7 @@ const useStyles = makeStyles(theme => ({
 
 const Home = ({currentUser}) => {
   const classes = useStyles();
-  console.log(currentUser)
+
   return (
     <React.Fragment>
       <NavBar />
