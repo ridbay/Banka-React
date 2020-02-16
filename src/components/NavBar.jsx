@@ -27,7 +27,7 @@ const useStyles = makeStyles(theme => ({
 
 
 const NavBar = ({currentUser}) => {
-    console.log(`this is ${currentUser.role} data`)
+    console.log(`this is ${currentUser} data`)
     const classes = useStyles();
     return (
         <div className={classes.root}>
