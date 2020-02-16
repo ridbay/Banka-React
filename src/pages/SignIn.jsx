@@ -87,7 +87,7 @@ const handleChange = name => event => {
       password,
       role
     }
-    
+    console.log(user);
   }
 
 
