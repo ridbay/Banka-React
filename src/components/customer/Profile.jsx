@@ -103,6 +103,6 @@ const Profile = ({currentUser})=> {
 }
 
 const mapStateToProps = state => ({
-currentUser: state.user.currentUser
+currentUser: state.user.currentUser[0]
 })
 export default connect(mapStateToProps)(Profile);
