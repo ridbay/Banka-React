@@ -45,15 +45,6 @@ export const customerListItems = (
 
 export const adminListItems = (
   <div>
-    <Link color="inherit" href="/" underline='none'>
-      <ListItem button>
-        <ListItemIcon>
-          <HomeIcon />
-        </ListItemIcon>
-        <ListItemText primary="Home" />
-
-      </ListItem>
-    </Link>
 
     <Link color="inherit" href="/admin/dashboard" underline='none'>
       <ListItem button>
