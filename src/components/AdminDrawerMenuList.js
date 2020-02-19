@@ -12,16 +12,6 @@ import Link from '@material-ui/core/Link';
 
 export const customerListItems = (
   <div>
-    {/* <Link color="inherit" href="/" underline='none'>
-      <ListItem button>
-        <ListItemIcon>
-          <HomeIcon />
-        </ListItemIcon>
-        <ListItemText primary="Home" />
-
-      </ListItem>
-    </Link> */}
-
     <Link color="inherit" href="/customer/dashboard" underline='none'>
       <ListItem button>
         <ListItemIcon>
