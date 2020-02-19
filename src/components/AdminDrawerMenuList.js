@@ -12,7 +12,7 @@ import Link from '@material-ui/core/Link';
 
 export const customerListItems = (
   <div>
-    <Link color="inherit" href="/" underline='none'>
+    {/* <Link color="inherit" href="/" underline='none'>
       <ListItem button>
         <ListItemIcon>
           <HomeIcon />
@@ -20,7 +20,7 @@ export const customerListItems = (
         <ListItemText primary="Home" />
 
       </ListItem>
-    </Link>
+    </Link> */}
 
     <Link color="inherit" href="/customer/dashboard" underline='none'>
       <ListItem button>
