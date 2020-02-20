@@ -1,7 +1,8 @@
 import UserData from '../../util/userData'
 
 const initialState = {
-    currentUser: UserData[0].customers
+    currentUser: UserData[0].customers,
+    currentAdmin: UserData[2].admins
 }
 const userReducer = (state = initialState, action) => {
     switch (action.type) {
