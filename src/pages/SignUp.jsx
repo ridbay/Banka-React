@@ -38,7 +38,10 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-const SignUp =() => {
+const SignUp =({customers}) => {
+  console.log(customers)
+
+  
   const classes = useStyles();
   const [state, setState] = useState({
     firstName: '',
@@ -68,7 +71,7 @@ const handleChange = name => event => {
       password,
       confirmPassword
     }
-    
+
     this.props.addNewUser(newUser)
   }
   return (
@@ -169,7 +172,11 @@ const handleChange = name => event => {
   );
 }
 
+const mapStateToProps = state => ({
+  customers: state.userState.customers
+})
+
 const mapDispatchToProps= dispatch =>({
 addNewUser: user => dispatch(addNewUser(user))
 })
-export default connect(null, mapDispatchToProps)(SignUp);
+export default connect(mapStateToProps, mapDispatchToProps)(SignUp);
