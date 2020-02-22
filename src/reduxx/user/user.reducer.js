@@ -17,7 +17,7 @@ const userReducer = (state = initialState, action) => {
         case 'ADD_NEW_USER':
             return {
                 ...state,
-                addNewUser: state.customers.push(action.payload)
+                addNewUser: state.customers.concat([action.payload])
             }
         default:
             return state;
