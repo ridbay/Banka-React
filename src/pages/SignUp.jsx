@@ -9,6 +9,8 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
+import {connect} from 'react-redux';
+import {addNewUser} from '../reduxx/user/user.actions'
 
 
 const useStyles = makeStyles(theme => ({
@@ -66,7 +68,8 @@ const handleChange = name => event => {
       password,
       confirmPassword
     }
-    console.log(newUser);
+    
+    this.props.addNewUser(newUser)
   }
   return (
     <Container component="main" maxWidth="xs">
@@ -166,4 +169,7 @@ const handleChange = name => event => {
   );
 }
 
-export default SignUp;
+const mapDispatchToProps= dispatch =>({
+addNewUser: user => dispatch(addNewUser(user))
+})
+export default connect(null, mapDispatchToProps)(SignUp);
