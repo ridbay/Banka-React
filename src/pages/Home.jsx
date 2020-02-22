@@ -77,6 +77,6 @@ const Home = ({currentUser}) => {
 
 
 const mapStateToProps = state => ({
-  currentUser: state.user.currentUser
+  currentUser: state.user.customers
 })
 export default connect(mapStateToProps)(Home);

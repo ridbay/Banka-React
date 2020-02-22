@@ -81,6 +81,6 @@ const Transactions=({transactions})=> {
 
 
 const mapStateToProps = state=> ({
-  transactions: state.user.currentUser[0].transactions
+  transactions: state.user.customers[0].transactions
 })
 export default connect(mapStateToProps)(Transactions);

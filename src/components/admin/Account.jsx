@@ -9,6 +9,8 @@ import {connect} from 'react-redux';
 // import USERS_DATA  from '../../util/userData';
 // const [customers] = USERS_DATA;
 // const customersData = customers.customers;
+
+
 const Account = ({customersData}) => {
   const [state, setState] = useState({
     columns: [
@@ -98,6 +100,6 @@ const Account = ({customersData}) => {
 }
 
 const mapStateToProps = state => ({
-  customersData: state.user.currentUser
+  customersData: state.user.customers
 })
 export default connect(mapStateToProps)(Account);

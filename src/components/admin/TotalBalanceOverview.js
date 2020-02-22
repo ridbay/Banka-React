@@ -51,6 +51,6 @@ const RecentTransaction=({customersData})=> {
 }
 
 const mapStateToProps = state =>({
-  customersData: state.user.currentUser
+  customersData: state.user.customers
 })
 export default connect(mapStateToProps)(RecentTransaction)

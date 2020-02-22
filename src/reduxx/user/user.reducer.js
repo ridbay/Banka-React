@@ -1,18 +1,21 @@
 import UserData from '../../util/userData'
 
 const initialState = {
-    currentUser: UserData[0].customers,
+    customers: UserData[0].customers,
     currentAdmin: UserData[2].admins
 }
 const userReducer = (state = initialState, action) => {
     switch (action.type) {
         case 'SET_CURRENT_USER':
-            
-        return {
+            return {
                 ...state,
                 currentUser: action.payload
             }
-
+        case 'ADD_NEW_USER':
+            return {
+                ...state,
+                addNewUser: state.customers.push(action.payload)
+            }
         default:
             return state;
     }

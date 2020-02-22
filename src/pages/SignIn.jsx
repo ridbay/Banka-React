@@ -18,6 +18,9 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 import { green, purple } from '@material-ui/core/colors';
 
 // import USERS_DATA from '../util/userData'
+import {connect} from 'react-redux';
+import {addNewUser} from '../reduxx/user/user.actions';
+
 
 const useStyles = makeStyles(theme => ({
   '@global': {
@@ -87,7 +90,7 @@ const handleChange = name => event => {
       password,
       role
     }
-    console.log(user);
+    this.props.addNewUser(user);
   }
 
 
@@ -202,4 +205,10 @@ const handleChange = name => event => {
   );
 }
 
-export default SignIn;
+
+const mapDispatchToProps = dispatch => ({
+  addNewUser: user => dispatch(addNewUser(user))
+});
+
+
+export default connect(null, mapDispatchToProps)(SignIn);

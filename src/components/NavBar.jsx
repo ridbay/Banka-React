@@ -27,7 +27,6 @@ const useStyles = makeStyles(theme => ({
 
 
 const NavBar = ({currentUser}) => {
-    console.log(`this is ${currentUser} data`)
     const classes = useStyles();
     return (
         <div className={classes.root}>
@@ -55,6 +54,6 @@ const NavBar = ({currentUser}) => {
 
 
 const mapStateToProps = state => ({
-currentUser : state.user.currentUser
+currentUser : state.user.customers
 })
 export default connect(mapStateToProps)(NavBar);
