@@ -19,7 +19,7 @@ import { green, purple } from '@material-ui/core/colors';
 
 // import USERS_DATA from '../util/userData'
 import {connect} from 'react-redux';
-import {addNewUser} from '../reduxx/user/user.actions';
+import {setCurrentUser} from '../reduxx/user/user.actions';
 
 
 const useStyles = makeStyles(theme => ({
@@ -90,7 +90,7 @@ const handleChange = name => event => {
       password,
       role
     }
-    this.props.addNewUser(user);
+    this.props.setCurrentUser(user);
   }
 
 
@@ -207,7 +207,7 @@ const handleChange = name => event => {
 
 
 const mapDispatchToProps = dispatch => ({
-  addNewUser: user => dispatch(addNewUser(user))
+  setCurrentUser: user => dispatch(setCurrentUser(user))
 });
 
 
