@@ -3,10 +3,15 @@ import MaterialTable from 'material-table';
 import ToggleOffOutlinedIcon from '@material-ui/icons/ToggleOffOutlined';
 import ToggleOnOutlinedIcon from '@material-ui/icons/ToggleOnOutlined';
 
-import USERS_DATA  from '../../util/userData';
-const [customers] = USERS_DATA;
-const customersData = customers.customers;
-const Account = () => {
+import {connect} from 'react-redux';
+
+
+// import USERS_DATA  from '../../util/userData';
+// const [customers] = USERS_DATA;
+// const customersData = customers.customers;
+
+
+const Account = ({customersData}) => {
   const [state, setState] = useState({
     columns: [
       { title: 'Name', field: 'name' },
@@ -94,5 +99,7 @@ const Account = () => {
   );
 }
 
-
-export default Account;
+const mapStateToProps = state => ({
+  customersData: state.user.customers
+})
+export default connect(mapStateToProps)(Account);
