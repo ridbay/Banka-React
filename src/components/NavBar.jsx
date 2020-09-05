@@ -7,6 +7,8 @@ import Typography from '@material-ui/core/Typography';
 import Link from '@material-ui/core/Link';
 import { makeStyles } from '@material-ui/core/styles';
 
+import {connect} from 'react-redux';
+
 
 const useStyles = makeStyles(theme => ({
     appBar: {
@@ -23,7 +25,8 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-const NavBar = () => {
+
+const NavBar = ({currentUser}) => {
     const classes = useStyles();
     return (
         <div className={classes.root}>
@@ -37,8 +40,11 @@ const NavBar = () => {
                             <Link variant="button" color="inherit" href="/about" className={classes.link}>About Us </Link>
                             <Link variant="button" color="inherit" href="/contact" className={classes.link}>Contact Us</Link>
                         </nav>
-                        <Button href="/signin" color="inherit" variant="outlined" className={classes.link}>SignIn</Button>
+                        {currentUser ? <Button href="/signout" color="inherit" variant="outlined" className={classes.link}>SignOut</Button> : (<div>
+                            <Button href="/signin" color="inherit" variant="outlined" className={classes.link}>SignIn</Button>
                         <Button href="/signup" color="inherit" variant="outlined" className={classes.link}>SignUp</Button>
+                        </div>)}
+                        
                     </Toolbar>
                 </AppBar>
             </React.Fragment>
@@ -46,4 +52,8 @@ const NavBar = () => {
     )
 }
 
-export default NavBar;
+
+const mapStateToProps = state => ({
+currentUser : state.user.customers
+})
+export default connect(mapStateToProps)(NavBar);

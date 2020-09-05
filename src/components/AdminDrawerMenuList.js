@@ -5,23 +5,12 @@ import ListItemText from '@material-ui/core/ListItemText';
 import DashboardIcon from '@material-ui/icons/Dashboard';
 import MonetizationOnIcon from '@material-ui/icons/MonetizationOn';
 import PeopleIcon from '@material-ui/icons/People';
-import HomeIcon from '@material-ui/icons/Home';
 import Link from '@material-ui/core/Link';
 
 
 
 export const customerListItems = (
   <div>
-    <Link color="inherit" href="/" underline='none'>
-      <ListItem button>
-        <ListItemIcon>
-          <HomeIcon />
-        </ListItemIcon>
-        <ListItemText primary="Home" />
-
-      </ListItem>
-    </Link>
-
     <Link color="inherit" href="/customer/dashboard" underline='none'>
       <ListItem button>
         <ListItemIcon>
@@ -55,15 +44,6 @@ export const customerListItems = (
 
 export const adminListItems = (
   <div>
-    <Link color="inherit" href="/" underline='none'>
-      <ListItem button>
-        <ListItemIcon>
-          <HomeIcon />
-        </ListItemIcon>
-        <ListItemText primary="Home" />
-
-      </ListItem>
-    </Link>
 
     <Link color="inherit" href="/admin/dashboard" underline='none'>
       <ListItem button>

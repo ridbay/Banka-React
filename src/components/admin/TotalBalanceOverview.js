@@ -5,7 +5,10 @@ import Typography from '@material-ui/core/Typography';
 import Title from './Title';
 
 
-import USERS_DATA from '../../util/userData';
+import {connect} from 'react-redux';
+
+// import USERS_DATA from '../../util/userData';
+
 
 function preventDefault(event) {
   event.preventDefault();
@@ -17,11 +20,9 @@ const useStyles = makeStyles({
   },
 });
 
-export default function RecentTransaction() {
+const RecentTransaction=({customersData})=> {
   const classes = useStyles();
-
-  const [customers] = USERS_DATA;
-  const balances = customers.customers.map(customer => customer.balance);
+  const balances = customersData.map(customer => customer.balance);
   const allBalance = balances.reduce((accumulator, currentValue) => accumulator + currentValue);
 
   const numberWithCommas = (allBalance) => allBalance.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
@@ -48,3 +49,8 @@ export default function RecentTransaction() {
     </React.Fragment>
   );
 }
+
+const mapStateToProps = state =>({
+  customersData: state.user.customers
+})
+export default connect(mapStateToProps)(RecentTransaction)

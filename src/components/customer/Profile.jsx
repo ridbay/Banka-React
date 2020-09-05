@@ -1,7 +1,5 @@
 import React from 'react';
 
-import USERS_DATA from '../../util/userData';
-
 
 import { makeStyles } from '@material-ui/core/styles';
 
@@ -15,6 +13,8 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Avatar from '@material-ui/core/Avatar';
 import { red } from '@material-ui/core/colors';
 import Typography from '@material-ui/core/Typography';
+
+import {connect} from 'react-redux';
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -51,9 +51,10 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-export default function Profile() {
+const Profile = ({currentUser})=> {
     const classes = useStyles();
-    const { role, fname, lname, image, phone, accountNumber, transactions } = USERS_DATA[1];
+    const { role, name, surname, image, phone, accountNumber, transactions } = currentUser;
+
     return (
         <div className={classes.root}>
             <main className={classes.content}>
@@ -65,17 +66,17 @@ export default function Profile() {
                                 <CardHeader
                                     avatar={
                                         <Avatar aria-label="profile" className={classes.avatar}>
-                                            {fname.charAt(0).toUpperCase()}
+                                            {name.charAt(0).toUpperCase()}
                                         </Avatar>
                                     }
 
-                                    title={`${fname} ${lname}`}
+                                    title={`${name} ${surname}`}
                                     subheader={role.charAt(0).toUpperCase() + role.slice(1)}
                                 />
                                 <CardMedia
                                     className={classes.media}
                                     image={image}
-                                    title={`${fname}'s picture`}
+                                    title={`${name}'s picture`}
                                 />
                                 <CardContent>
                                     <Typography variant="body2" color="textSecondary" component="p">
@@ -100,3 +101,8 @@ export default function Profile() {
         </div>
     )
 }
+
+const mapStateToProps = state => ({
+currentUser: state.user.customers[0]
+})
+export default connect(mapStateToProps)(Profile);

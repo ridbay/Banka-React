@@ -14,7 +14,9 @@ import Avatar from '@material-ui/core/Avatar';
 import { red } from '@material-ui/core/colors';
 import Typography from '@material-ui/core/Typography';
 
-import USERS_DATA from '../../util/userData';
+// import USERS_DATA from '../../util/userData';
+import {connect} from 'react-redux';
+
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -51,13 +53,16 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-// const admins = USERS_DATA[2].admins[0]
 
-// console.log(admins)
-export default function Profile() {
+const Profile = ({adminsData})=> {
+
+    const admin = adminsData.filter(admin => admin.role === 'Admin');
+    
     const classes = useStyles();
-    const { role, fname, lname, image, phone, accountNumber, transactions } = USERS_DATA[2].admins[0];
-    console.log(fname)
+   
+    const [theAdmin] = admin
+    
+    const {role, fname, lname, image, phone, accountNumber, transactions } = theAdmin;
     return (
         <div className={classes.root}>
             <main className={classes.content}>
@@ -104,3 +109,8 @@ export default function Profile() {
         </div>
     )
 }
+
+const mapStateToProps = state =>({
+    adminsData: state.user.currentAdmin
+  })
+export default connect(mapStateToProps)(Profile)
