@@ -13,6 +13,8 @@ import Image from '../img/bg.jpg';
 import NavBar from '../components/NavBar';
 import Footer from '../components/Footer';
 
+import {connect} from 'react-redux';
+
 const useStyles = makeStyles(theme => ({
 
   heroContent: {
@@ -31,7 +33,7 @@ const useStyles = makeStyles(theme => ({
 
 }));
 
-const Home = () => {
+const Home = ({currentUser}) => {
   const classes = useStyles();
 
   return (
@@ -46,7 +48,7 @@ const Home = () => {
             <Typography variant="h5" align="center" color="textSecondary" paragraph>
               RidBank is a light-weight core banking application that powers banking operations like account creation, customer deposit and withdrawals.
             </Typography>
-            <div className={classes.heroButtons}>
+            {currentUser ? null : <div className={classes.heroButtons}>
               <Grid container spacing={2} justify="center">
                 <Grid item>
                   <Button variant="contained" color="primary">
@@ -63,7 +65,8 @@ const Home = () => {
                   </Button>
                 </Grid>
               </Grid>
-            </div>
+            </div>}
+            
           </Container>
         </div>
       
@@ -72,4 +75,8 @@ const Home = () => {
   );
 }
 
-export default Home;
+
+const mapStateToProps = state => ({
+  currentUser: state.user.customers
+})
+export default connect(mapStateToProps)(Home);

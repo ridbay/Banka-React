@@ -9,6 +9,8 @@ import TableRow from '@material-ui/core/TableRow';
 
 import Title from './Title';
 
+import {connect} from 'react-redux';
+
 
 // Generate Order Data
 // function createData(id, date, name, accountNumber, accountType, amount) {
@@ -33,6 +35,7 @@ const useStyles = makeStyles(theme => ({
 
 
 const Transactions=({transactions})=> {
+
   const getRoute = () => {
     return window.location.pathname === "/customer/dashboard";
   };
@@ -54,7 +57,7 @@ const Transactions=({transactions})=> {
           </TableRow>
         </TableHead>
         <TableBody>
-          {/* {transactions.map(row => (
+          {transactions.map(row => (
             <TableRow key={row.id}>
               <TableCell>{row.date}</TableCell>
               <TableCell>{row.beneficiary}</TableCell>
@@ -63,7 +66,7 @@ const Transactions=({transactions})=> {
               <TableCell>{row.status}</TableCell>
               <TableCell align="right">{row.amount}</TableCell>
             </TableRow>
-          ))} */}
+          ))}
         </TableBody>
       </Table>
       <div className={classes.seeMore}>
@@ -76,4 +79,8 @@ const Transactions=({transactions})=> {
   );
 }
 
-export default Transactions;
+
+const mapStateToProps = state=> ({
+  transactions: state.user.customers[0].transactions
+})
+export default connect(mapStateToProps)(Transactions);
