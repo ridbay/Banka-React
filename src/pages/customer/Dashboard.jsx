@@ -6,7 +6,7 @@ import ProfileMenu from '../../components/ProfileMenu';
 import AdminNavbar from '../../components/AdminNavbar';
 import AdminDrawer from '../../components/AdminDrawer';
 
-import SwitchRoutes from './SwitchRoutes'
+import SwitchRoutes from './switchRoutes'
 
 import  USERS_DATA from '../../util/userData'
 
